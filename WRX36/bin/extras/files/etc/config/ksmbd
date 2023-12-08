@@ -1,0 +1,17 @@
+config globals
+        option workgroup 'WORKGROUP'
+        option interface 'lan'
+        option description 'OpenWrt'
+
+#config share
+#        option name ''
+#        option path ''
+#        option users 'SMBUSER'
+#        option create_mask '0666'
+#        option dir_mask '0777'
+#        option inherit_owner 'yes'
+#        option read_only 'no'
+#        option writeable 'yes'
+#        option browsable 'yes'
+#        option guest_ok 'no'
+

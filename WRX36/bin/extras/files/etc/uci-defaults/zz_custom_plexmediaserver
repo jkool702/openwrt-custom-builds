@@ -1,0 +1,10 @@
+cat<<'EOF'>>/etc/rc.local
+
+mkdir -p "${plex_mnt}"
+grep -qF "${plex_dev} ${plex_mnt}" </proc/mounts || { mount "${plex_dev}" "${plex_mnt}" 2>&1 | grep -qF "unknown filesystem type 'ntfs'"; } && { grep -qF 'ntfs3' </proc/filesystems; } && ntfs-3g "${plex_dev}" "${plex_mnt}"
+sleep 2
+/etc/init.d/plexmediaserver start
+sleep 2
+ps | grep -q 'Plex Media Server' || /etc/init.d/plexmediaserver start
+
+EOF

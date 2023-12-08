@@ -1,0 +1,8 @@
+echo 'SMBUSER:x:2468:2468:SMBUSER:/mnt:/bin/false' >> /etc/passwd
+echo 'SMBUSER:x:2468:SMBUSER' >>/etc/group
+echo 'SMBUSER:x:0:0:99999:7:::' >>/etc/shadow
+
+passwd -u SMBUSER
+echo 'SMBPASSWORD' | passwd SMBUSER
+
+ksmbd.adduser -a SMBUSER -p 'SMBPASSWORD'

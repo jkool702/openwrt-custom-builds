@@ -1,0 +1,8 @@
+cat /proc/mounts | grep -F "/dev/sda"* | grep -qF /mnt/* || mount -a
+
+[ -f "$(echo /mnt/*/.plex)" ] && {
+sleep 5
+/etc/init.d/plexmediaserver start
+sleep 5
+ps | grep -q 'Plex Media Server' || /etc/init.d/plexmediaserver start
+}
