@@ -1,5 +1,5 @@
 # openwrt-custom-builds
-Custom firmware images (compiled locally from source) for OpenWrt
+Custom firmware images (compiled locally from source) for OpenWrt for the Dynalink DL-WRX36
 
 # Install instructions
 
