@@ -1,6 +1,12 @@
 # openwrt-custom-builds
 Custom firmware images (compiled locally from source) for OpenWrt for the Dynalink DL-WRX36
 
+NOTICE: for the current build, the `ntpd` and `sysntpd` services appear to be broken, and can cause some issues. If these are causing problems (check `logread`) then disable them via
+
+    service ntpd disable
+    service sysntpd disable
+    reboot
+
 # Install instructions
 
 This OpenWrt firmware image can be installed using the [standard WRX36 install instructions for OpenWrt](https://openwrt.org/toh/dynalink/dl-wrx36).
