@@ -1,12 +1,19 @@
 # openwrt-custom-builds
 Custom firmware images (compiled locally from source) for OpenWrt for the Dynalink DL-WRX36
 
-NOTICE: for the current build, the `ntpd` and `sysntpd` services appear to be broken, and can cause some issues. If these are causing problems (check `logread`) then disable them via
+NOTICE: for the current build, the `ntpd` and `sysntpd` services appear to be broken, and can cause some issues. If these are causing problems then disable them via
 
     service ntpd disable
     service sysntpd disable
     reboot
 
+If your not sure if they are broke or not run `logread` and look for entries like the following
+
+    ntpd error:     daemon.err ntpd[15868]: recvbuff.c:372: REQUIRE((((void*)0) == pf->phead && ((void*)0) == pf->pptail) || (((void*)0) != pf->phead && ((void*)0) != pf->pptail)) failed
+                    daemon.err ntpd[15868]: exiting (due to assertion failure)
+                    
+    sysntpd error:  user.err : jail: failed to load dependencies
+    
 # Install instructions
 
 This OpenWrt firmware image can be installed using the [standard WRX36 install instructions for OpenWrt](https://openwrt.org/toh/dynalink/dl-wrx36).
