@@ -1,5 +1,8 @@
 # connection is 1000/500 mbps fibre
 
+# compare to prev speedtest to see benefit from NSS:
+# https://github.com/jkool702/openwrt-custom-builds/blob/main/WRX36/bin/extras/performance_speedtests
+
 $ speedtest-netperf.sh
 
 2024-03-30 13:39:52 Starting speedtest for 30 seconds per transfer session.
