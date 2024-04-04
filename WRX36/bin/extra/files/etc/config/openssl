@@ -1,0 +1,6 @@
+config engine 'devcrypto'
+	option enabled '1'
+	option builtin '1'
+
+config provider 'legacy'
+	option enabled '1'

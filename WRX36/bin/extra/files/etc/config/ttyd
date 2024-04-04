@@ -1,0 +1,9 @@
+
+config ttyd
+	option interface '@lan'
+	option command '/bin/login'
+	option uid '0'
+	option gid '0'
+	option ipv6 '1'
+	option debug '7'
+

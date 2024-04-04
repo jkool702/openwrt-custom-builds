@@ -1,0 +1,41 @@
+
+config system
+	option hostname 'OpenWrt_WRX36'
+	#option timezone 'EST5EDT,M3.2.0,M11.1.0'
+	option ttylogin '0'
+	option log_size '64'
+	option urandom_seed '0'
+	#option zonename 'America/New York'
+	option log_proto 'udp'
+	option conloglevel '8'
+	option cronloglevel '9'
+	option zram_comp_algo 'zstd'
+	option description 'OpenWrt on WRX36 (NSS)'
+	option notes 'NSS-enabled openwrt firmware on a Dynalink WRX36'
+
+config timeserver 'ntp'
+	option enabled '1'
+	option enable_server '1'
+	list server '0.openwrt.pool.ntp.org'
+	list server '1.openwrt.pool.ntp.org'
+	list server '2.openwrt.pool.ntp.org'
+	list server '3.openwrt.pool.ntp.org'
+
+config led 'led_wan_port_link_green'
+	option name 'WAN-PORT-LINK-GREEN'
+	option sysfs '90000.mdio-1:1c:green:wan'
+	option trigger 'netdev'
+	option mode 'link_2500'
+	option dev 'wan'
+
+config led 'led_wan_port_link_yellow'
+	option name 'WAN-PORT-LINK-YELLOW'
+	option sysfs '90000.mdio-1:1c:yellow:wan'
+	option trigger 'netdev'
+	option mode 'tx rx link_10 link_100 link_1000'
+	option dev 'wan'
+
+config rngd
+	option enabled '1'
+	option device '/dev/urandom'
+

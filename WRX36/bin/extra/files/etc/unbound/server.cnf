@@ -1,0 +1,13 @@
+[req]
+default_bits=3072
+default_md=sha256
+prompt=no
+distinguished_name=req_distinguished_name
+x509_extensions=v3_ca
+[req_distinguished_name]
+commonName=unbound
+[v3_ca]
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid:always,issuer:always
+basicConstraints=critical,CA:TRUE,pathlen:0
+subjectAltName=DNS:unbound

@@ -1,0 +1,11 @@
+Package: sqm-scripts-nss
+Version: 20240228-r2
+Depends: libc, sqm-scripts, kmod-qca-nss-drv-qdisc, kmod-qca-nss-drv-igs
+Section: net
+Architecture: all
+Installed-Size: 40960
+Filename: sqm-scripts-nss_20240228-r2_all.ipk
+Size: 8293
+SHA256sum: fe262b73bc852256008b5e0a54465557c246aeb232ac3b92aeb607a833d8d5fb
+Description:  Smart Queue Management Scripts for OpenWRT for use with NSS enabled builds.
+

@@ -1,8 +1,0 @@
-config defaults
-	# example for blacklisting individual devices or bridges
-	list blacklist wan
-	list blacklist tunl0
-	list blacklist siit0
-	list blacklist miireg
-	list blacklist lan4
-	list blacklist br-IoT
