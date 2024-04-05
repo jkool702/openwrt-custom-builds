@@ -1,16 +1,24 @@
 # openwrt-custom-builds
 Custom NSS-enabled firmware images (compiled locally from source) for OpenWrt for the Dynalink DL-WRX36
 
-# KNOWN BUGS:
+# KNOWN BUGS
 
+enabling the NSS subsystem on OpenWrt is about as cutting edge as openwrt gets. As such, the (considerably) better performance that using NSS gives comes at the cost of a few bugs.
+
+Currently, the only major problem I know of is that the firmware is very "touchy" about doing certain SSL-related tasks on-router. This means you should avoid doing things like "having LUCI/uhtppd upgrade connections to htpps" and "setting unbound-control to a value of more than 1, which encrypts your control/communication with it". I havent tried, but VPN-related tasks might also not work well.
+
+If/when I find a solution to this I will update the build accordingly. SO long as you dont try to use a SSL operation that it doesnt like, the build appears extremely stable, and neither `dmesg` nor `logread` are spitting out any unexpected errors.
 
 # Install instructions
 
-This OpenWrt firmware image can be installed using the [standard WRX36 install instructions for OpenWrt](https://openwrt.org/toh/dynalink/dl-wrx36).
+This OpenWrt firmware image can be installed using the [standard WRX36 install instructions for OpenWrt](https://openwrt.org/toh/dynalink/dl-wrx36). 
 
-Firmware images are located in the `WRX36/bin/target/qualcommax/ipq807x` directory.
+Firmware images are located in the `WRX36/bin/target/qualcommax/ipq807x` directory. you will want either
 
-If you are already on OpenWrt, you can either install the sysupgrade squashfs image (e.g., though LUCI), or you can boot into the USB recovery and re-flash mt18 and mt20 with the factory squashfs image. 
+* openwrt-qualcommax-ipq807x-dynalink_dl-wrx36-squashfs-sysupgrade.bin
+* openwrt-qualcommax-ipq807x-dynalink_dl-wrx36-squashfs-factory.ubi
+
+If you are already on OpenWrt, you can either install the sysupgrade image (e.g., though LUCI), or you can boot into the USB recovery and re-flash `/dev/mtd18` and `/dev/mtd20` with the factory squashfs image. 
 
 # Initial network configuration
 
