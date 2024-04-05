@@ -58,7 +58,7 @@ There is an init script setup that will install and then auto start on boot a pl
 
 To set this up, in LUCI go system->startup->local startup, and 
 
-1. replace all instances of `${plex_dev}` with the block devine name of the external drive. This will probably be `/dev/sda1` or `/dev/sda2`
+1. replace all instances of `${plex_dev}` with the block device name of the external drive. This will probably be `/dev/sda1` or `/dev/sda2`
 2. replace all instances of `${plex_mnt}` with the desired mount point for the drive. Example: `/mnt/PLEX`. Note: do NOT include the trailing `/`.
 
 Then reboot. On boot up, it should install plex media server and start it for you. (note: it might take a minute to build the squashfs image of it for you).
@@ -76,4 +76,8 @@ The standard
     opkg update
     opkg install $PKG
 
-will work. However, it may pull in and try to install kmod packages that may not be fully compatable with the device. Most kmod packages are available in this repo ([here](https://github.com/jkool702/openwrt-custom-builds/tree/main/WRX36/bin/targets/qualcommax/ipq807x/packages/kmods)) - be sure to use the kmod packages from this repo if you need to install one.
+will work. However, it may pull in and try to install kmod packages that may not be fully compatible with the device. Most kmod packages are available in this repo. When possible, be sure to use the kmod packages from this repo if you need to install one.
+
+***
+
+Disclaimer: My wrx36 is running the firmware that the firmware image's in this repo were based on. The only difference in this firmware image and the one my wrx36 uses is that some configs that would share private info (like my wifi network name and password) were changed/removed. That said, I have not physically flashed this image to a router yet.
