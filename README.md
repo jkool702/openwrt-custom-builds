@@ -1,24 +1,14 @@
 # openwrt-custom-builds
-Custom firmware images (compiled locally from source) for OpenWrt for the Dynalink DL-WRX36
+Custom NSS-enabled firmware images (compiled locally from source) for OpenWrt for the Dynalink DL-WRX36
 
-NOTICE: for the current build, the `ntpd` and `sysntpd` services appear to be broken, and can cause some issues. If these are causing problems then disable them via
+# KNOWN BUGS:
 
-    service ntpd disable
-    service sysntpd disable
-    reboot
 
-If your not sure if they are broke or not run `logread` and look for entries like the following
-
-    ntpd error:     daemon.err ntpd[15868]: recvbuff.c:372: REQUIRE((((void*)0) == pf->phead && ((void*)0) == pf->pptail) || (((void*)0) != pf->phead && ((void*)0) != pf->pptail)) failed
-                    daemon.err ntpd[15868]: exiting (due to assertion failure)
-                    
-    sysntpd error:  user.err : jail: failed to load dependencies
-    
 # Install instructions
 
 This OpenWrt firmware image can be installed using the [standard WRX36 install instructions for OpenWrt](https://openwrt.org/toh/dynalink/dl-wrx36).
 
-Firmware images are located in the `WRX36/bin/target/qualcommax/ipq8074a` directory.
+Firmware images are located in the `WRX36/bin/target/qualcommax/ipq807x` directory.
 
 If you are already on OpenWrt, you can either install the sysupgrade squashfs image (e.g., though LUCI), or you can boot into the USB recovery and re-flash mt18 and mt20 with the factory squashfs image. 
 
@@ -61,13 +51,15 @@ There is an init script setup that will install and then auto start on boot a pl
 To set this up, in LUCI go system->startup->local startup, and 
 
 1. replace all instances of `${plex_dev}` with the block devine name of the external drive. This will probably be `/dev/sda1` or `/dev/sda2`
-2. replace all instances of `${plex_mnt}` with the desired mount point for the drive. Example: `/mnt/plex`. Note: do NOT include the trailing `/`.
+2. replace all instances of `${plex_mnt}` with the desired mount point for the drive. Example: `/mnt/PLEX`. Note: do NOT include the trailing `/`.
 
 Then reboot. On boot up, it should install plex media server and start it for you. (note: it might take a minute to build the squashfs image of it for you).
 
 To control plex media server, use `service plexmediaserver <COMMAND>`. There are a handful of commands, but the most useful are `start`, `stop`, and `update`.
 
 To access plex from a web browser, go to 10.0.0.1:32400/web.
+
+NOTE: plexmediaserver requires `unzip` `curl` and `squashfs-tools-mksquashfs`. This build has them compiled in, but standard openwrt builds do not and will need them installed (using `opkg`)
 
 # Installing packages
 
