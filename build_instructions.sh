@@ -108,7 +108,7 @@ make -j$(nproc) V=sc prepare
 mkdir -p files/lib/modules/"${builddir_kernel##*/}"
 
 \cp -f "${builddir_kernel}"/{m,M,.m,.M}od* files/lib/modules/"${builddir_kernel##*/}"
-\rm -f "$(find files/lib/modules/"${builddir_kernel##*/}" -type f -maxdepth 0 -empty)"
+\rm -f $(find files/lib/modules/"${builddir_kernel##*/}" -type f -empty)
 
 # make the rest of the build
 make -j$(nproc) -k V=sc
