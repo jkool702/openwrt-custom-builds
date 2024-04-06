@@ -40,7 +40,18 @@ make menuconfig
 # make defconfig
 
 # download/check sources, then build unmodified kernel 
-make -j$(nproc) V=sc download check prepare 
+make -j$(nproc) download 
+
+# fix package hash mis-matches
+C="$(make check | grep -B 1 PKG_MIRROR_HASH)"
+mapfile -t B < <(grep PKG_MIRROR_HASH <<<"$C" | sed -E s/'^.* '//)
+mapfile -t A < <(grep directory <<<"$C" | sed -E 's/^.* '"'"'//;s/'"'"'$//')
+
+for kk in "${!A[@]}"; do
+    sed -iE s/'^PKG_MIRROR_HASH.*$'/'PKG_MIRROR_HASH:='"${B[$kk]}"'/' "${A[$kk]}"'/Makefile'
+done
+
+make -j$(nproc) V=sc check prepare 
 
 # save important paths in variables
 target_board="$(grep -F CONFIG_TARGET_BOARD <.config | sed -E 's/^[^"]*"//;s/".*$//')"
