@@ -1,8 +1,11 @@
 buildroot_dir="/mnt/ramdisk"
-bin_dir="$buildroot_dir"/openwrt-custom-builds/WRX36/bin
+bin_dir="${buildroot_dir}"/openwrt-custom-builds/WRX36/bin
 
 mkdir -p "${buildroot_dir}"
 cat /proc/mounts | grep -F "${buildroot_dir}" | grep -q 'tmpfs' || sudo mount -t tmpfs tmpfs "${buildroot_dir}" -o defaults -o size=96G
+
+cd "${buildroot_dir}"
+git clone https://github.com/jkool702/openwrt-custom-builds.git --branch=dynalink_wrx36_NSS_build
 mkdir -p "${buildroot_dir}/build"
 cd "${buildroot_dir}/build"
 git clone https://github.com/jkool702/openwrt.git
