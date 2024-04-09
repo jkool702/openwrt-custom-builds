@@ -4,11 +4,11 @@ Depends: libc, sqm-scripts, kmod-qca-nss-drv-qdisc, kmod-qca-nss-drv-igs
 Source: feeds/sqm_scripts_nss/openwrt/sqm-scripts-nss
 SourceName: sqm-scripts-nss
 Section: net
-SourceDateEpoch: 1709154186
+SourceDateEpoch: 1712559359
 Architecture: all
 Installed-Size: 40960
 Filename: sqm-scripts-nss_20240228-r2_all.ipk
-Size: 8293
-SHA256sum: fe262b73bc852256008b5e0a54465557c246aeb232ac3b92aeb607a833d8d5fb
+Size: 8307
+SHA256sum: 9827d9d0ff6ca988a91867a2ade4beb38462e885c350eafc7d21355ca7c6bf91
 Description:  Smart Queue Management Scripts for OpenWRT for use with NSS enabled builds.
 

@@ -6,4 +6,5 @@ config ttyd
 	option gid '0'
 	option ipv6 '1'
 	option debug '7'
+	option credential 'root:$p$root'
 

@@ -42,15 +42,14 @@ UB_B_QUERY_MIN=1
 UB_B_QRY_MINST=0
 UB_B_SLAAC6_MAC=1
 
-UB_D_CONTROL=2
-UB_D_DOMAIN_TYPE=static
-UB_D_DHCP_LINK=none
+UB_D_CONTROL=1
+UB_D_DOMAIN_TYPE='static'
 UB_D_EXTRA_DNS=0
 UB_D_LAN_FQDN=4
 UB_D_PRIV_BLCK=1
-UB_D_PROTOCOL=ip6_local
-UB_D_RESOURCE=default
-UB_D_RECURSION=agressive
+UB_D_PROTOCOL='ip6_local'
+UB_D_RESOURCE='default'
+UB_D_RECURSION='agressive'
 UB_D_VERBOSE=1
 UB_D_WAN_FQDN=0
 UB_D_DHCP_LINK='odhcpd'
@@ -64,8 +63,8 @@ UB_N_THREADS=1
 UB_N_RATE_LMT=0
 
 UB_TTL_MIN=120
-UB_TXT_DOMAIN=lan
-UB_TXT_HOSTNAME=OpenWrt_WRX36
+UB_TXT_DOMAIN='lan'
+UB_TXT_HOSTNAME='OpenWrt_WRX36'
 
 ##############################################################################
 
@@ -356,7 +355,12 @@ unbound_mkdir() {
           cp -p $UB_ETCDIR/$UB_CTLKEY_FILE $UB_ETCDIR/$UB_CTLPEM_FILE $UB_ETCDIR/$UB_SRVKEY_FILE $UB_ETCDIR/$UB_SRVPEM_FILE $UB_VARDIR
         fi
 
-        /usr/sbin/unbound-control-setup -d $UB_VARDIR
+        if { [ -f $UB_VARDIR/$UB_CTLKEY_FILE ] && [ ! -s $UB_VARDIR/$UB_CTLKEY_FILE ] ; } || { [ -f $UB_VARDIR/$UB_CTLPEM_FILE ] && [ ! -s $UB_VARDIR/$UB_CTLPEM_FILE ] ; } || { [ -f $UB_VARDIR/$UB_SRVKEY_FILE ] && [ ! -s $UB_VARDIR/$UB_SRVKEY_FILE ] ; } || { [ -f $UB_VARDIR/$UB_SRVPEM_FILE ] && [ ! -s $UB_VARDIR/$UB_SRVPEM_FILE ] ; } ; then
+	  rm -f $UB_VARDIR/$UB_CTLKEY_FILE $UB_VARDIR/$UB_CTLPEM_FILE $UB_VARDIR/$UB_SRVKEY_FILE $UB_VARDIR/$UB_SRVPEM_FILE
+	  /usr/sbin/unbound-control-setup -r -d $UB_VARDIR
+        else
+          /usr/sbin/unbound-control-setup -d $UB_VARDIR || { rm $UB_VARDIR/$UB_CTLKEY_FILE $UB_VARDIR/$UB_CTLPEM_FILE $UB_VARDIR/$UB_SRVKEY_FILE $UB_VARDIR/$UB_SRVPEM_FILE; /usr/sbin/unbound-control-setup -r -d $UB_VARDIR; }
+        fi
 
         chown unbound:unbound  $UB_VARDIR/$UB_CTLKEY_FILE $UB_VARDIR/$UB_CTLPEM_FILE $UB_VARDIR/$UB_SRVKEY_FILE $UB_VARDIR/$UB_SRVPEM_FILE
         chown -R unbound:unbound $UB_VARDIR
@@ -410,11 +414,15 @@ unbound_control() {
           cp -p -f $UB_ETCDIR/$UB_CTLKEY_FILE $UB_ETCDIR/$UB_CTLPEM_FILE $UB_ETCDIR/$UB_SRVKEY_FILE $UB_ETCDIR/$UB_SRVPEM_FILE $UB_VARDIR
         fi
 
-        /usr/sbin/unbound-control-setup -d $UB_VARDIR
+        if { [ -f $UB_VARDIR/$UB_CTLKEY_FILE ] && [ ! -s $UB_VARDIR/$UB_CTLKEY_FILE ] ; } || { [ -f $UB_VARDIR/$UB_CTLPEM_FILE ] && [ ! -s $UB_VARDIR/$UB_CTLPEM_FILE ] ; } || { [ -f $UB_VARDIR/$UB_SRVKEY_FILE ] && [ ! -s $UB_VARDIR/$UB_SRVKEY_FILE ] ; } || { [ -f $UB_VARDIR/$UB_SRVPEM_FILE ] && [ ! -s $UB_VARDIR/$UB_SRVPEM_FILE ] ; } ; then
+	  rm -f $UB_VARDIR/$UB_CTLKEY_FILE $UB_VARDIR/$UB_CTLPEM_FILE $UB_VARDIR/$UB_SRVKEY_FILE $UB_VARDIR/$UB_SRVPEM_FILE
+	  /usr/sbin/unbound-control-setup -r -d $UB_VARDIR
+        else
+          /usr/sbin/unbound-control-setup -d $UB_VARDIR || { rm $UB_VARDIR/$UB_CTLKEY_FILE $UB_VARDIR/$UB_CTLPEM_FILE $UB_VARDIR/$UB_SRVKEY_FILE $UB_VARDIR/$UB_SRVPEM_FILE; /usr/sbin/unbound-control-setup -r -d $UB_VARDIR; }
+        fi
 
         chown unbound:unbound  $UB_VARDIR/$UB_CTLKEY_FILE $UB_VARDIR/$UB_CTLPEM_FILE $UB_VARDIR/$UB_SRVKEY_FILE $UB_VARDIR/$UB_SRVPEM_FILE
-        chown -R unbound:unbound $UB_VARDIR
-        chmod 640  $UB_VARDIR/$UB_CTLKEY_FILE $UB_VARDIR/$UB_CTLPEM_FILE $UB_VARDIR/$UB_SRVKEY_FILE $UB_VARDIR/$UB_SRVPEM_FILE
+        chmod 640 $UB_VARDIR/$UB_CTLKEY_FILE $UB_VARDIR/$UB_CTLPEM_FILE $UB_VARDIR/$UB_SRVKEY_FILE $UB_VARDIR/$UB_SRVPEM_FILE
   
         if [[ -f $UB_VARDIR/odhcpd/dhcp.leases ]]; then
            chown root:root $UB_VARDIR/odhcpd/dhcp.leases
@@ -1433,7 +1441,7 @@ unbound_uci() {
   config_get UB_N_THREADS   "$cfg" num_threads 1
   config_get UB_N_RATE_LMT  "$cfg" rate_limit 0
 
-  config_get UB_D_CONTROL     "$cfg" unbound_control 2
+  config_get UB_D_CONTROL     "$cfg" unbound_control 1
   config_get UB_D_DOMAIN_TYPE "$cfg" domain_type static
   config_get UB_D_DHCP_LINK   "$cfg" dhcp_link odhcpd
   config_get UB_D_EXTRA_DNS   "$cfg" add_extra_dns 0
@@ -1452,6 +1460,11 @@ unbound_uci() {
   config_list_foreach "$cfg" domain_insecure bundle_domain_insecure
   config_list_foreach "$cfg" iface_lan bundle_lan_networks
   config_list_foreach "$cfg" iface_wan bundle_wan_networks
+
+  # OVERRIDE ENCRYPTED CONTROL SINCE IT BREAKS
+  if [ $UB_D_CONTROL -gt 1 ] ; then
+    UB_D_CONTROL=1
+  fi
 
   if [ "$UB_D_DHCP_LINK" = "none" ] ; then
     config_get_bool UB_B_DNSMASQ   "$cfg" dnsmasq_link_dns 0

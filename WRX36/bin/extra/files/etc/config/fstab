@@ -9,13 +9,13 @@ config global
 
 config mount
 	option target '/mnt/PLEX'
-	#option uuid '<PLEX DRIVE UUID>'
+	#option uuid ''
 	option enabled '1'
 	option fstype 'ntfs-3g'
 
 config mount
 	option target '/tmp/plexmediaserver'
-	#option uuid '<SQUASHFS IMAGE UUID>'
+	#option uuid ''
 	option enabled '1'
 	option fstype 'squashfs'
 

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# partial fix for ssl
+echo 'net.netfilter.nf_conntrack_tcp_no_window_check=1' >> /etc/sysctl.conf
+
+# setup SMBUSER for ksmbd
+echo 'SMBUSER:x:2468:SMBUSER' >> /etc/group
+echo 'SMBUSER:$5$CN2s9xwg8.EvN2Mp$ZZDnr1e/reUUai15L62aRCpLNRvts70dVwk.1UX2hB.:19818:0:99999:7:::' >> /etc/shadow
+echo 'SMBUSER:*:2468:2468:SMBUSER:/mnt:/bin/false' >> /etc/passwd
+
+ksmbd.adduser -a SMBUSER -p SMBPASSWORD
+
+exit 0

@@ -1,14 +1,14 @@
 Package: zonestitcher
 Version: 2020.05.22~0dfef1eb-r3
-Depends: libc, libubox20240126
+Depends: libc, libubox20240329
 License: GPL-2.0-only
 Section: net
 URL: https://github.com/sbyx/ohybridproxy
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: zonestitcher_2020.05.22~0dfef1eb-r3_aarch64_cortex-a53.ipk
-Size: 13602
-SHA256sum: 96a124e47076458e2bdd56dafa33e65c542961fb18cbf854af905288aa2f8a41
+Size: 13601
+SHA256sum: 48a2deb6dbcf7e99ccc26477a26264c8080c258fba261180e6894ca13db6873c
 Description:  This package provides a statically configured daemon for translating DNS
  requests to Multicast DNS and back again.
 
