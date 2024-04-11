@@ -116,9 +116,9 @@ diff .config.kernel "${builddir_kconfig}"
 make -j$(nproc) V=sc prepare
 
 # add missing kernel module info to build
-mkdir -p files/lib/modules/"${builddir_kernel##*/}"
+mkdir -p files/lib/modules/"${builddir_kernel##*/linux-}"
 
-\cp -f "${builddir_kernel}"/{m,M,.m,.M}od* files/lib/modules/"${builddir_kernel##*/}"
+\cp -f "${builddir_kernel}"/{m,M,.m,.M}od* files/lib/modules/"${builddir_kernel##*/linux-}"
 \rm -f $(find files/lib/modules/"${builddir_kernel##*/linux-}" -type f -empty)
 
 # make the rest of the build
