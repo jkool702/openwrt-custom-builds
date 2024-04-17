@@ -81,7 +81,8 @@ elif [[ "${prev_full_config_path}" ]] && [[ -f "${prev_full_config_path}" ]]; th
 fi
 
 # get target board
-target_board="$(grep -F CONFIG_TARGET_BOARD <.config | sed -E 's/^[^"]*"//;s/".*$//')"
+#target_board="$(grep -F CONFIG_TARGET_BOARD <.config | sed -E 's/^[^"]*"//;s/".*$//')"
+target_board="$(grep -E '^CONFIG_TARGET_[a-z]+=y' <.config | sed -E 's/^CONFIG_TARGET_//;s/=y$//')"
 
 # make copy of default target config(s)
 for nn in find target/linux/${target_board}/config-*; do
