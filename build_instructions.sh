@@ -88,8 +88,8 @@ for nn in find target/linux/${target_board}/config-*; do
     cp $nn .config.target.orig0.${nn##*/}
 done
 
-# speed up downloads. Not needed if using my github repo.
-# echo "$(cat scripts/download.pl | sed -zE s/'(elsif \(\$mirror \=\~ \/\^\\\@GNU\\\/\(\.\+\)\$\/\) \{[^p]+push \@mirrors\, )[^\}]+\}'/'\1"https:\/\/gnu.mirror.constant.com\/$1"\n\t}'/)" > scripts/download.pl
+# speed up downloading GNU software. https://ftpmirror.gnu.org will automatically pick a nearby mirror for you. Not needed if using my github repo.
+# echo "$(cat scripts/download.pl | sed -zE s/'(elsif \(\$mirror \=\~ \/\^\\\@GNU\\\/\(\.\+\)\$\/\) \{[^p]+push \@mirrors\, )[^\}]+\}'/'\1"https:\/\/ftpmirror.gnu.org\/$1"\n\t}'/)" > scripts/download.pl
 
 # configure openwrt settings.
 make menuconfig
