@@ -5,37 +5,50 @@
 # set main buildroot
 buildroot_dir="/mnt/ramdisk"
 
-# set paths where you can find previous builds diffconfig, kernel config, and "files" directoryu needs to have: "configs/.config.diff", "configs/.config.kernel", and "files")
-# if you dont some/any of these then comment out (or unset if you already ran) the ones you dont have
+# optional - set paths where you can find the [diff]config, kernel config, and "files" directory needs from a previous build
+# if any of the below are set and a file/dir exists at the specified path, it will automatically be incorporated into the build
+# comment out (or unset if you already ran) any of the below that you dont want automatically added to the build
 prev_files_dir_path="${buildroot_dir}"/openwrt-custom-builds/WRX36/bin/extra/files
 prev_diff_config_path="${buildroot_dir}"/openwrt-custom-builds/WRX36/bin/extra/configs/.config.diff
 prev_kernel_config_path="${buildroot_dir}"/openwrt-custom-builds/WRX36/bin/extra/configs/.config.kernel
 
-# ALT -if you dont have a previous diffconfig (.config.diff) but have a previous full config (.config), specify its path below. Be sure to comment out (dont set) the above line setting "prev_diff_config_path"
+# ALT -if you dont have a previous diffconfig (.config.diff) but have a previous full config (.config), specify its path below. 
+# Be sure to comment out (or unset if already run) the above line that sets "prev_diff_config_path"
 # prev_full_config_path="${buildroot_dir}"/openwrt-custom-builds/WRX36/bin/extra/configs/.config
 
 # choose whether or not to build on a tmpfs
-tmpfs_build_flag=true
+# 'false', '0' --> disable. Anything else (nonempty) --> enable
+# if blank/unset, defaults to true if your system has >63 gigs ram and false otherwise
+# tmpfs_build_flag=true
 
 # # # # # BEGIN SCRIPT
 
-# set tmpfs_build_flag to false if empty+unset --OR-- to true if nonempty+set (to anything)
-tmpfs_build_flag="${tmpfs_build_flag:+true}"
-: "${tmpfs_build_flag:=false}"
+# get system memory 
+read -r memKB < /proc/meminfo
+memKB="${memKB% *}"
+memKB="${memKB#* }"
+
+# set tmpfs_build_flag to false if empty+unset --OR-- to true if nonempty+set (to anything other than 'false' or '0')
+if [[ "${tmpfs_build_flag}" == '0' ]] || [[ "${tmpfs_build_flag}" == 'false' ]]; then
+    tmpfs_build_flag=false
+elif [[ ${tmpfs_build_flag} ]]; then
+    tmpfs_build_flag=true
+elif (( ${memKB} > 66060288 )); then
+    tmpfs_build_flag=true
+else
+    tmpfs_build_flag=false
+fi
 
 # make build directory 
 mkdir -p "${buildroot_dir}"
 
-# mount tmpfs to it (if it doesnt already have one)
-# unless your system has a substantial amount of ram (64gb or more) you should probably comment out this line 
-# --OR-- you should set the "automatically remove build directories" (set "CONFIG_AUTOREMOVE=y" in .config)
+# mount tmpfs to it (if it doesnt already have one and tmpfs_build_flag is set)
+# unless your system has a substantial amount of ram (64gb or more) you should probably either:
+# not set tmpfs_build_flag --OR-- enable the "automatic removal of build directories" (set "CONFIG_AUTOREMOVE=y" in .config)
 ${tmpfs_build_flag} && {
-	 grep -F "${buildroot_dir}" </proc/mounts | grep -q 'tmpfs' || {
-	 	read -r memKB < /proc/meminfo
-		memKB="${memKB% *}"
-		memKB="${memKB#* }"
-	 	sudo mount -t tmpfs tmpfs "${buildroot_dir}" -o defaults -o size=$(( ( memKB * 1024 * 3 ) / 4 ))
-	}
+    grep -F "${buildroot_dir}" </proc/mounts | grep -q 'tmpfs' || {
+        sudo mount -t tmpfs tmpfs "${buildroot_dir}" -o defaults -o size=$(( ( memKB * 1024 * 3 ) / 4 ))
+    }
 }
 
 # download custom firmware repo (to grab config files) to "${buildroot_dir}"/openwrt-custom-builds
@@ -60,11 +73,11 @@ git clone --depth 1 --branch master --single-branch --no-tags --recurse-submodul
 [[ "${prev_files_dir_path}" ]] && [[ -d "${prev_files_dir_path}" ]] && cp -r "${prev_files_dir_path}" ./
 [[ "${prev_kernel_config_path}" ]] && [[ -f "${prev_kernel_config_path}" ]] && cp "${prev_kernel_config_path}" .config.kernel.prev || touch .config.kernel.prev
 if [[ "${prev_diff_config_path}" ]] && [[ -f "${prev_diff_config_path}" ]]; then
-	cp "${prev_diff_config_path}" .config
+    cp "${prev_diff_config_path}" .config
 elif [[ "${prev_full_config_path}" ]] && [[ -f "${prev_full_config_path}" ]]; then
-	cp "${prev_full_config_path}" .config
-	./scripts/diffconfig > .config.diff
-	\mv -f .config.diff .config 
+    cp "${prev_full_config_path}" .config
+    ./scripts/diffconfig > .config.diff
+    \mv -f .config.diff .config 
 fi
 
 # get target board
@@ -105,10 +118,10 @@ make -j$(nproc) V=sc check
 
 # we need to disable automatic build directory removal for the kernel build (if it is set)
 if ${config_autoremove_flag}; then
-	# build tools+toolchain
-	make -j$(nproc) V=sc prepare_kernel_conf
-	cp .config .config.save
-	{ grep -vE '^CONFIG_AUTOREMOVE=y$' <.config.save; echo '# CONFIG_AUTOREMOVE is not set'; } >.config
+    # build tools+toolchain
+    make -j$(nproc) V=sc prepare_kernel_conf
+    cp .config .config.save
+    { grep -vE '^CONFIG_AUTOREMOVE=y$' <.config.save; echo '# CONFIG_AUTOREMOVE is not set'; } >.config
 fi
 
 # build [tools+toolchain+]kernel (unmodified default kernel)
@@ -118,19 +131,19 @@ make -j$(nproc) V=sc prepare
 # if the target supports 2 different kernel versions this *should* correctly choose the one that you are using
 target_kconfig="$(find target/linux/${target_board}/config-* -maxdepth 0)"
 (( $(wc -l <<<"${target_kconfig}") > 1 )) && {
-	if grep -qF 'CONFIG_TESTING_KERNEL=y' <.config; then
-		target_kconfig0="${target_kconfig%%$'\n'*}"
-		target_kconfig="${target_kconfig#*$'\n'}"
-	else
-		target_kconfig0="${target_kconfig#*$'\n'}"
-		target_kconfig="${target_kconfig%%$'\n'*}"
-	fi
+    if grep -qF 'CONFIG_TESTING_KERNEL=y' <.config; then
+        target_kconfig0="${target_kconfig%%$'\n'*}"
+        target_kconfig="${target_kconfig#*$'\n'}"
+    else
+        target_kconfig0="${target_kconfig#*$'\n'}"
+        target_kconfig="${target_kconfig%%$'\n'*}"
+    fi
 }
 target_kconfig="$(realpath "${target_kconfig}")"
 builddir_kernel=(build_dir/target*/linux-${target_board}*/linux-${target_kconfig##*config-}*)
 [[ -z ${builddir_kernel} ]] && {
-	target_kconfig="$(realpath "${target_kconfig0}")"
-	builddir_kernel=(build_dir/target*/linux-${target_board}*/linux-${target_kconfig##*config-}*)
+    target_kconfig="$(realpath "${target_kconfig0}")"
+    builddir_kernel=(build_dir/target*/linux-${target_board}*/linux-${target_kconfig##*config-}*)
 }
 builddir_kernel="$(realpath "${builddir_kernel}")"
 builddir_kconfig="${builddir_kernel}"/.config
