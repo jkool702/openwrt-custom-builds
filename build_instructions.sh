@@ -96,7 +96,7 @@ done
 make menuconfig
 
 # generate diffconfig
-./scripts/diffconfig > .config.diff
+./scripts/diffconfig.sh > .config.diff
 
  grep -qE '^CONFIG_AUTOREMOVE=y$' <.config && config_autoremove_flag=true || config_autoremove_flag=false
 
