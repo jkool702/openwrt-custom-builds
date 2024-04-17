@@ -18,7 +18,7 @@ prev_kernel_config_path="${buildroot_dir}"/openwrt-custom-builds/WRX36/bin/extra
 
 # choose whether or not to build on a tmpfs
 # 'false', '0' --> disable. Anything else (nonempty) --> enable
-# if blank/unset, defaults to true if your system has >63 gigs ram and false otherwise
+# if blank/unset, defaults to true if your system has >60 gb ram and false otherwise
 # tmpfs_build_flag=true
 
 # # # # # BEGIN SCRIPT
@@ -33,7 +33,7 @@ if [[ "${tmpfs_build_flag}" == '0' ]] || [[ "${tmpfs_build_flag}" == 'false' ]];
     tmpfs_build_flag=false
 elif [[ ${tmpfs_build_flag} ]]; then
     tmpfs_build_flag=true
-elif (( ${memKB} > 66060288 )); then
+elif (( ${memKB} > 62914560 )); then
     tmpfs_build_flag=true
 else
     tmpfs_build_flag=false
