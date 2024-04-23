@@ -1,0 +1,3 @@
+depmod -a
+chronyd-hotplug
+wifi up

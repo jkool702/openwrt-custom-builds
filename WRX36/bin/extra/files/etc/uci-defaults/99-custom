@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# partial fix for ssl
+echo 'net.netfilter.nf_conntrack_tcp_no_window_check=1' >> /etc/sysctl.conf
+
+# setup SMBUSER for ksmbd
+echo 'SMBUSER:x:2468:SMBUSER' >> /etc/group
+echo 'SMBUSER:$5$CN2s9xwg8.EvN2Mp$ZZDnr1e/reUUai15L62aRCpLNRvts70dVwk.1UX2hB.:19818:0:99999:7:::' >> /etc/shadow
+echo 'SMBUSER:*:2468:2468:SMBUSER:/mnt:/bin/false' >> /etc/passwd
+
+sed -i -E s/'^(root.*\/bin\/)ash'/'\1bash'/ /etc/passwd
+
+ksmbd.adduser -a SMBUSER -p SMBPASSWORD
+
+/etc/init.d/bridger disable
+/etc/init.d/bridger stop
+
+/etc/init.d/sysntpd disable
+/etc/init.d/sysntpd stop
+
+ln /etc/ssl/certs/ca-certificates.crt /etc/unbound/ca-certificates.crt
+sudo -u unbound unbound-anchor -a /etc/unbound/root.key
+sudo -u unbound mkdir -p /var/lib/unbound
+cp -p /etc/unbound/root.key /var/lib/unbound
+sudo -u unbound unbound-control-setup -d /etc/unbound
+/etc/init.d/unbound restart
+
+chrony-hotplug
+
+if [ -d /etc/init.d/irqbalance ]; then
+uci set irqbalance.irqbalance.enabled='0'
+uci commit irqbalance
+/etc/init.d/irqbalance disable
+/etc/init.d/irqbalance stop
+fi
+
+exit 0

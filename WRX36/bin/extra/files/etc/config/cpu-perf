@@ -1,0 +1,16 @@
+
+config main 'config'
+	option enabled '1'
+
+config governor 'ondemand'
+
+config governor 'conservative'
+
+config cpu 'cpu0'
+
+config cpu 'cpu1'
+
+config cpu 'cpu2'
+
+config cpu 'cpu3'
+

@@ -1,0 +1,16 @@
+config defaults
+	# example for blacklisting individual devices or bridges
+	# list blacklist eth0
+        list blacklist "wan"
+#        list blacklist "erspan0"
+#        list blacklist "gre0"
+#        list blacklist "gretap0"
+#        list blacklist "ip6gre0"
+#        list blacklist "ip6tnl0"
+#        list blacklist "lo"
+#        list blacklist "miireg"
+#        list blacklist "siit0"
+#        list blacklist "sit0"
+#        list blacklist "tunl0"
+#        list blacklist "lan4"
+

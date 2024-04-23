@@ -1,31 +1,14 @@
-Package: batctl-default
-Version: 2023.3-1
-Depends: libc, libnl-tiny1, librt
-Provides: batctl
-Alternatives: 200:/usr/sbin/batctl:/usr/libexec/batctl-default
-License: GPL-2.0-only ISC MIT
-Section: net
-Architecture: aarch64_cortex-a53
-Installed-Size: 54786
-Filename: batctl-default_2023.3-1_aarch64_cortex-a53.ipk
-Size: 55779
-SHA256sum: fea14d359a658fcaf54e6824cbfab44e5f9b1ca32b46abfb53cb92674f106e44
-Description:  batctl is a more intuitive managment utility for B.A.T.M.A.N.-Advanced.
- It is an easier method for configuring batman-adv and provides some
- additional tools for debugging as well. This package builds
- version 2023.3 of the user space utility.
- Standard subcommands for configuration and online debugging are enabled.
-
 Package: zonestitcher
-Version: 2020-05-22-0dfef1eb-3
-Depends: libc, libubox202312041
+Version: 2020.05.22~0dfef1eb-r3
+Depends: libc, libubox20240329
 License: GPL-2.0-only
 Section: net
+URL: https://github.com/sbyx/ohybridproxy
 Architecture: aarch64_cortex-a53
-Installed-Size: 12681
-Filename: zonestitcher_2020-05-22-0dfef1eb-3_aarch64_cortex-a53.ipk
-Size: 13586
-SHA256sum: 7d0bafd66742bded95facb093692e7510f959a3406c1d39e4d04c772e8bab951
+Installed-Size: 30720
+Filename: zonestitcher_2020.05.22~0dfef1eb-r3_aarch64_cortex-a53.ipk
+Size: 13580
+SHA256sum: 7897c4d5e2cc6fc3f1602c303db9e0e2ac9822e6cd51636e173c361263dab68b
 Description:  This package provides a statically configured daemon for translating DNS
  requests to Multicast DNS and back again.
 
