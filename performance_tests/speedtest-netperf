@@ -1,0 +1,57 @@
+# note: this was run on a 1000/500 fiber internet connection
+
+speedtest-netperf.sh
+
+2024-04-23 13:36:50 Starting speedtest for 30 seconds per transfer session.
+Measure speed to netperf-west.bufferbloat.net (IPv4) while pinging gstatic.com.
+Download and upload sessions are sequential, each with 8 simultaneous streams.
+...............................
+ Download: 899.63 Mbps
+  Latency: [in msec, 31 pings, 0.00% packet loss]
+      Min:  28.700
+    10pct:  29.100
+   Median:  34.100
+      Avg:  34.465
+    90pct:  39.200
+      Max:  40.100
+ CPU Load: [in % busy (avg +/- std dev) @ avg frequency, 28 samples]
+     cpu0:  13.2 +/-  1.5  @ 2208 MHz
+     cpu1:  15.7 +/-  2.4  @ 2208 MHz
+     cpu2:  14.6 +/-  2.1  @ 2208 MHz
+     cpu3:  20.1 +/-  2.8  @ 2208 MHz
+ Overhead: [in % used of total CPU available]
+  netperf:  15.6
+...............................
+   Upload: 484.31 Mbps
+  Latency: [in msec, 25 pings, 0.00% packet loss]
+      Min:  28.700
+    10pct:  28.700
+   Median:  34.100
+      Avg:  32.564
+    90pct:  34.600
+      Max:  35.000
+ CPU Load: [in % busy (avg +/- std dev) @ avg frequency, 29 samples]
+     cpu0:   3.3 +/-  1.4  @ 2208 MHz
+     cpu1:   3.0 +/-  1.2  @ 2208 MHz
+     cpu2:   2.5 +/-  1.2  @ 2208 MHz
+     cpu3:   8.3 +/-  3.1  @ 2208 MHz
+ Overhead: [in % used of total CPU available]
+  netperf:   2.0
+
+
+# analysis of download CPU usage
+
+download average CPU usage  =  15.9%
+CPU overhead from the test  =  15.6%
+CPU usage for 900 mbps down =   0.3%
+
+
+# no-load ping (for refference)
+
+ping -A -c 100 -i 0.1 -q gstatic.com
+
+PING gstatic.com (173.194.219.120) 56(84) bytes of data.
+
+--- gstatic.com ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 2935ms
+rtt min/avg/max/mdev = 28.731/29.520/29.696/0.128 ms, pipe 2, ipg/ewma 29.643/29.536 ms
