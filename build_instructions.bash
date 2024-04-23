@@ -173,7 +173,7 @@ cp ${target_kconfig} .config.target.orig
 diff .config.kernel.prev .config.kernel.orig | grep -E '^<' | sed -E s/'^< '// > .config.kernel.prev.diff
 
 # diff original (pre-menuconfig) target config and full (post-menuconfig with all automatic changes) target config
-diff .config.target.orig0.${target_kconfig##*/} .config.target.orig | grep -E '^<' | sed -E s/'^< '// > .config.target.orig.diff
+diff .config.target.orig .config.target.orig0.${target_kconfig##*/} | grep -E '^<' | sed -E s/'^< '// > .config.target.orig.diff
 
 # layer full kernel config --> differernces to kernel config from repo --> differences to target config based on menuconfig choices
 # the idea here is that automatic changesd to the kernel probably are being made for a good reason,
@@ -191,8 +191,17 @@ realpath .config.kernel
 # All required changes will be automatically saved to the target .config-x.y
 make kernel_menuconfig 
 
+# regenerate kernel confoig from (now updated) target config
+make -j$(nproc) V=sc target/linux/{clean,prepare}
+
+# manually tweak makefile to set 
+#      asm-arch := armv8-a+crc+crypto+rdma 
+# --and-- add build flag
+#      -Wa,-mcpu=cortex-a53+crc+crypto
+vim $builddir_kernel/arch/arm64/Makefile
+
 # rebuild kernel with all kernel config tweaks present
-make -j$(nproc) V=sc target/linux/clean prepare
+make -j$(nproc) V=sc prepare
 
 # copy final target and kernel config
 mv .config.kernel .config.kernel.old
