@@ -1,5 +1,24 @@
 #!/usr/bin/env bash
 
+# Below is my "general" build script. It is a bit involved, but it allows you to properly integrate previous configurations (including the custom kernel .config)
+
+# As various bugs get fixed in the source code the following tweaks may not be needed, but to get this specific firmware to compile they were required:
+#     1. use the "package source override" for: unbound (unbound on github), libpcap (libpcap on github) and libpfring (PF_RING on github). This entails
+#          clone the github repo somewhere outside the openwrt buildroot, then 
+#          cd to the "packages" folder for these (something like package/feeds/packages/{unbound,libpfring} and package/libs/libpcap) and 
+#          run `ln -s /path/to/cloned/git/repo/.git git-src`
+#     2. after building the kernel, the "CMakeLists" for libpcap and usteer need minor modifications. First "prepare" the buildroot for these packages by running
+#            make package/feeds/packages/libpcap/prepare package/.../usteer/prepare
+#          For libpcap, add `set(___________ 0) to the first line of the CMakeLists file at builddir/.../libpcap/CMakeLists.txt
+#          For usteer, change the `Werror` to `Wno-error` in builddir/.../usteer-<ver>/CMakeLists.txt
+#     3. `tools/tar` requires you to be a non-root user to build...however, the final `make imagebuilder` step failed for me if I was not root. 
+#          To fix this, I started off as a standard (non-root) user and after the 1st `make prepare` call run
+#            sudo su
+#            find ./ -user $SUDO_USER -exec chown -R root:root {} +
+#     4. Add `HOST_CFLAGS += -fPIC` to the zstd Makefile at tools/zstd/Makefile
+#
+# THE FIXES SHOWN ABOVE ARE NOT INCLUDED IN THE BELOW BUILD SCRIPT! They may (or may not) be required to re-build an updated copy of the firmware from this repo.
+
 # # # # # USER SPECIFIED OPTIONS
 
 # set main buildroot
