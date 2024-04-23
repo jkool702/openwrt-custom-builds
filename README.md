@@ -1,6 +1,14 @@
 # openwrt-custom-builds
 Custom NSS-enabled firmware images (compiled locally from source) for OpenWrt for the Dynalink DL-WRX36
 
+# What does "NSS-enabled" mean?
+
+In addition to the "general purpose" CPU, the dynalink dl-wrx36 (and all other ipq807x-based routers) have additional processors that are specifically designed to handle certain networking-related tasks. These extra processors and their related functionality are collectively known as the "Networking Sub-System", or NSS. 
+
+In mainline OpenWrt, the NSS system is largely inactive and mostly just sits there idle and unused. In this NSS-enabled build, however, the NSS is active and takes over the vast majority of the networking stack. This both allows the router to process more traffic than what would be possible using the CPU (I only have only tested it on a 1 gbps connection; but, in theory, it should handle up to a 10 gbps connection). Using the NSS to handle networking stuff also frees up the CPU to do other potentially useful things (file sharing, recursive, DNS lookup, running a plex media server instance, etc.)
+
+Enabling NSS is particularly beneficial for high-bandwidth connections - anyone with an internet connection with bandwidth of a few hundred mbps (or more) should notice distinctly better router performance. Those with connection speeds under ~100 mbps will likely see minimal improvements, and *might* see slightly better performance on mainline openwrt.
+
 # Install instructions
 
 This OpenWrt firmware image can be installed using the [standard WRX36 install instructions for OpenWrt](https://openwrt.org/toh/dynalink/dl-wrx36). 
