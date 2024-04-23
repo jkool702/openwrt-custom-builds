@@ -72,7 +72,7 @@ ${tmpfs_build_flag} && {
 
 # download custom firmware repo (to grab config files) to "${buildroot_dir}"/openwrt-custom-builds
 cd "${buildroot_dir}"
-git clone https://github.com/jkool702/openwrt-custom-builds.git --branch=dynalink_wrx36_NSS_build
+git clone https://github.com/jkool702/openwrt-custom-builds.git
 
 mkdir -p "${buildroot_dir}/build"
 cd "${buildroot_dir}/build"
