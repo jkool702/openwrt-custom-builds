@@ -15,7 +15,7 @@
 #          To fix this, I started off as a standard (non-root) user and after the 1st `make prepare` call run
 #            sudo su
 #            find ./ -user $SUDO_USER -exec chown -R root:root {} +
-#     4. Add `HOST_CFLAGS += -fPIC` to the zstd Makefile at tools/zstd/Makefile
+#     4. Add `HOST_CFLAGS += -fPIC` to the zstd Makefile at tools/zstd/Makefile (note: this is not needed if you use my openwrt fork (since I already added this fix), which this build script does by default.)
 #
 # THE FIXES SHOWN ABOVE ARE NOT INCLUDED IN THE BELOW BUILD SCRIPT! They may (or may not) be required to re-build an updated copy of the firmware from this repo.
 
