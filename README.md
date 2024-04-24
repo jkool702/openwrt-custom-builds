@@ -76,6 +76,12 @@ To access plex from a web browser, go to 10.0.0.1:32400/web.
 
 NOTE: plexmediaserver requires `unzip` `curl` and `squashfs-tools-mksquashfs`. This build has them compiled in, but standard openwrt builds do not and will need them installed (using `opkg`)
 
+### Memory usage when running plexmediaserver
+
+When setup running, plex media server consumes ~35% of the available system RAM. The (very aggressive) builtin settings for unbound consume, by default, around 30% of the available system RAM. The various items that different programs require to be stored under /tmp takes up an additional ~10%. Combined, this only leaves ~1/4 of the system RAM for everything else. This build uses a compressed ramdisk for swap (zram + zswap), which helps, but there still isnt a lot of extra RAM to spare.
+
+As is, the build works just fine with like this...there isnt much free RAM, but as they say free RAM is wasted RAM. However, if you were to add another ram-hungry program to run in the build you might encounter out-of-memory problems. In this case Id recommend tuning down the unbound settings a bit or not running plex media server on the router.
+
 # Installing packages
 
 The standard 
