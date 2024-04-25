@@ -1,0 +1,105 @@
+# no sqm
+
+root@OpenWrt_WRX36:~# speedtest-netperf.sh
+2024-04-25 09:29:46 Starting speedtest for 30 seconds per transfer session.
+Measure speed to netperf-west.bufferbloat.net (IPv4) while pinging gstatic.com.
+Download and upload sessions are sequential, each with 8 simultaneous streams.
+...............................
+ Download: 913.09 Mbps
+  Latency: [in msec, 31 pings, 0.00% packet loss]
+      Min:  21.400
+    10pct:  22.000
+   Median:  26.800
+      Avg:  26.926
+    90pct:  31.600
+      Max:  33.800
+ CPU Load: [in % busy (avg +/- std dev) @ avg frequency, 28 samples]
+     cpu0:  23.0 +/- 12.4  @ 2208 MHz
+     cpu1:  21.8 +/-  9.1  @ 2208 MHz
+     cpu2:  29.8 +/- 13.0  @ 2208 MHz
+     cpu3:  29.8 +/-  9.0  @ 2208 MHz
+ Overhead: [in % used of total CPU available]
+  netperf:  16.8
+...................................
+   Upload: 476.50 Mbps
+  Latency: [in msec, 32 pings, 0.00% packet loss]
+      Min:  21.400
+    10pct:  21.700
+   Median:  26.300
+      Avg:  25.066
+    90pct:  27.200
+      Max:  27.400
+ CPU Load: [in % busy (avg +/- std dev) @ avg frequency, 32 samples]
+     cpu0:   9.4 +/-  8.1  @ 2208 MHz
+     cpu1:   9.1 +/-  9.9  @ 2208 MHz
+     cpu2:   9.0 +/-  9.0  @ 2208 MHz
+     cpu3:  15.5 +/- 10.5  @ 2208 MHz
+ Overhead: [in % used of total CPU available]
+  netperf:   1.8
+  
+  
+root@OpenWrt_WRX36:~# service sqm start
+
+SQM: Starting SQM script: nss-zk.qos on wan, in: 960000 Kbps, out: 500000 Kbps
+SQM: sqm_prepare_script: loading required kernel module: qca_nss_qdisc
+SQM: sqm_prepare_script: loading required kernel module: act_nssmirred
+SQM: sqm_start: egress shaping activated
+SQM: sqm_start: ingress shaping activated
+SQM: nss-zk.qos was started on wan successfully
+
+# sqm
+
+root@OpenWrt_WRX36:~# speedtest-netperf.sh
+2024-04-25 10:02:37 Starting speedtest for 30 seconds per transfer session.
+Measure speed to netperf-west.bufferbloat.net (IPv4) while pinging gstatic.com.
+Download and upload sessions are sequential, each with 8 simultaneous streams.
+...............................
+ Download: 889.81 Mbps
+  Latency: [in msec, 31 pings, 0.00% packet loss]
+      Min:  21.000
+    10pct:  21.000
+   Median:  21.700
+      Avg:  21.723
+    90pct:  22.400
+      Max:  22.800
+ CPU Load: [in % busy (avg +/- std dev) @ avg frequency, 28 samples]
+     cpu0:  32.8 +/-  3.6  @ 2208 MHz
+     cpu1:  34.3 +/-  0.0  @ 2208 MHz
+     cpu2:  29.5 +/-  5.4  @ 2208 MHz
+     cpu3:  41.2 +/-  0.0  @ 2208 MHz
+ Overhead: [in % used of total CPU available]
+  netperf:  18.2
+................................
+   Upload: 457.12 Mbps
+  Latency: [in msec, 32 pings, 0.00% packet loss]
+      Min:  20.900
+    10pct:  20.900
+   Median:  21.700
+      Avg:  21.547
+    90pct:  21.900
+      Max:  21.900
+ CPU Load: [in % busy (avg +/- std dev) @ avg frequency, 29 samples]
+     cpu0:   2.2 +/-  1.0  @ 2208 MHz
+     cpu1:   6.7 +/-  2.0  @ 2208 MHz
+     cpu2:   2.8 +/-  1.1  @ 2208 MHz
+     cpu3:   6.7 +/-  2.7  @ 2208 MHz
+ Overhead: [in % used of total CPU available]
+  netperf:   1.9
+  
+  
+root@OpenWrt_WRX36:~# cat /etc/config/sqm
+
+config queue 'eth0'
+        option enabled '1'
+        option interface 'wan'
+        option download '960000'
+        option upload '500000'
+        option qdisc 'fq_codel'
+        option script 'nss-zk.qos'
+        option linklayer 'ethernet'
+        option overhead '44'
+        option tcMTU '2047'
+        option tcTSIZE '512'
+        option tcMPU '84'
+        option ingress_ecn 'ECN'
+        option egress_ecn 'ECN'
