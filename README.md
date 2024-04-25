@@ -97,6 +97,29 @@ Disclaimer: My wrx36 is running the firmware that the firmware image's in this r
 
 # KNOWN BUGS
 
-Currently, to the best of my knowledge, everything is working correctly as it is supposed to (on my dynalink dl-wrx36 at least). That said, enabling the NSS subsystem on OpenWrt is about as cutting edge as openwrt gets. As such, the better performance that using NSS gives comes at the cost of bugs being more likely. If/when any bugs are reported I will list them below.
+luci-app-sqm does not work properly. If you attempt to setup SQM using LUCI you will get high CPU usage and other undesirable behavior. (Note: this is a general openwrt bug, not a NSS-specific one).
+
+The following SQM config (`/etc/config/sqm`) works quite well for me with a 1000/500 mbps fiber connection:
+
+```
+config queue 'eth0'
+        option enabled '1'
+        option interface 'wan'
+        option download '960000'
+        option upload '500000'
+        option qdisc 'fq_codel'
+        option script 'nss-zk.qos'
+        option linklayer 'ethernet'
+        option overhead '44'
+        option tcMTU '2047'
+        option tcTSIZE '512'
+        option tcMPU '84'
+        option ingress_ecn 'ECN'
+        option egress_ecn 'ECN'
+```
+
+***
+
+Enabling the NSS subsystem on OpenWrt is about as cutting edge as openwrt gets. As such, the better performance that using NSS gives comes at the cost of bugs being more likely. If/when any bugs are reported I will list them here.
 
 It is worth noting that this build does NOT include mesh support.
