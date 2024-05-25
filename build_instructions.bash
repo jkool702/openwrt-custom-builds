@@ -104,7 +104,7 @@ fi
 target_board="$(grep -E '^CONFIG_TARGET_[a-z]+=y' <.config | sed -E 's/^CONFIG_TARGET_//;s/=y$//')"
 
 # make copy of default target config(s)
-for nn in find target/linux/${target_board}/config-*; do
+for nn in target/linux/${target_board}/config-*; do
     cp $nn .config.target.orig0.${nn##*/}
 done
 
