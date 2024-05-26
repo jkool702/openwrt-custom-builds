@@ -223,9 +223,9 @@ vim $builddir_kernel/arch/arm64/Makefile
 make -j$(nproc) V=sc prepare
 
 # copy final target and kernel config
-mv .config.kernel .config.kernel.old
-cp "$builddir_kconfig" .config.kernel
-cp "$target_kconfig" .config.target
+\mv .config.kernel .config.kernel.old
+\cp "$builddir_kconfig" .config.kernel
+\cp "$target_kconfig" .config.target
 
 # add missing kernel module info to build by including them in the files/lib/modules/<kernel_ver> (this makes `depmod` work better)
 mkdir -p files/lib/modules/"${builddir_kernel##*/linux-}"
