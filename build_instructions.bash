@@ -229,14 +229,18 @@ make -j$(nproc) V=sc prepare
 
 # add missing kernel module info to build by including them in the files/lib/modules/<kernel_ver> (this makes `depmod` work better)
 mkdir -p files/lib/modules/"${builddir_kernel##*/linux-}"
-\cp -f "${builddir_kernel}"/{,.}{m,M}od* files/lib/modules/"${builddir_kernel##*/linux-}"
+\cp -f "${builddir_kernel}"/{.vermagic,.dep_files} "${builddir_kernel}"/{,.}{m,M}od* files/lib/modules/"${builddir_kernel##*/linux-}"
 find files/lib/modules/"${builddir_kernel##*/linux-}" -type f -empty -exec rm {} +
 
 # we need to re-enable automatic build directory removal for the rest of the build (if CONFIG_AUTOREMOVE set)
 ${config_autoremove_flag} && \mv -f .config.save .config
 
 # make the rest of the build
-make -j$(nproc) -k V=sc
+IGNORE_ERRORS=1 make -j$(nproc) -k V=swc package/compile
+sudo find ./ -user $USER -exec chown -R root:root {} +
+su
+
+make -j28 -k V=swc
 
 # optional: gather some useful things from the build and add them to bin/extra
 mkdir -p bin/extra/keys
