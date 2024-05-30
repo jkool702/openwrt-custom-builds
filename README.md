@@ -1,6 +1,12 @@
 # openwrt-custom-builds
 Custom NSS-enabled firmware images (compiled locally from source) for OpenWrt for the Dynalink DL-WRX36
 
+# NEW RELEASE - 05/30/24
+
+As of this release I will be releasing two different versions. One that uses `unbound`+`odhcpd` for DNS+DHCP, and one than uses dnsmasq-full. I reccomend using the `unbound` varient unless you have a specific need for `dnsmasq-full` (e.g., it is a requirement for another package you want to use like `pbr`).
+
+The new build is largely the same as the previous NSS build (with everything updated and now buiilt with GCC 14). It is slightly leaner, giving you a bit more free flash space and a bit more memory headroom if you are running plexmediaserver on the unbound varient.
+
 # What does "NSS-enabled" mean?
 
 In addition to the "general purpose" CPU, the dynalink dl-wrx36 (and all other ipq807x-based routers) have additional processors that are specifically designed to handle certain networking-related tasks. These extra processors and their related functionality are collectively known as the "Networking Sub-System", or NSS. 
