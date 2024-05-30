@@ -1,1 +1,1 @@
-{"metadata":{"timestamp":"2024-05-30T08:20:48"},"serialNumber":"urn:uuid:b8593236-96f4-4df8-bea4-1fc9ad2d78c5","version":1,"bomFormat":"CycloneDX","specVersion":"1.4","components":[{"name":"sqm-scripts-nss","type":"application","version":"20240510"}]}
+{"bomFormat":"CycloneDX","metadata":{"timestamp":"2024-05-30T07:24:19"},"specVersion":"1.4","components":[{"type":"application","version":"20240510","name":"sqm-scripts-nss"}],"version":1,"serialNumber":"urn:uuid:a834f1d1-b769-4343-b0a0-4b1596b30bb6"}

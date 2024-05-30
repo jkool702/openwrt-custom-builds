@@ -95,6 +95,7 @@ dbus - 1.14.10-r1
 dbus-utils - 1.14.10-r1
 diffutils - 3.10-r1
 dmesg - 2.39.3-r1
+dnsmasq-full - 2.90-r2
 dnstap - 0.4.0-r1
 drill - 1.8.3-r1
 dropbear - 2024.85-r1
@@ -266,6 +267,7 @@ kmod-nat46 - 6.6.30.2022.09.19~4c5beee2-r1
 kmod-nbd - 6.6.30-r1
 kmod-netatop - 6.6.30.3.1-r1
 kmod-nf-conntrack - 6.6.30-r1
+kmod-nf-conntrack-netlink - 6.6.30-r1
 kmod-nf-conntrack6 - 6.6.30-r1
 kmod-nf-flow - 6.6.30-r1
 kmod-nf-ipt - 6.6.30-r1
@@ -420,8 +422,10 @@ libmnl0 - 1.0.5-r1
 libmount1 - 2.39.3-r1
 libncurses6 - 6.4-r2
 libnet-1.2.x - 1.2-rc3-r4
+libnetfilter-conntrack3 - 1.0.9-r2
 libnetsnmp - 5.9.4-r2
 libnettle8 - 3.9.1-r1
+libnfnetlink0 - 1.0.2-r1
 libnftnl11 - 1.2.6-r1
 libnghttp2-14 - 1.61.0-r1
 libnghttp3 - 1.2.0-r1
@@ -473,7 +477,6 @@ libucode20230711 - 2024.05.09~0d823e70-r1
 libudebug - 2023.12.06~6d3f51f9
 libudev-zero - 1.0.3-r1
 libuhttpd-openssl - 3.14.1-r2
-libunbound - 1.19.3-r2
 libunrar - 7.0.7-r1
 libunwind8 - 1.8.1-r1
 liburing - 2.6-r1
@@ -518,7 +521,6 @@ luci-app-statistics - 24.149.32680~c27c0b2
 luci-app-temp-status - 0.4-2-1
 luci-app-tn-netports - 2.0.6-1
 luci-app-uhttpd - 24.149.32680~c27c0b2
-luci-app-unbound - 24.149.32680~c27c0b2
 luci-app-usteer - 24.149.32680~c27c0b2
 luci-app-watchcat - 24.149.32680~c27c0b2
 luci-base - 24.149.32680~c27c0b2
@@ -708,12 +710,6 @@ uhttpd-mod-lua - 2023.06.25~34a8a74d-r3
 uhttpd-mod-ubus - 2023.06.25~34a8a74d-r3
 uhttpd-mod-ucode - 2023.06.25~34a8a74d-r3
 umdns - 2024.01.08~e91ed406-r1
-unbound-anchor - 1.19.3-r2
-unbound-checkconf - 1.19.3-r2
-unbound-control - 1.19.3-r2
-unbound-control-setup - 1.19.3-r2
-unbound-daemon - 1.19.3-r2
-unbound-host - 1.19.3-r2
 unrar - 7.0.7-r1
 unzip - 6.0-r8
 urandom-seed - 3
