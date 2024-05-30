@@ -7,8 +7,8 @@ URL: https://github.com/sbyx/ohybridproxy
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: zonestitcher_2020.05.22~0dfef1eb-r3_aarch64_cortex-a53.ipk
-Size: 14487
-SHA256sum: bc8eb8c330a8a494b3d8db441a5e78a9cf1adc600addeb731c0046465bac487a
+Size: 14457
+SHA256sum: 7d70a0ef2a4002a6b686a73fe9fba99d7725c2121f7c5e97011c109862683d1e
 Description:  This package provides a statically configured daemon for translating DNS
  requests to Multicast DNS and back again.
 

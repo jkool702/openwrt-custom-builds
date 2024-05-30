@@ -1,0 +1,36 @@
+
+config system
+	option hostname 'OpenWrt_WRX36'
+	option ttylogin '0'
+	option log_size '64'
+	option urandom_seed '0'
+	option log_proto 'udp'
+	option conloglevel '8'
+	option cronloglevel '5'
+	option zram_comp_algo 'zstd'
+	option description 'OpenWrt on Dynalink DL-WRX36 (NSS)'
+	option notes 'Custom NSS-enabled OpenWrt firmware for Dynalink DL-WRX36'
+	#option zonename ''
+	#option timezone ''
+
+config timeserver 'ntp'
+	option enabled '0'
+
+config led 'led_wan_port_link_green'
+	option name 'WAN-PORT-LINK-GREEN'
+	option sysfs '90000.mdio-1:1c:green:wan'
+	option trigger 'netdev'
+	option mode 'link 1000 link_2500'
+	option dev 'wan'
+
+config led 'led_wan_port_link_yellow'
+	option name 'WAN-PORT-LINK-YELLOW'
+	option sysfs '90000.mdio-1:1c:yellow:wan'
+	option trigger 'netdev'
+	option mode 'tx rx link_10 link_100'
+	option dev 'wan'
+
+config rngd
+	option enabled '1'
+	option device '/dev/urandom'
+

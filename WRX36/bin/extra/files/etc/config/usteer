@@ -1,0 +1,13 @@
+
+config usteer
+	option network 'lan'
+	option syslog '1'
+	option local_mode '1'
+	option ipv6 '0'
+	option debug_level '2'
+	option band_steering_threshold '1'
+	option band_steering_interval '30000'
+	option link_measurement_interval '30000'
+	list ssid_list 'OpenWrt_WiFi'
+	option band_steering_min_snr '0'
+

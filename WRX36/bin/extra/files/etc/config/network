@@ -1,0 +1,59 @@
+
+config interface 'loopback'
+	option device 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option ula_prefix 'fda0:e854:8bbe::/48'
+
+config device
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'lan1'
+	list ports 'lan2'
+	list ports 'lan3'
+	option bridge_empty '1'
+	option stp '1'
+	option igmp_snooping '1'
+
+config interface 'lan'
+	option device 'br-lan'
+	option proto 'static'
+	option ip6assign '60'
+	option broadcast '10.0.0.255'
+	list dns_search 'lan'
+	list ipaddr '10.0.0.1/24'
+	list dns '10.0.0.1'
+	option delegate '0'
+
+config interface 'IoT'
+	option device 'lan4'
+	option proto 'static'
+	option ip6assign '60'
+	option broadcast '192.168.0.255'
+	list ipaddr '192.168.0.1/24'
+	list dns_search 'lan'
+	list dns '192.168.0.1'
+	option delegate '0'
+
+config interface 'wan'
+	option device 'wan'
+	option proto 'dhcp'
+	option force_link '1'
+	option peerdns '0'
+	list dns '127.0.0.1'
+	option delegate '0'
+
+config interface 'wan6'
+	option device 'wan'
+	option proto 'dhcpv6'
+	option auto '0'
+	option reqaddress 'try'
+	option reqprefix 'auto'
+	option peerdns '0'
+
+config device
+	option name 'lan4'
+

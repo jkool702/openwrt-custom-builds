@@ -47,8 +47,8 @@ Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: liblucihttp0_2023.03.15~9b5b683f-r1_aarch64_cortex-a53.ipk
-Size: 8746
-SHA256sum: 3caf3361de247e60740ff9eeee2d9124db0f00ffa354fb7e60a50bac90315efe
+Size: 8741
+SHA256sum: a59c491b332df69883e6c2f30b28e3bfdc4a7c9a4bf4a9503b4b05245ff19d86
 Description:  LuCI HTTP utility library
 
 Package: luci-app-acl
@@ -268,8 +268,8 @@ Maintainer: OpenWrt LuCI community
 Architecture: aarch64_cortex-a53
 Installed-Size: 501760
 Filename: luci-base_24.149.32680~c27c0b2_aarch64_cortex-a53.ipk
-Size: 127334
-SHA256sum: 215dd5df6daf924d8d48bfc98d82d25a93d9cba9c8d5433ae183309929f886bd
+Size: 127314
+SHA256sum: 83305f7d935f48bb5122b91e49b854aa6c8cc0f06cb15cc1c0e88d7762121853
 Description:  LuCI core runtime
 
 Package: luci-compat
@@ -369,8 +369,8 @@ Maintainer: OpenWrt LuCI community
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: luci-lib-ip_24.149.32680~c27c0b2_aarch64_cortex-a53.ipk
-Size: 16882
-SHA256sum: 417786a57d2f35e4771c0b6400020b744426e9a5c25be5da3efd2fec2c484169
+Size: 16759
+SHA256sum: 63d536db0699e24c2d5bff4d2f3e4d1af732c1d7604a6167a42bc504ddb1b433
 Description:  Lua library for IP calculation and routing information
 
 Package: luci-lib-ipkg
@@ -438,7 +438,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: luci-lib-jsonc_24.149.32680~c27c0b2_aarch64_cortex-a53.ipk
 Size: 5485
-SHA256sum: 92405d1fef0fca61b465faa4b62d3d568714d421d2663f420c03bb102543de3c
+SHA256sum: 4569b31492aeae00f9cb5869f82f05955ee21837669c25d1b1c2145473dfd292
 Description:  Lua binding for JSON-C
 
 Package: luci-lib-nixio
@@ -454,8 +454,8 @@ Maintainer: OpenWrt LuCI community
 Architecture: aarch64_cortex-a53
 Installed-Size: 112640
 Filename: luci-lib-nixio_24.149.32680~c27c0b2_aarch64_cortex-a53.ipk
-Size: 37689
-SHA256sum: 26a614c3223f97f34fa27ab4755d2ec1d01efb85ecae95c798ed1508dcc78e8c
+Size: 37619
+SHA256sum: 6c768559de2d3f80221af2809c4a52d4a188e91124f1545d17e596056dfa49c9
 Description:  NIXIO POSIX library
 
 Package: luci-lib-px5g
@@ -471,8 +471,8 @@ Maintainer: OpenWrt LuCI community
 Architecture: aarch64_cortex-a53
 Installed-Size: 92160
 Filename: luci-lib-px5g_24.149.32680~c27c0b2_aarch64_cortex-a53.ipk
-Size: 43092
-SHA256sum: b1150f04aa42ca2afa87b157f2a581b840c007c1b78993bb08690e7745d7ea2f
+Size: 42442
+SHA256sum: 8caa9112eafe59c42e2aa801b4676da47f6ecbf7d93123fe68e606991233f1c9
 Description:  RSA/X.509 Key Generator (required for LuCId SSL support)
 
 Package: luci-light
@@ -505,8 +505,8 @@ Maintainer: OpenWrt LuCI community
 Architecture: aarch64_cortex-a53
 Installed-Size: 122880
 Filename: luci-lua-runtime_24.149.32680~c27c0b2_aarch64_cortex-a53.ipk
-Size: 33394
-SHA256sum: 190b7f86037d9ebcea07d3fa10dab63ab80bea23b87e14abf79143c6cebaca92
+Size: 33217
+SHA256sum: ee6b3e0fadf22e2773e71f28acd9e993c01ce1ccfcb5410b3735d3120037ef37
 Description:  LuCI Lua runtime libraries
 
 Package: luci-mod-admin-full
@@ -590,8 +590,8 @@ Maintainer: OpenWrt LuCI community
 Architecture: aarch64_cortex-a53
 Installed-Size: 184320
 Filename: luci-mod-status_24.149.32680~c27c0b2_aarch64_cortex-a53.ipk
-Size: 40493
-SHA256sum: dcbd96e36e717584daeef5c92dd4836b43aa28f76a21c894f0213ab4e93d7996
+Size: 40491
+SHA256sum: b559a8818c08ea252986ae97be9d6135e55488fe3c8ff77e396a8eb16e12cc2d
 Description:  LuCI Status Pages
 
 Package: luci-mod-system
@@ -742,8 +742,8 @@ Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: rpcd-mod-luci_20240305-r1_aarch64_cortex-a53.ipk
-Size: 15196
-SHA256sum: a515e0b7253d3aa86fd9d04dee45220acc40e7ce877f78013bf45dc274536d5f
+Size: 15210
+SHA256sum: 419cdbe86028772192cbf26ec74ca5ccef6e6ad413bb625c373ca4b54323716f
 Description:  Provides LuCI backend ubus RPC operations.
 
 Package: rpcd-mod-rrdns
@@ -758,8 +758,8 @@ Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: rpcd-mod-rrdns_20170710_aarch64_cortex-a53.ipk
-Size: 4909
-SHA256sum: efe1437cdfb379ece11ed13bb31c384c3e4bece446893c5af3af66d59aa4040a
+Size: 4879
+SHA256sum: b20b45a182c8480eb890b2aef9fbaf080e652ffee1bff740b52908d190d9372d
 Description:  Provides rapid mass reverse DNS lookup functionality.
 
 Package: ucode-mod-html
@@ -774,8 +774,8 @@ Maintainer: Jo-Philipp Wich <jo@mein.io>
 Architecture: aarch64_cortex-a53
 Installed-Size: 122880
 Filename: ucode-mod-html_1_aarch64_cortex-a53.ipk
-Size: 37763
-SHA256sum: 47d89bb4cff32da174582e0a879b3c890acba1de631a7e10010c4796563440f3
+Size: 37790
+SHA256sum: d4155d7cb6e604aed34dbaf8cd570aba5f38d8dd535d277884003537419bd453
 Description:  ucode HTML utility library
 
 Package: ucode-mod-lua
