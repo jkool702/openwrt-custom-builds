@@ -216,7 +216,7 @@ make -j$(nproc) V=sc target/linux/{clean,prepare}
 # manually tweak makefile to set 
 #      asm-arch := armv8-a+crc+crypto+rdma 
 # --and-- add build flag
-#      -Wa,-mcpu=cortex-a53+crc+crypto
+#      -Wa,-mcpu=cortex-a53+crc+crypto+rdma
 vim $builddir_kernel/arch/arm64/Makefile
 
 # rebuild kernel with all kernel config tweaks present
