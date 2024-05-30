@@ -1,0 +1,21 @@
+
+config watchcat
+	option period '15m'
+	option mode 'ping_reboot'
+	option pinghosts '1.1.1.1'
+	option forcedelay '1m'
+	option addressfamily 'ipv4'
+	option pingperiod '1m'
+	option pingsize 'standard'
+	option interface '@wan'
+
+config watchcat
+	option mode 'ping_reboot'
+	option period '15m'
+	option pinghosts 'gstatic.com'
+	option addressfamily 'any'
+	option pingperiod '1m'
+	option pingsize 'standard'
+	option forcedelay '1m'
+	option interface '@wan'
+

@@ -1,0 +1,20 @@
+config pool
+	option hostname 'stratum1.time.cifelli.xyz'
+	option maxpoll '12'
+	option iburst 'yes'
+	option nts yes
+
+config dhcp_ntp_server
+	option iburst 'yes'
+	option disabled 'no'
+
+config allow
+	option interface 'lan'
+
+config makestep
+	option threshold '1.0'
+	option limit '3'
+
+config nts
+	option rtccheck 'yes'
+	option systemcerts 'yes'

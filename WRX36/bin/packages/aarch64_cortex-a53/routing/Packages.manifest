@@ -6,14 +6,14 @@ SourceName: ohybridproxy
 License: GPL-2.0-only
 LicenseFiles: LICENSE
 Section: net
-SourceDateEpoch: 1713250390
+SourceDateEpoch: 1716885725
 URL: https://github.com/sbyx/ohybridproxy
 Maintainer: Steven Barth <cyrus@openwrt.org>
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: zonestitcher_2020.05.22~0dfef1eb-r3_aarch64_cortex-a53.ipk
-Size: 13580
-SHA256sum: 7897c4d5e2cc6fc3f1602c303db9e0e2ac9822e6cd51636e173c361263dab68b
+Size: 14487
+SHA256sum: bc8eb8c330a8a494b3d8db441a5e78a9cf1adc600addeb731c0046465bac487a
 Description:  This package provides a statically configured daemon for translating DNS
  requests to Multicast DNS and back again.
 

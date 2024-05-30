@@ -1,18 +1,3 @@
-Package: nss-eip-firmware
-Version: 2.5.7-r1
-Depends: libc
-Source: feeds/nss_packages/firmware/nss-eip-firmware
-SourceName: nss-eip-firmware
-Section: firmware
-SourceDateEpoch: 1713088007
-Maintainer: Robert Marko <robimarko@gmail.com>
-Architecture: aarch64_cortex-a53
-Installed-Size: 40960
-Filename: nss-eip-firmware_2.5.7-r1_aarch64_cortex-a53.ipk
-Size: 9503
-SHA256sum: 9f1c4f3df56a8fd91ad2b1fa27d636aa881830cc22ab3c6cb787ff1c86f37811
-Description:  NSS EIP-197 firmware
-
 Package: nss-firmware-default
 Version: 2022.07.12~ade6bff5-r2
 Depends: libc
@@ -20,14 +5,14 @@ Source: feeds/nss_packages/firmware/nss-firmware
 SourceName: nss-firmware
 LicenseFiles: LICENSE.md
 Section: firmware
-SourceDateEpoch: 1713088007
+SourceDateEpoch: 1714927679
 URL: https://github.com/quic/qca-sdk-nss-fw.git
 Maintainer: Sean K <datapronix@protonmail.com>
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: nss-firmware-default_2022.07.12~ade6bff5-r2_aarch64_cortex-a53.ipk
-Size: 901
-SHA256sum: 44fa6e0637d5ef16d5556b2cf85bbaeafd17b3e694c994d35550348f018074a7
+Size: 865
+SHA256sum: 3cd1a7f718bb1e529d95df8f42602cbcad66027905372fa2155679073e16e8b4
 Description:  NSS firmware
 
 Package: nss-firmware-ipq8074
@@ -37,13 +22,13 @@ Source: feeds/nss_packages/firmware/nss-firmware
 SourceName: nss-firmware
 LicenseFiles: LICENSE.md
 Section: firmware
-SourceDateEpoch: 1713088007
+SourceDateEpoch: 1714927679
 URL: https://github.com/quic/qca-sdk-nss-fw.git
 Maintainer: Sean K <datapronix@protonmail.com>
 Architecture: aarch64_cortex-a53
 Installed-Size: 1136640
 Filename: nss-firmware-ipq8074_2022.07.12~ade6bff5-r2_aarch64_cortex-a53.ipk
-Size: 419554
-SHA256sum: ad243f49e32e4dcad673d0bed741de2b543aaf821f75a01503382bbb88482d01
+Size: 419376
+SHA256sum: 068d677e3ac381049ad5218bb91f90e22e9366d16e3e06a6923b571f34367c01
 Description:  NSS firmware
 

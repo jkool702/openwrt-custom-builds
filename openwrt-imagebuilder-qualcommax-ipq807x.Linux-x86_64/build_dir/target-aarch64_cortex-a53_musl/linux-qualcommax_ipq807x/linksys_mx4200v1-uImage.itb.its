@@ -6,7 +6,7 @@
 
 	images {
 		kernel-1 {
-			description = "ARM64 OpenWrt Linux-6.6.27";
+			description = "ARM64 OpenWrt Linux-6.6.30";
 			data = /incbin/("/mnt/ramdisk/build/openwrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq807x/linksys_mx4200v1-uImage.itb");
 			type = "kernel";
 			arch = "arm64";

@@ -1,0 +1,15 @@
+
+config globals
+	option workgroup 'WORKGROUP'
+	option interface 'lan'
+	option description 'OpenWrt_WRX36'
+
+config share
+	#option name ''
+	#option path ''
+	option read_only 'no'
+	option users 'SMBUSER'
+	option guest_ok 'no'
+	option create_mask '0666'
+	option dir_mask '0777'
+
