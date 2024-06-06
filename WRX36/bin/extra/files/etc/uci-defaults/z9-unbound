@@ -1,0 +1,55 @@
+#!/bin/sh
+
+{ [ -f /etc/config/unbound ] && ! [ "$(cat /etc/config/unbound)" = "$(cat /rom/etc/config/unbound)" ]; } || {
+uci batch <<'EOF'
+delete unbound.ub_main
+set unbound.ub_main=unbound
+set unbound.ub_main.interface_auto='1'
+set unbound.ub_main.hide_binddata='1'
+set unbound.ub_main.listen_port='53'
+set unbound.ub_main.extended_luci='1'
+set unbound.ub_main.localservice='1'
+set unbound.ub_main.add_extra_dns='0'
+set unbound.ub_main.num_threads='1'
+set unbound.ub_main.rate_limit='0'
+set unbound.ub_main.rebind_protection='1'
+set unbound.ub_main.rebind_localhost='1'
+set unbound.ub_main.root_age='5'
+set unbound.ub_main.ttl_min='120'
+set unbound.ub_main.ttl_neg_max='1000'
+set unbound.ub_main.validator='1'
+set unbound.ub_main.validator_ntp='1'
+set unbound.ub_main.verbosity='1'
+set unbound.ub_main.enabled='1'
+set unbound.ub_main.extended_stats='1'
+set unbound.ub_main.dhcp_link='odhcpd'
+set unbound.ub_main.recursion='agressive'
+set unbound.ub_main.resource='default'
+set unbound.ub_main.domain='lan'
+set unbound.ub_main.unbound_control='1'
+set unbound.ub_main.protocol='ip6_local'
+set unbound.ub_main.manual_conf='0'
+set unbound.ub_main.edns_size='1232'
+set unbound.ub_main.dns64='1'
+set unbound.ub_main.dns64_prefix='64:ff9b::/96'
+set unbound.ub_main.domain_type='static'
+set unbound.ub_main.add_local_fqdn='4'
+set unbound.ub_main.add_wan_fqdn='0'
+set unbound.ub_main.trigger_interface='lan' 'IoT' 'wan'
+set unbound.ub_main.iface_lan='IoT' 'lan'
+set unbound.ub_main.iface_wan='wan' 'wan6'
+set unbound.ub_main.iface_trig='IoT' 'lan' 'wan'
+set unbound.ub_main.dhcp4_slaac6='1'
+set unbound.ub_main.query_minimize='1'
+delete unbound.auth_icann
+set unbound.auth_icann=zone
+set unbound.auth_icann.enabled='1'
+set unbound.auth_icann.fallback='1'
+set unbound.auth_icann.url_dir='https://www.internic.net/domain/'
+set unbound.auth_icann.zone_type='auth_zone'
+set unbound.auth_icann.server='lax.xfr.dns.icann.org' 'iad.xfr.dns.icann.org'
+set unbound.auth_icann.zone_name='.' 'arpa.' 'in-addr.arpa.' 'in-addr-servers.arpa.' 'ip4only.arpa.' 'ip6.arpa.' 'ip6-servers.arpa.' 'root-servers.net.' 'iana-servers.net.' 'icann-servers.net.' 'mcast.net.' 'ns.arpa.' 'home.arpa.' 'resolver.arpa.' 'uri.arpa.' 'urn.arpa.' 'iris.arpa.'
+EOF
+uci commit unbound
+}
+exit 0

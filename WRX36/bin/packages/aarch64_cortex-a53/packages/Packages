@@ -6,8 +6,8 @@ Section: net
 Architecture: all
 Installed-Size: 92160
 Filename: adblock_4.1.5-r9_all.ipk
-Size: 20820
-SHA256sum: 6690d83856e807457c4676214d2005c6038ae709ba172c4c1aefb7f64a7a2aaa
+Size: 20822
+SHA256sum: 82376044442cf06860c4962ab5c3df94ca0d06c59b5abcfc8f8de9ad743a5296
 Description:  Powerful adblock solution to block ad/abuse domains via dnsmasq, unbound, named or kresd.
  The script supports many domain blacklist sites plus manual black- and whitelist overrides.
  Please see https://github.com/openwrt/packages/blob/master/net/adblock/files/README.md for further information.
@@ -22,8 +22,8 @@ URL: https://github.com/royhills/arp-scan
 Architecture: aarch64_cortex-a53
 Installed-Size: 1464320
 Filename: arp-scan-database_1.10.0-r2_aarch64_cortex-a53.ipk
-Size: 533488
-SHA256sum: 6cc59dd89840bde6f0d8dc1c21cca85062f4c5a215531d52687ac1eabd75bade
+Size: 533491
+SHA256sum: 6534d16a516ab15f8b9fe9966ba185973b1946eb32bb28f629ced8a21c7d6f17
 Description:  MAC database for ARP scanner
 
 Package: arp-scan
@@ -35,8 +35,8 @@ URL: https://github.com/royhills/arp-scan
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: arp-scan_1.10.0-r2_aarch64_cortex-a53.ipk
-Size: 26128
-SHA256sum: f555680834aa35e33290241a1205033d3354a7c33477d129d100b3ded24fdd1b
+Size: 26132
+SHA256sum: 7c6f3774301a10c8a592510adca1649e9ed16d487218aa14332565f1a7438e1c
 Description:  ARP scanner
 
 Package: atop
@@ -49,8 +49,8 @@ CPE-ID: cpe:/a:atop_project:atop
 Architecture: aarch64_cortex-a53
 Installed-Size: 317440
 Filename: atop_2.7.1-r1_aarch64_cortex-a53.ipk
-Size: 130194
-SHA256sum: 1924da4d8f9289fe39ce2f2368ddd4454a6f6228478513b737956dcf09799a67
+Size: 130196
+SHA256sum: d122f4b7d70dbb7082fc25a1f482f974fc760ddeffa47909669dbcc5cd76125f
 Description:  Atop is an ASCII full-screen performance monitor for
  Linux that is capable of reporting the activity of all
  processes (even if processes have finished during the
@@ -76,8 +76,8 @@ CPE-ID: cpe:/a:avahi:avahi
 Architecture: aarch64_cortex-a53
 Installed-Size: 133120
 Filename: avahi-dbus-daemon_0.8-r9_aarch64_cortex-a53.ipk
-Size: 46486
-SHA256sum: 0a1fb9998d9f6851f53759d86f31d30281b15e831366bd781dc182344483281c
+Size: 46487
+SHA256sum: 2ae4667aeed6b24ae70ca18286e60660d85637efe2b48d534716bfda5e354b5a
 Description:  Avahi is an mDNS/DNS-SD (aka RendezVous/Bonjour/ZeroConf)
  implementation (library). It facilitates
  service discovery on a local network -- this means that
@@ -100,8 +100,8 @@ CPE-ID: cpe:/a:gnu:bash
 Architecture: aarch64_cortex-a53
 Installed-Size: 1556480
 Filename: bash_5.2.21-r1_aarch64_cortex-a53.ipk
-Size: 750790
-SHA256sum: c5cf610535b09cfcc18c1d41b9eb5e662b6fd87969f9df7bb155a95ba1678628
+Size: 750432
+SHA256sum: 03bf22a7c6192dc698a400b0e835393078734432e07cc4ce875ae889fa1c7116
 Description:  Bash is an sh-compatible command language interpreter that executes
  commands read from the standard input or from a file. Bash also
  incorporates useful features from the Korn and C shells (ksh and csh).
@@ -116,10 +116,24 @@ CPE-ID: cpe:/a:gnu:bc
 Architecture: aarch64_cortex-a53
 Installed-Size: 102400
 Filename: bc_1.06.95-r1_aarch64_cortex-a53.ipk
-Size: 46230
-SHA256sum: b45c7d20ee1b75dd2ff8908b2b4715f08e320a42f248e988b8c8896cd8be500d
+Size: 46223
+SHA256sum: f7cfa6ad58eeb9fee6c55f86b55b3a9b3041e217865243b7928f8d728395e338
 Description:  bc is a language that supports arbitrary precision numbers with
  interactive execution of statements.
+
+Package: bottom
+Version: 0.9.4-r1
+Depends: libc
+License: MIT
+Section: admin
+URL: https://github.com/ClementTsang/bottom
+Architecture: aarch64_cortex-a53
+Installed-Size: 3297280
+Filename: bottom_0.9.4-r1_aarch64_cortex-a53.ipk
+Size: 1481964
+SHA256sum: 052e8a1388590ad83d112715eb139ca481f5c8e1699b644eba02ab8e52e8fbe6
+Description:  A customizable cross-platform graphical process/system monitor
+ for the terminal.
 
 Package: bridge
 Version: 1.7.1-r1
@@ -132,8 +146,8 @@ CPE-ID: cpe:/a:kernel:bridge-utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: bridge_1.7.1-r1_aarch64_cortex-a53.ipk
-Size: 12885
-SHA256sum: 57b081e27017150756c12b304179d64adc54f0fa3653e1d043fa2472fd014515
+Size: 12898
+SHA256sum: 77df461b8ea356f5ecad203e0bd9f868bc0738519d57ff65d4321334dbfcadf9
 Description:  Manage ethernet bridging: a way to connect networks together to
  form a larger network.
 
@@ -146,8 +160,8 @@ URL: https://github.com/aristocratos/btop
 Architecture: aarch64_cortex-a53
 Installed-Size: 1341440
 Filename: btop_1.3.2-r1_aarch64_cortex-a53.ipk
-Size: 570756
-SHA256sum: 6a045c54f151de8af0ed2f31d39b3535f0b91145345952dd465b22c4fe1a9f45
+Size: 570753
+SHA256sum: 15ee58d687731bd21a2ffab5d9f9cf7eeaab9e1472999eab7c3dd4c3f63f0a3d
 Description:  Resource monitor that shows usage and stats for processor, memory,
  disks, network and processes.
  
@@ -163,8 +177,8 @@ CPE-ID: cpe:/a:gnu:gnutls
 Architecture: aarch64_cortex-a53
 Installed-Size: 184320
 Filename: certtool_3.8.5-r1_aarch64_cortex-a53.ipk
-Size: 74515
-SHA256sum: 06acaa3af5ea5704b07087c6f06c470d1a71bd27ca42ec5ad365e7bff663bcab
+Size: 74528
+SHA256sum: 43d6be31664ae0434d0be539eaa485f8f1c6fa66ac62f6c5b3cef23d1f026b14
 Description:  GnuTLS is a secure communications library implementing the SSL, TLS
  and DTLS protocols and technologies around them. It provides a simple
  C language application programming interface (API) to access the secure
@@ -181,8 +195,8 @@ Section: net
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: cgi-io_2022.08.10~901b0f04-r21_aarch64_cortex-a53.ipk
-Size: 9825
-SHA256sum: 2b75f505ae63e3e6cda96e37c07c1fabaa62a284bff43c5b11b767ecfb24e3f2
+Size: 9828
+SHA256sum: ae3414e52adca112b66fdfb62d36c5a6e611611a5852ec8955783524c5396b97
 Description:  This package contains an cgi utility that is useful for up/downloading files
 
 Package: cgroup-tools
@@ -194,8 +208,8 @@ CPE-ID: cpe:/a:libcgroup_project:libcgroup
 Architecture: aarch64_cortex-a53
 Installed-Size: 112640
 Filename: cgroup-tools_2.0.3-r1_aarch64_cortex-a53.ipk
-Size: 34198
-SHA256sum: 57dbdf72ee7bb6f75c17b9126125842917cf403e5045d790d829bdf0c993512a
+Size: 34226
+SHA256sum: 16bff7f13b324f4479009b8b2c9700fc2f471e91b9c9fbf519760c9ad9c5149d
 Description:  CGroup config and exec tools
 
 Package: cgroupfs-mount
@@ -206,8 +220,8 @@ CPE-ID: cpe:/a:cgroupfs-mount_project:cgroupfs-mount
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: cgroupfs-mount_2020.06.26~05494281-r2_aarch64_cortex-a53.ipk
-Size: 2064
-SHA256sum: 874a88083b08b685f4ce69e2523febe1217b174c7529e37fadef7639f18541cc
+Size: 2075
+SHA256sum: 8e94f91795fa9809a5e1d92c431213d265a2c7c3f352e3308ca5815fb0ffa04f
 Description:  Simple scripts to properly mount the cgroupfs hierarchy, especially structured for Debian packaging
 
 Package: chrony-nts
@@ -221,8 +235,8 @@ CPE-ID: cpe:/a:tuxfamily:chrony
 Architecture: aarch64_cortex-a53
 Installed-Size: 419840
 Filename: chrony-nts_4.5-r2_aarch64_cortex-a53.ipk
-Size: 219940
-SHA256sum: 74d8ac3782af7ff8315406430df069b192883a6a7bb7c5ce2c5d501d99eadca9
+Size: 219845
+SHA256sum: 8fd055b04f1ba29c5d3ec25384189a98aea7870971a0db41e72a7643e9228bf7
 Description:  An NTP client and server designed to perform well in a wide range
  of conditions. It can synchronize the system clock with NTP servers,
  reference clocks, and manual input using wristwatch and keyboard.
@@ -238,12 +252,12 @@ CPE-ID: cpe:/a:samba:cifs-utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: cifsmount_6.11-r2_aarch64_cortex-a53.ipk
-Size: 15350
-SHA256sum: e32c8f2e8f60756590fb803931c3ea42afb43cf37f2aeda94b541d669f72e38f
+Size: 15352
+SHA256sum: f08c5ef2a5e8306a7a4f4b85374e4cb5bb7fcac0f9b77ef545ac6cf8b43634d5
 Description:  CIFS mount
 
 Package: collectd-mod-cpu
-Version: 5.12.0-r51
+Version: 5.12.0-r52
 Depends: libc, collectd
 License: MIT GPL-2.0-or-later
 Section: utils
@@ -251,13 +265,13 @@ URL: https://collectd.org/
 CPE-ID: cpe:/a:collectd:collectd
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
-Filename: collectd-mod-cpu_5.12.0-r51_aarch64_cortex-a53.ipk
-Size: 6552
-SHA256sum: f7a5573285dec68cbde1fa04e98e16f08b26f23aad828622bd9a3388371bd490
+Filename: collectd-mod-cpu_5.12.0-r52_aarch64_cortex-a53.ipk
+Size: 6557
+SHA256sum: 4fcd29fe9471e581e92d03ac453eaf8f6082a8039422e30e1c787e2e9b25b19c
 Description:  CPU input plugin
 
 Package: collectd-mod-interface
-Version: 5.12.0-r51
+Version: 5.12.0-r52
 Depends: libc, collectd
 License: MIT GPL-2.0-or-later
 Section: utils
@@ -265,13 +279,13 @@ URL: https://collectd.org/
 CPE-ID: cpe:/a:collectd:collectd
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
-Filename: collectd-mod-interface_5.12.0-r51_aarch64_cortex-a53.ipk
-Size: 4229
-SHA256sum: 131f66760526cb58b8f5053a38b10567bf55cc29a2a1964ab1f4f7c5e2405f8f
+Filename: collectd-mod-interface_5.12.0-r52_aarch64_cortex-a53.ipk
+Size: 4231
+SHA256sum: 53e3ed59c58e3b56f4e2ba91ed11e679b7790ca207c70b001045b65f6630d9ec
 Description:  network interfaces input plugin
 
 Package: collectd-mod-iwinfo
-Version: 5.12.0-r51
+Version: 5.12.0-r52
 Depends: libc, collectd, libiwinfo20230701
 License: MIT GPL-2.0-or-later
 Section: utils
@@ -279,13 +293,13 @@ URL: https://collectd.org/
 CPE-ID: cpe:/a:collectd:collectd
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
-Filename: collectd-mod-iwinfo_5.12.0-r51_aarch64_cortex-a53.ipk
-Size: 4525
-SHA256sum: daed7b5dbba7ca143840733782cf2012b27eb9a089fc2d86db4548dc33431cd0
+Filename: collectd-mod-iwinfo_5.12.0-r52_aarch64_cortex-a53.ipk
+Size: 4529
+SHA256sum: ba41c8a8a6b9f2493520c58659c75ed350ed8312fe32d2b46dd13fcaa615a5e5
 Description:  libiwinfo wireless statistics plugin
 
 Package: collectd-mod-load
-Version: 5.12.0-r51
+Version: 5.12.0-r52
 Depends: libc, collectd
 License: MIT GPL-2.0-or-later
 Section: utils
@@ -293,13 +307,13 @@ URL: https://collectd.org/
 CPE-ID: cpe:/a:collectd:collectd
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
-Filename: collectd-mod-load_5.12.0-r51_aarch64_cortex-a53.ipk
-Size: 2884
-SHA256sum: 5f7a7b51fee237781700000f4f7984680d95cda083df227b99b03c92819f3c8e
+Filename: collectd-mod-load_5.12.0-r52_aarch64_cortex-a53.ipk
+Size: 2881
+SHA256sum: 0792b32bbd273b46b43306d4b29f84d676363dcc043e541dba2873286bad7d1d
 Description:  system load input plugin
 
 Package: collectd-mod-memory
-Version: 5.12.0-r51
+Version: 5.12.0-r52
 Depends: libc, collectd
 License: MIT GPL-2.0-or-later
 Section: utils
@@ -307,13 +321,13 @@ URL: https://collectd.org/
 CPE-ID: cpe:/a:collectd:collectd
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
-Filename: collectd-mod-memory_5.12.0-r51_aarch64_cortex-a53.ipk
-Size: 3761
-SHA256sum: 480b8d41c7c882101d4af825599152e53db48b7527ad5bf3e93665b682b7b290
+Filename: collectd-mod-memory_5.12.0-r52_aarch64_cortex-a53.ipk
+Size: 3774
+SHA256sum: 8fa83cacc39290f2b0ed4a3fc33376f2f8f3473be7e9c121160fe6da9f7c1ff9
 Description:  physical memory usage input plugin
 
 Package: collectd-mod-network
-Version: 5.12.0-r51
+Version: 5.12.0-r52
 Depends: libc, collectd
 License: MIT GPL-2.0-or-later
 Section: utils
@@ -321,13 +335,13 @@ URL: https://collectd.org/
 CPE-ID: cpe:/a:collectd:collectd
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
-Filename: collectd-mod-network_5.12.0-r51_aarch64_cortex-a53.ipk
-Size: 16439
-SHA256sum: d56aface47fbccdf4591d1005dd24b726f32150206e4ee6252ac75b277b49266
+Filename: collectd-mod-network_5.12.0-r52_aarch64_cortex-a53.ipk
+Size: 16432
+SHA256sum: 8329f13e84e87b987c1a53cb05c2a02f9e0ad8475d10fc45fb31d432d395fc99
 Description:  network input/output plugin
 
 Package: collectd-mod-rrdtool
-Version: 5.12.0-r51
+Version: 5.12.0-r52
 Depends: libc, collectd, librrd1
 License: MIT GPL-2.0-or-later
 Section: utils
@@ -335,13 +349,13 @@ URL: https://collectd.org/
 CPE-ID: cpe:/a:collectd:collectd
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
-Filename: collectd-mod-rrdtool_5.12.0-r51_aarch64_cortex-a53.ipk
-Size: 13550
-SHA256sum: 557b44378a8bf1fb275133dc434394c2fb261efebd7ed7cf63563e122e148970
+Filename: collectd-mod-rrdtool_5.12.0-r52_aarch64_cortex-a53.ipk
+Size: 13557
+SHA256sum: 520bdefaac67c56a7f794ebdaf09edfb910661ca8a81803cdbb8e7b57dc10b47
 Description:  RRDtool output plugin
 
 Package: collectd
-Version: 5.12.0-r51
+Version: 5.12.0-r52
 Depends: libc, libpthread, zlib, libltdl7, jshn
 License: MIT GPL-2.0-or-later
 Section: utils
@@ -349,9 +363,9 @@ URL: https://collectd.org/
 CPE-ID: cpe:/a:collectd:collectd
 Architecture: aarch64_cortex-a53
 Installed-Size: 317440
-Filename: collectd_5.12.0-r51_aarch64_cortex-a53.ipk
-Size: 121538
-SHA256sum: 5fb7186dc76e24d60171e82456ce8d726b1acdff14bc69e4a11a514f63082562
+Filename: collectd_5.12.0-r52_aarch64_cortex-a53.ipk
+Size: 121507
+SHA256sum: 7b85495ac47b3e8b0513abbb34909fa888bc3b6686782179e02b0de66ee2404a
 Description:  collectd is a small daemon which collects system information periodically
  and provides mechanismns to store the values in a variety of ways.
 
@@ -365,8 +379,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-b2sum_9.3-r1_aarch64_cortex-a53.ipk
-Size: 33588
-SHA256sum: bee744c0fdd56edc9e8e2e11e876571ca790bb44d89cf600f3a931b22306fd72
+Size: 33598
+SHA256sum: 5898d4ffb641c53d67c7c9ff039301874474e8f9339e030fdda9ffba5d406231
 Description:  Full version of standard GNU b2sum utility.
 
 Package: coreutils-cat
@@ -380,8 +394,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-cat_9.3-r1_aarch64_cortex-a53.ipk
-Size: 27541
-SHA256sum: ebb7673ddcef081b5af1247b1374e5aa529ff7225f0059eca7ce4c4fb2ffef60
+Size: 27549
+SHA256sum: 7eaf9e0433b110065fe3f0833aa170110c2b47806bc6a1137f33385e667b00bb
 Description:  Full version of standard GNU cat utility.
 
 Package: coreutils-chmod
@@ -395,8 +409,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: coreutils-chmod_9.3-r1_aarch64_cortex-a53.ipk
-Size: 37850
-SHA256sum: 44495dc4936a1def4eba74763b5147b47fb1022d1447b78363261cafe5dbfe54
+Size: 37840
+SHA256sum: 6d8faea12791dae5f486b8986dd388ce7a3b3b736edd6c7bd2fce67eacedb63a
 Description:  Full version of standard GNU chmod utility.
 
 Package: coreutils-chown
@@ -410,8 +424,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 92160
 Filename: coreutils-chown_9.3-r1_aarch64_cortex-a53.ipk
-Size: 41867
-SHA256sum: 68827437cca8cbc00dd4129cf4c219f2a6a15f6c74b6f51600e0a5b087de3de6
+Size: 41859
+SHA256sum: 7d7c8c8d40c387e3483df64cfaf1a555b28d34beeeb0a567fac061eb079ad3f0
 Description:  Full version of standard GNU chown utility.
 
 Package: coreutils-chroot
@@ -425,8 +439,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-chroot_9.3-r1_aarch64_cortex-a53.ipk
-Size: 31883
-SHA256sum: d369a5c73583f394e11de101eb2a76575d42e4c82245146bcd0c302db5f232fe
+Size: 31887
+SHA256sum: 35447522cb7a63b283dc00b447fc6610c522b49acf1f8ab82399232d989608f6
 Description:  Full version of standard GNU chroot utility.
 
 Package: coreutils-cksum
@@ -440,8 +454,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 133120
 Filename: coreutils-cksum_9.3-r1_aarch64_cortex-a53.ipk
-Size: 78961
-SHA256sum: 08ad2f55d925b43b1250be35f36b81b47bc69c1a6439ff2de7301b2a6c02675f
+Size: 78950
+SHA256sum: 6cc88c991df8bbf77405c8dcca3a29288d16e9eba15c04cafa0f6e36fb54f53e
 Description:  Full version of standard GNU cksum utility.
 
 Package: coreutils-cp
@@ -455,8 +469,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 143360
 Filename: coreutils-cp_9.3-r1_aarch64_cortex-a53.ipk
-Size: 67467
-SHA256sum: 2179f5b6d501489183138b65897498c1ae8af72c1765ad96aad09286c37d39e7
+Size: 67480
+SHA256sum: 5bc06025553ad83e996fa9cac5b3e817fc1a6923f0c1a8e549bd8a421d73df6f
 Description:  Full version of standard GNU cp utility.
 
 Package: coreutils-cut
@@ -470,8 +484,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-cut_9.3-r1_aarch64_cortex-a53.ipk
-Size: 29268
-SHA256sum: 540f0ec61ac02c31845b895bc0fef6a7563ee61c5720c99023e62957ff997e2d
+Size: 29282
+SHA256sum: 3974426a4a900e89c0093085cfcbcdd5592f986d5020f7f892b06c7759ad540b
 Description:  Full version of standard GNU cut utility.
 
 Package: coreutils-date
@@ -485,8 +499,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 112640
 Filename: coreutils-date_9.3-r1_aarch64_cortex-a53.ipk
-Size: 54710
-SHA256sum: 59fbfc16a4b4077a5d153f409008bf2263a45c97228daf42656a7beee1a8e4c3
+Size: 54717
+SHA256sum: e3f90ec83de1d2de9f6d3795a3d9cb35806f3b8a79e5d4c1f1beac0fe30a528a
 Description:  Full version of standard GNU date utility.
 
 Package: coreutils-dd
@@ -500,8 +514,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 92160
 Filename: coreutils-dd_9.3-r1_aarch64_cortex-a53.ipk
-Size: 41268
-SHA256sum: f2079f7019e60c24e08f08dcd3f18f0c1048ffc045e767be82303e3fda60b0de
+Size: 41273
+SHA256sum: 0e3f6fde58426120aebbb362fd6d33a57b83e6d8afd586cfb4eafa637bdd6f74
 Description:  Full version of standard GNU dd utility.
 
 Package: coreutils-df
@@ -515,9 +529,24 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 102400
 Filename: coreutils-df_9.3-r1_aarch64_cortex-a53.ipk
-Size: 48183
-SHA256sum: 8efc8db2c4704c609cfef1613da9a84eb18f3a5045f87faa3a9e519bfa68b6e9
+Size: 48177
+SHA256sum: ee9ce347dab1666ddaba069ef4677bd94f425462f7c28613a4e202b689b8f9e4
 Description:  Full version of standard GNU df utility.
+
+Package: coreutils-dirname
+Version: 9.3-r1
+Depends: libc, coreutils
+Alternatives: 300:/usr/bin/dirname:/usr/libexec/dirname-coreutils
+License: GPL-3.0-or-later
+Section: utils
+URL: http://www.gnu.org/software/coreutils/
+CPE-ID: cpe:/a:gnu:coreutils
+Architecture: aarch64_cortex-a53
+Installed-Size: 51200
+Filename: coreutils-dirname_9.3-r1_aarch64_cortex-a53.ipk
+Size: 19456
+SHA256sum: 5ccd2f4c98a73052709c55d653ea76942c8882f7f55e09153cc3b53372c2a7ab
+Description:  Full version of standard GNU dirname utility.
 
 Package: coreutils-du
 Version: 9.3-r1
@@ -531,7 +560,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 215040
 Filename: coreutils-du_9.3-r1_aarch64_cortex-a53.ipk
 Size: 111334
-SHA256sum: 5afff8401657f1dfa977e6cd0ad60470e2987dc8331f3b96f8749fce742d5926
+SHA256sum: 92c11bfcf74c76b06698c1f80e979dfa3df685575f209c25036faf8d2fecb080
 Description:  Full version of standard GNU du utility.
 
 Package: coreutils-env
@@ -545,8 +574,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-env_9.3-r1_aarch64_cortex-a53.ipk
-Size: 31712
-SHA256sum: 6996c46b2769d0a8b89afe18373b4eaec320517b2d7551b9ee828220389976db
+Size: 31706
+SHA256sum: c146a8bc032eae7e6153f00f4aa741a9a222aae8c744baa7a15c395c562ae2f7
 Description:  Full version of standard GNU env utility.
 
 Package: coreutils-head
@@ -560,8 +589,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-head_9.3-r1_aarch64_cortex-a53.ipk
-Size: 31000
-SHA256sum: 575be7d94ef68a04e170a7e1b092b23bf469ea6401bcff7dc55425ba0801cd25
+Size: 30992
+SHA256sum: fdc8562464c99dd4f83ca8895fec2c270631d4c3ba37b7034b87665ecc1ce09f
 Description:  Full version of standard GNU head utility.
 
 Package: coreutils-hostid
@@ -575,8 +604,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: coreutils-hostid_9.3-r1_aarch64_cortex-a53.ipk
-Size: 24051
-SHA256sum: ddb0d213e1abe0d189375906be2db4a42e55dea589819b533731f5100f6f84a7
+Size: 24047
+SHA256sum: 2ea0f1816cb61a0892c3472ffc99793aa9c605272aaa1994d7eb94a9095b07a7
 Description:  Full version of standard GNU hostid utility.
 
 Package: coreutils-kill
@@ -590,8 +619,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-kill_9.3-r1_aarch64_cortex-a53.ipk
-Size: 27023
-SHA256sum: 7c680a144c073c01839393553b9feefefb85da640e72aa497910527762353936
+Size: 27022
+SHA256sum: dc72e2d1b74bc6b158449bc7e706cefcd04e74979138d40744f20207e526c4b5
 Description:  Full version of standard GNU kill utility.
 
 Package: coreutils-ln
@@ -605,8 +634,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: coreutils-ln_9.3-r1_aarch64_cortex-a53.ipk
-Size: 39037
-SHA256sum: 90c2b497226192dbbac706eb1cb881ba0dd6ff87d82fec6a8d3fd12d19bc968c
+Size: 39042
+SHA256sum: 73149e411561608a350b9bc630cb6faed4398b076236ac3169adc380c9044fae
 Description:  Full version of standard GNU ln utility.
 
 Package: coreutils-ls
@@ -620,8 +649,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 194560
 Filename: coreutils-ls_9.3-r1_aarch64_cortex-a53.ipk
-Size: 89527
-SHA256sum: 28287fcf2baf878aaf6592de61bf72b98111e61afc9107c189a7e2e7c49075cc
+Size: 89504
+SHA256sum: 41268fdb73dd925dfb0705cde3ca5dcbc42784f16a3a25a4b24a1badb982b669
 Description:  Full version of standard GNU ls utility.
 
 Package: coreutils-md5sum
@@ -635,8 +664,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-md5sum_9.3-r1_aarch64_cortex-a53.ipk
-Size: 31659
-SHA256sum: 68c7816731f33f961cf1b3e328f6690cf77a193e7ab1136a7db6396ac781d637
+Size: 31666
+SHA256sum: 7afcbf07f0ab2ae042ac64f4a52f0f489940644e8b676156fd413bc0814a1b46
 Description:  Full version of standard GNU md5sum utility.
 
 Package: coreutils-mkdir
@@ -650,8 +679,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-mkdir_9.3-r1_aarch64_cortex-a53.ipk
-Size: 27816
-SHA256sum: 4da90961d1f53a4b84468141d7c6ba90c8ed3c814710adfb945b0aad2d916147
+Size: 27800
+SHA256sum: 31d61aa2ffd3c61bc91453df834da4164ce6a672c3a1ef3840c5df49602e0d6b
 Description:  Full version of standard GNU mkdir utility.
 
 Package: coreutils-mkfifo
@@ -665,8 +694,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-mkfifo_9.3-r1_aarch64_cortex-a53.ipk
-Size: 25394
-SHA256sum: 1469647db4380427f9bf9829fd79f006d092929fb34d67c0f98acfc40d5bbc56
+Size: 25374
+SHA256sum: f670a1ec7148dd805fa00edfe760ede2e8e14b7f25a1436e6b9b3ba93de77dcc
 Description:  Full version of standard GNU mkfifo utility.
 
 Package: coreutils-mknod
@@ -681,7 +710,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-mknod_9.3-r1_aarch64_cortex-a53.ipk
 Size: 26911
-SHA256sum: e620106573e317d577c10e84cf7851db1d3a6e88206753edfa3a28dcb530f641
+SHA256sum: 6915b8ee07e7f5add1c90fdee86367ad59f812d5c96c9fef36398bc28f6c9f6b
 Description:  Full version of standard GNU mknod utility.
 
 Package: coreutils-mktemp
@@ -695,8 +724,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-mktemp_9.3-r1_aarch64_cortex-a53.ipk
-Size: 26997
-SHA256sum: 50e1af34121bc5020c476b476b6dde290b67942bc1cfc89defc47beb69ec7d86
+Size: 27003
+SHA256sum: 3708844bc075ce5787b49073ac587138a1bb7e77b0be29407364658cf1a2b167
 Description:  Full version of standard GNU mktemp utility.
 
 Package: coreutils-mv
@@ -710,8 +739,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 143360
 Filename: coreutils-mv_9.3-r1_aarch64_cortex-a53.ipk
-Size: 71810
-SHA256sum: 35336b77bfb5ccad5e9bfeaeeeec1786d5d4ee1ef5ab3554d0e54ac523c81d0b
+Size: 71805
+SHA256sum: e132fda0046f022dfedf279b36b4298dfe902269845c7555b9c909e521b21199
 Description:  Full version of standard GNU mv utility.
 
 Package: coreutils-nice
@@ -725,8 +754,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-nice_9.3-r1_aarch64_cortex-a53.ipk
-Size: 24508
-SHA256sum: 288fb9fed5ac727852905b6860183e5fe2a0c7cf535ed2f3e8fb4bec1ec10c28
+Size: 24522
+SHA256sum: e29f0a1c9fb67ce09fea380a88991bc099b85933e0ec2b56a7b4abf3281d8738
 Description:  Full version of standard GNU nice utility.
 
 Package: coreutils-nohup
@@ -741,7 +770,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-nohup_9.3-r1_aarch64_cortex-a53.ipk
 Size: 25751
-SHA256sum: 70ca28860733bf0991ccb3a36ab2d9f09f1c548845534b4ac016b5d4ed03c353
+SHA256sum: 30e54ebe3b6f260ff6187c08cd0b3824aa9cbd0ddaa196a7c57c299706c24fe3
 Description:  Full version of standard GNU nohup utility.
 
 Package: coreutils-nproc
@@ -755,8 +784,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-nproc_9.3-r1_aarch64_cortex-a53.ipk
-Size: 24933
-SHA256sum: 093963ee715a345d0763b09f05c2532bf27ffa0e62d60b8b80b2b71c5fdde37e
+Size: 24932
+SHA256sum: 052c28b82460d6777cffcd901a9a68d71746cf4858b80e701c0a036a58c9f546
 Description:  Full version of standard GNU nproc utility.
 
 Package: coreutils-paste
@@ -770,8 +799,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-paste_9.3-r1_aarch64_cortex-a53.ipk
-Size: 26411
-SHA256sum: 52bdc68088d396296faf1890fed01e99cd0b4c9faf65f6a8d97cde210e560d9d
+Size: 26409
+SHA256sum: 462169dd9ff14fee7e5a2a886771c8d726a7530f981854336f7651c4b805e975
 Description:  Full version of standard GNU paste utility.
 
 Package: coreutils-pwd
@@ -785,8 +814,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-pwd_9.3-r1_aarch64_cortex-a53.ipk
-Size: 28346
-SHA256sum: 89c1e9e072448e769b49f9297dee44a73405bf864ea1b5329f6cb368b645284f
+Size: 28344
+SHA256sum: 39a20f907ef6018a59152701acb3d592427e643efba466e931ad9081b0b43dfd
 Description:  Full version of standard GNU pwd utility.
 
 Package: coreutils-readlink
@@ -800,8 +829,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-readlink_9.3-r1_aarch64_cortex-a53.ipk
-Size: 29237
-SHA256sum: 51c7958d7f2b0930863b759f2a006e551e109c7bbe194415776f19300d300c62
+Size: 29243
+SHA256sum: 91bb4193d6274e5787b8619600ac60d59e61206f97b63bd95a9b430c42615e8c
 Description:  Full version of standard GNU readlink utility.
 
 Package: coreutils-realpath
@@ -815,8 +844,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-realpath_9.3-r1_aarch64_cortex-a53.ipk
-Size: 29878
-SHA256sum: ead53e2aeba2a77ec11527d6732fda985ebaa532301e55b6fa0fb5ae160373cf
+Size: 29871
+SHA256sum: 0dd6b8559d461c3a9c3c9a45237a64770ebcac8911ce4e49bbb8968ba76bda5a
 Description:  Full version of standard GNU realpath utility.
 
 Package: coreutils-rm
@@ -830,8 +859,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: coreutils-rm_9.3-r1_aarch64_cortex-a53.ipk
-Size: 40043
-SHA256sum: 65c032a27cf0246f9a0d5bbe14c19c2f6c4f45fb250c90d0cbaadd3c9e6290e4
+Size: 40048
+SHA256sum: de0b9e173404582678ec7010b22aa7c0290b029939a692475ec5926fe337004c
 Description:  Full version of standard GNU rm utility.
 
 Package: coreutils-seq
@@ -845,8 +874,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-seq_9.3-r1_aarch64_cortex-a53.ipk
-Size: 30356
-SHA256sum: 925adf513c921b21a5e1ad221a61e588e848d03604953a1937a182b8d65f8dbd
+Size: 30359
+SHA256sum: 4e270f2e2bd291e1d35da32b64587909444ec5cc8ab2b05e2a9953b50a3e78f6
 Description:  Full version of standard GNU seq utility.
 
 Package: coreutils-sha1sum
@@ -860,8 +889,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-sha1sum_9.3-r1_aarch64_cortex-a53.ipk
-Size: 32868
-SHA256sum: 56db934be2e2c02c717f8ab151d39a95ae3bf578464ea3b9006e48f2f43faef5
+Size: 32879
+SHA256sum: 71ad201e3c77429a55fcaed8d10625e61432ae24da7a49c436738b17b75d5114
 Description:  Full version of standard GNU sha1sum utility.
 
 Package: coreutils-sha224sum
@@ -874,8 +903,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-sha224sum_9.3-r1_aarch64_cortex-a53.ipk
-Size: 36225
-SHA256sum: 3ebfe2d794a005d9b61efcec4919d099dd4a52e362037f84b617b7b98f99ff10
+Size: 36243
+SHA256sum: fa5ecce2c8ab707fd95e34acdb09f5ff0264d927c5df33dec62987f13220ef0b
 Description:  Full version of standard GNU sha224sum utility.
 
 Package: coreutils-sha256sum
@@ -889,8 +918,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-sha256sum_9.3-r1_aarch64_cortex-a53.ipk
-Size: 36320
-SHA256sum: a74ba61b5c2e36d493764257d8de326faacf4a0393bb4bdd5982ba14d360408b
+Size: 36303
+SHA256sum: 907e18bd4b5be9c8b38178c82eb0c5da0cfd58fa1612da3f7109f664c951f03a
 Description:  Full version of standard GNU sha256sum utility.
 
 Package: coreutils-sha384sum
@@ -903,8 +932,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: coreutils-sha384sum_9.3-r1_aarch64_cortex-a53.ipk
-Size: 38644
-SHA256sum: 464fa40f0d0fa298198c0656488308713e36d29997c6840723194f4e09351b95
+Size: 38645
+SHA256sum: b72b1c48d619e3dc5d492dccfe7e6b4644bac92cdf92be745965b4455e3b2fe7
 Description:  Full version of standard GNU sha384sum utility.
 
 Package: coreutils-sha512sum
@@ -918,8 +947,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: coreutils-sha512sum_9.3-r1_aarch64_cortex-a53.ipk
-Size: 38728
-SHA256sum: e1cbc4101c64860ab6516e88939596e645690e3275cb61afff97bfe4622f331d
+Size: 38729
+SHA256sum: 497369bfa5ae3c0a6ff53a0eb2dcfddc192e46623917d4996fdeb6c0eafb0eb3
 Description:  Full version of standard GNU sha512sum utility.
 
 Package: coreutils-shred
@@ -933,8 +962,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-shred_9.3-r1_aarch64_cortex-a53.ipk
-Size: 35501
-SHA256sum: 9f45504afbad6ebc25091e0ec99c1bd51db8446d1da99cd630ebfc4cfaaa4b12
+Size: 35502
+SHA256sum: 06a9f06e8746e237499d63bf4b25bcc59f8a4ed2f7afc6e25a756f6aed5e0562
 Description:  Full version of standard GNU shred utility.
 
 Package: coreutils-shuf
@@ -948,8 +977,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-shuf_9.3-r1_aarch64_cortex-a53.ipk
-Size: 33220
-SHA256sum: 4fcd3968e1437c13d74d21c55d827408bb9fabc01733d7cd617f44b69a60ab7d
+Size: 33224
+SHA256sum: b6de6b1261181c52394413652c4ed577567b7dc53b53795e1e83df43424051ec
 Description:  Full version of standard GNU shuf utility.
 
 Package: coreutils-sleep
@@ -963,8 +992,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-sleep_9.3-r1_aarch64_cortex-a53.ipk
-Size: 26762
-SHA256sum: cadc2f25e2958e884a1f199436203814f9fa35c09da98033c080bb6282c5bb88
+Size: 26767
+SHA256sum: 90fe0064da05199dd83cf036c11e4bffc88f4a6e2faf7a39638a196ed26fa9ca
 Description:  Full version of standard GNU sleep utility.
 
 Package: coreutils-sort
@@ -978,8 +1007,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 133120
 Filename: coreutils-sort_9.3-r1_aarch64_cortex-a53.ipk
-Size: 68427
-SHA256sum: c69d14d040dd6419a2b70ea27aacc78c96486b03e429d1ced4e81a5cf13dd31d
+Size: 68454
+SHA256sum: 8bee54ea5c2271f4345ccd06860ba2d8266654581a507c8adace5c8455f9d441
 Description:  Full version of standard GNU sort utility.
 
 Package: coreutils-split
@@ -993,8 +1022,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: coreutils-split_9.3-r1_aarch64_cortex-a53.ipk
-Size: 37804
-SHA256sum: 4a5c77d90dfc272d7c63dac804277a5a5e3b9d779302a93ad947061b87e409c7
+Size: 37823
+SHA256sum: 5f9c402d281d3a3da1a2391bb9f62acc095fd7b50ca26143a9a9400dc82bd75b
 Description:  Full version of standard GNU split utility.
 
 Package: coreutils-stdbuf
@@ -1008,7 +1037,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-stdbuf_9.3-r1_aarch64_cortex-a53.ipk
 Size: 28970
-SHA256sum: 6c4676d9016566a203cb4df1085f81af0c8a591e6f9494594831e8f44aef33cb
+SHA256sum: baf0f75616c524a63d8cf82de65c718e69da7819c58b6225f1eb0c8c9ccc4749
 Description:  Full version of standard GNU stdbuf utility.
 
 Package: coreutils-sum
@@ -1022,8 +1051,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-sum_9.3-r1_aarch64_cortex-a53.ipk
-Size: 26002
-SHA256sum: 3d9890a2501c9832214fd5b18fa34700ba3e36b4b01e90e890e9ffe8442ebeff
+Size: 26004
+SHA256sum: f1bb782844fca273f08e0d1b38ab94aefefec935a7ad28003dfe9cc346c0faa6
 Description:  Full version of standard GNU sum utility.
 
 Package: coreutils-tail
@@ -1037,8 +1066,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 92160
 Filename: coreutils-tail_9.3-r1_aarch64_cortex-a53.ipk
-Size: 44177
-SHA256sum: 59a807fd2e7f53be0767f080c5a5c94180e06ad249f52cb31b70dd8d96aed66f
+Size: 44179
+SHA256sum: 5786d5dba2a7262aa7cf8bb9c2df7eaa5bf2e169e1b9f9559374711a22a44ae7
 Description:  Full version of standard GNU tail utility.
 
 Package: coreutils-tee
@@ -1052,8 +1081,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-tee_9.3-r1_aarch64_cortex-a53.ipk
-Size: 27534
-SHA256sum: 2c03d137cbca2a36d76813c192080834021ed09e70ee71eb856342655006d089
+Size: 27526
+SHA256sum: adad9fe4087e346ff4a081b3875645843803dfb17364e35f0838ee2bc520ca99
 Description:  Full version of standard GNU tee utility.
 
 Package: coreutils-timeout
@@ -1067,8 +1096,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-timeout_9.3-r1_aarch64_cortex-a53.ipk
-Size: 30573
-SHA256sum: 03c8d00b3847200eef85fd27e3f59467067b9000eefeda0ea0ba8fa56b1e3f65
+Size: 30583
+SHA256sum: 1f7ecd5747bd7dfc23d0ef0dabbb7db0810b1ea7062d3063935d6f085e6f24be
 Description:  Full version of standard GNU timeout utility.
 
 Package: coreutils-touch
@@ -1082,8 +1111,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 102400
 Filename: coreutils-touch_9.3-r1_aarch64_cortex-a53.ipk
-Size: 48176
-SHA256sum: a75644e7390ae799dc1d8cf9d5fa600ac1017f68ad3e55d8ec4e8bcc37c4c4b8
+Size: 48187
+SHA256sum: 39229a156f1314b94c92d8e4fdf6e49982b4456c3700f916a5f32fdc1fa1bec4
 Description:  Full version of standard GNU touch utility.
 
 Package: coreutils-tr
@@ -1097,8 +1126,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-tr_9.3-r1_aarch64_cortex-a53.ipk
-Size: 33194
-SHA256sum: 3ca385cf47e9446381cba1405fe063e26616b4213aadb335b4fc89b4b83bfb16
+Size: 33200
+SHA256sum: 4aa8f0057436f76739d2b6778062fc557f1a012d7c77d0c51c4c31a75aa9a835
 Description:  Full version of standard GNU tr utility.
 
 Package: coreutils-truncate
@@ -1112,8 +1141,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-truncate_9.3-r1_aarch64_cortex-a53.ipk
-Size: 27273
-SHA256sum: 986db0cd8b440048d9b4ab6fd3f85cfc71503067bc5a1fadd195721e7bf9b131
+Size: 27276
+SHA256sum: b9f04dfccb0457752b4b9ba0dcaaefa0f22fb44dc185e4612b55281e0dabb090
 Description:  Full version of standard GNU truncate utility.
 
 Package: coreutils-uniq
@@ -1127,8 +1156,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-uniq_9.3-r1_aarch64_cortex-a53.ipk
-Size: 29921
-SHA256sum: 41e4b5fab97e4523a9b52d7a11c3f69a4f5e86a15768c66d6b3da15fcaf6ac57
+Size: 29922
+SHA256sum: 82f0f81c83ce714e6a107f36f52311efa7e0668ca62193d61686a0898425a622
 Description:  Full version of standard GNU uniq utility.
 
 Package: coreutils-wc
@@ -1143,7 +1172,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: coreutils-wc_9.3-r1_aarch64_cortex-a53.ipk
 Size: 32299
-SHA256sum: 4510d4587869d2205d20d81ee78ad463aa2521e87ecc544f69a10a16e4159ec5
+SHA256sum: 9e4f03c812e34869ae31b54fd0ea5e51e537678d1d17273f4d2bc7f2779c6a10
 Description:  Full version of standard GNU wc utility.
 
 Package: coreutils-who
@@ -1157,8 +1186,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: coreutils-who_9.3-r1_aarch64_cortex-a53.ipk
-Size: 29024
-SHA256sum: 64c5eb6977ecd1a92aaae1c7a30e13d4e25c7f6bdc75c4699a865faeba5d42be
+Size: 29023
+SHA256sum: 3eb7412ecbcdde95b7055c724ef99288b14c2195bc372b436e904750d5ece648
 Description:  Full version of standard GNU who utility.
 
 Package: coreutils-yes
@@ -1172,8 +1201,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: coreutils-yes_9.3-r1_aarch64_cortex-a53.ipk
-Size: 19738
-SHA256sum: ce647a4bc6971d5d9f9cc70c141daab066a6ad285a49da060a168ee938abb6b8
+Size: 19745
+SHA256sum: d70e5b5c69653d21b29dc0cbe79f20a81e45b4a687255c063cfc6e54046de2df
 Description:  Full version of standard GNU yes utility.
 
 Package: coreutils
@@ -1186,8 +1215,8 @@ CPE-ID: cpe:/a:gnu:coreutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: coreutils_9.3-r1_aarch64_cortex-a53.ipk
-Size: 999
-SHA256sum: 33d8f965fbab1f7d2764e279af762bddfd6318958bec74ec99f6a305034f84a7
+Size: 1004
+SHA256sum: 51bfd027b682bff6deee6bd799cb33a3e8275069d7c6e1cc63bc52b12729c786
 Description:  Full versions of standard GNU utilities. If an equivalent Busybox applet is
  available, you should consider compiling that instead as Busybox applets are
  usually smaller, at the expense of reduced functionality.
@@ -1199,8 +1228,8 @@ Section: utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: cpusage_1_aarch64_cortex-a53.ipk
-Size: 4997
-SHA256sum: 38b663d0b4e7918e3f27350d1e63398097511c53ebd7d2a6e394901a8edf4678
+Size: 5001
+SHA256sum: 49a7465ac73b027f827a37ffc134e9e84dbe4d6af702231c02f1b8ea6dc4c083
 Description:  CPUsage outputs CPU usage statistics once per second.
  Optionally writes CSV output (see '-o' option).
  Originally written by Fabian Schneider (TUM, TUB) in 2005.
@@ -1217,8 +1246,8 @@ CPE-ID: cpe:/a:haxx:libcurl
 Architecture: aarch64_cortex-a53
 Installed-Size: 163840
 Filename: curl_8.7.1-r2_aarch64_cortex-a53.ipk
-Size: 74153
-SHA256sum: f4dfd508a242be023d67bb6a07a03d3dc8ed6387960adb61b65434ae242a17a7
+Size: 74146
+SHA256sum: 54b145e224db1ff2cdcf92b6ad7ff2ac93dc72af962df1e279bdafb36aa90d58
 Description:  A client-side URL transfer utility
 
 Package: dbus-utils
@@ -1231,8 +1260,8 @@ CPE-ID: cpe:/a:freedesktop:dbus
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: dbus-utils_1.14.10-r1_aarch64_cortex-a53.ipk
-Size: 27802
-SHA256sum: 8e0bf9028f0d18248aa2351c59bb6521c0da1021c1c78a56e70c86e59c7bd1e8
+Size: 27812
+SHA256sum: 11b57b0d36f881457b23ae03ecca1fd3e05a35ec438e25555b0a0c8c96def151
 Description:  Simple interprocess messaging system (utilities)
 
 Package: dbus
@@ -1245,8 +1274,8 @@ CPE-ID: cpe:/a:freedesktop:dbus
 Architecture: aarch64_cortex-a53
 Installed-Size: 307200
 Filename: dbus_1.14.10-r1_aarch64_cortex-a53.ipk
-Size: 122497
-SHA256sum: a652e9129fef61e909796399081bf017fa5581bc7fb63e9c9b1857755b3d5ce5
+Size: 122682
+SHA256sum: 5553cfb62b413aa93448c47ec83a6c21c87f04370b207b69def93344ab689f25
 Description:  Simple interprocess messaging system (daemon)
 
 Package: diffutils
@@ -1260,8 +1289,8 @@ CPE-ID: cpe:/a:gnu:diffutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 327680
 Filename: diffutils_3.10-r1_aarch64_cortex-a53.ipk
-Size: 158020
-SHA256sum: 8f615e6c8b79a4919c19983aad30835745ad971ebdd87ad13e3438d201b2e152
+Size: 158048
+SHA256sum: ddf812daa9f545b6eb5a64ea7157f1b83f9efecded311c6618919f81db47eb19
 Description:  The Diffutils package contains programs that show the differences between
  files or directories.
 
@@ -1274,8 +1303,8 @@ URL: https://dnstap.info
 Architecture: aarch64_cortex-a53
 Installed-Size: 6635520
 Filename: dnstap_0.4.0-r1_aarch64_cortex-a53.ipk
-Size: 2504970
-SHA256sum: 83b6a468b1ecf42776d82aef162cf4828bbe136b6dd38f47246d16a0f77192c5
+Size: 2504977
+SHA256sum: 1be99da3ce67ba9c38b543191d7f9eeca08e855a9b6dcd33a8d4eeb70abe5625
 Description:  The dnstap command-line tool can read, write, and decode
  dnstap data from a running name server or a previously-saved file.
 
@@ -1289,8 +1318,8 @@ CPE-ID: cpe:/a:nlnetlabs:ldns
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: drill_1.8.3-r1_aarch64_cortex-a53.ipk
-Size: 24568
-SHA256sum: 41637bf60123806c4c63d595a7830fd22995b4cc8524216367a3b770cdc889ca
+Size: 24562
+SHA256sum: 999e6c8e5726581334de55b1edae316d831b7cabb1b3a862ccf0e170f8f5e073
 Description:  ldns includes the drill tool, which is much like dig from BIND. It was
  designed with DNSSEC in mind and should be a useful debugging/query tool
  for DNSSEC.
@@ -1304,8 +1333,8 @@ URL: https://darwinsys.com/file/
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: file_5.45-r1_aarch64_cortex-a53.ipk
-Size: 9609
-SHA256sum: 3d4beba2dc620af81e61c3f2be34813c4e0a74408480900f1c23d35cc7bbc736
+Size: 9610
+SHA256sum: d1cdd9a83c1335bf0729ec0196de6af9a0857dcb92c249919c16224c9aa0f3ec
 Description:  File type determination utility
 
 Package: findutils-find
@@ -1319,8 +1348,8 @@ CPE-ID: cpe:/a:gnu:findutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 317440
 Filename: findutils-find_4.9.0-r1_aarch64_cortex-a53.ipk
-Size: 154311
-SHA256sum: 6ac103912e27775ebccca41d6ff41d242d9c0717d3bdc8a5838f633c72f44fef
+Size: 154296
+SHA256sum: b110d0ca0c7e922a053a5946526fcecfc7933311b1d4ca84cfc90536e9c0acfa
 Description:  GNU Find Utilities - find utility
 
 Package: findutils-locate
@@ -1333,8 +1362,8 @@ CPE-ID: cpe:/a:gnu:findutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 204800
 Filename: findutils-locate_4.9.0-r1_aarch64_cortex-a53.ipk
-Size: 100533
-SHA256sum: e9bf0ffd7a39deaac0d0948db5d792093d5ba83bb84e1fb90e21366f56469b6b
+Size: 100547
+SHA256sum: 9c83122f2b4a24b6ff40d9dbcb1b1132d38909c6fd938c6338f59859e2083577
 Description:  GNU Find Utilities - locate and updatedb utility
 
 Package: findutils-xargs
@@ -1348,8 +1377,8 @@ CPE-ID: cpe:/a:gnu:findutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: findutils-xargs_4.9.0-r1_aarch64_cortex-a53.ipk
-Size: 32699
-SHA256sum: ee09f0f4665100e224dc4fd3bdf0593df1c21ffc96a7b88a849090c91486ae5e
+Size: 32707
+SHA256sum: ec51343e7fe04d2480f50f237d0a870da60c6314b2daafcd44be53b3cfaa3610
 Description:  GNU Find Utilities - xargs utility
 
 Package: findutils
@@ -1362,8 +1391,8 @@ CPE-ID: cpe:/a:gnu:findutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: findutils_4.9.0-r1_aarch64_cortex-a53.ipk
-Size: 862
-SHA256sum: 528c75d0c14306bc9fe3b61ffdafd6737b731506524c09f02e953a8ceea38428
+Size: 864
+SHA256sum: 04181b4a6a23bd9297c0df625c211430cae2c5b9f072570c8ecaa93ed35da35b
 Description:  GNU Find Utilities (all)
 
 Package: glib2
@@ -1376,8 +1405,8 @@ CPE-ID: cpe:/a:gnome:glib
 Architecture: aarch64_cortex-a53
 Installed-Size: 4065280
 Filename: glib2_2.74.7-r3_aarch64_cortex-a53.ipk
-Size: 1472992
-SHA256sum: 7323951ada7ee29ffec9f9d0c3fb2dca8000a5c4c5b053918e95523012374918
+Size: 1473010
+SHA256sum: 7ef3fd6a04b48beea87bd0c0c8dee8cec3e902d01b0b0f822b75ba981185994a
 Description:  The GLib library of C routines
 
 Package: gnupg2-dirmngr
@@ -1390,8 +1419,8 @@ CPE-ID: cpe:/a:gnupg:gnupg
 Architecture: aarch64_cortex-a53
 Installed-Size: 389120
 Filename: gnupg2-dirmngr_2.2.39-r1_aarch64_cortex-a53.ipk
-Size: 190605
-SHA256sum: b764fe881a8e8f39ad28e390e77506feb67fa4173d535908654cb85ce10e0ba6
+Size: 190582
+SHA256sum: 956ff9902eed1d794b569f31185ec83c2c8f6b771b07a94e7ea3c71275d6a42e
 Description:  Since version 2.1 of GnuPG, 'dirmngr' takes care of accessing the
  OpenPGP keyservers.  As with previous versions it is also used as a
  server for managing and downloading certificate revocation lists (CRLs)
@@ -1409,8 +1438,8 @@ CPE-ID: cpe:/a:gnupg:gnupg
 Architecture: aarch64_cortex-a53
 Installed-Size: 1372160
 Filename: gnupg2-utils_2.2.39-r1_aarch64_cortex-a53.ipk
-Size: 652030
-SHA256sum: 6c8ce2e02b7fbced62c54a163a847b2727becf098749b46f7724364c1b1f18a6
+Size: 652032
+SHA256sum: 4052122454462dd5b355e894362e8877b5d15a033bbbd7923e5978249433458a
 Description:  Key management utilies for GnuPG (version 2).
  This package is needed to import keys from a keyserver.
 
@@ -1425,8 +1454,8 @@ CPE-ID: cpe:/a:gnupg:gnupg
 Architecture: aarch64_cortex-a53
 Installed-Size: 921600
 Filename: gnupg2_2.2.39-r1_aarch64_cortex-a53.ipk
-Size: 473359
-SHA256sum: 4cd757ba759b7b48ee5a3830854835f09a327a712b410bb8251cd064baa7111f
+Size: 473366
+SHA256sum: 0c048809d6768ac242d53ae3a27fa5b3af0f92a2229926b410eb2a85f7d6adf5
 Description:  GnuPG is a complete and free implementation of the OpenPGP standard as
  defined by RFC4880 (also known as PGP). GnuPG allows you to encrypt and
  sign your data and communications; it features a versatile key
@@ -1446,8 +1475,8 @@ CPE-ID: cpe:/a:gnu:gnutls
 Architecture: aarch64_cortex-a53
 Installed-Size: 317440
 Filename: gnutls-utils_3.8.5-r1_aarch64_cortex-a53.ipk
-Size: 136619
-SHA256sum: e0d5894a29abaa1fea3f674baf848fcf252a6ecfaf02eced6d56c1bac32dde75
+Size: 136602
+SHA256sum: 14a71f1b12234078cdc51e3c2f825837bd952c227370e511a2a694624095044d
 Description:  GnuTLS is a secure communications library implementing the SSL, TLS
  and DTLS protocols and technologies around them. It provides a simple
  C language application programming interface (API) to access the secure
@@ -1468,8 +1497,8 @@ CPE-ID: cpe:/a:gnu:grep
 Architecture: aarch64_cortex-a53
 Installed-Size: 276480
 Filename: grep_3.11-r1_aarch64_cortex-a53.ipk
-Size: 140602
-SHA256sum: 22b6c06b28b610163426302019c5c958a51dc8c2bd7adb9705255d0c14e3fa47
+Size: 140657
+SHA256sum: 571d7f83dfaa41c73804d3e209eb0bf65ac93c3e2326c38066c6557262909363
 Description:  The grep command searches one or more input files for lines
  containing a match to a specified pattern. By default, grep
  prints the matching lines.
@@ -1485,8 +1514,8 @@ CPE-ID: cpe:/a:gnu:gzip
 Architecture: aarch64_cortex-a53
 Installed-Size: 122880
 Filename: gzip_1.13-r1_aarch64_cortex-a53.ipk
-Size: 61652
-SHA256sum: e22a1ce6719335ff6594d3a46e7989e1559e7035ea884d2e05e75413fa6322ee
+Size: 61658
+SHA256sum: cf5240bfeeea7edbda964768ea7403800730b27ceca02d48c5717265647251e6
 Description:  gzip (GNU zip) is a compression utility designed to be a replacement for compress.
 
 Package: hexedit
@@ -1498,8 +1527,8 @@ URL: http://rigaux.org/hexedit.html
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: hexedit_1.6-r1_aarch64_cortex-a53.ipk
-Size: 19683
-SHA256sum: b7badd227377cf1ee5b1bf60f4ef74e38f43ca4c2ffc8021fbdad3f2651a3531
+Size: 19682
+SHA256sum: 0cb9b7dab558cebe3f4539e6f640a06ff35140012682ddb15d81f5d3b6676b70
 Description:  Viewer and editor in hexadecimal or ASCII for files or devices
  
  hexedit shows a target both in hexadecimal and in ASCII. This target can be
@@ -1524,8 +1553,8 @@ CPE-ID: cpe:/a:htop:htop
 Architecture: aarch64_cortex-a53
 Installed-Size: 389120
 Filename: htop_3.3.0-r2_aarch64_cortex-a53.ipk
-Size: 174876
-SHA256sum: 4b295a0590137e8e67f8d45ff46a1cc43f65ce2f72408ba4b26171d889a6369b
+Size: 174890
+SHA256sum: c6ba24e76d5ec941155b235dae7944538555b7f15cfa1dc9ab050b91c06abcd3
 Description:  Htop is an ncursed-based process viewer similar to top, but
  it allows to scroll the list vertically and horizontally to
  see all processes and their full command lines.
@@ -1539,8 +1568,8 @@ URL: https://github.com/openSUSE/hwinfo
 Architecture: aarch64_cortex-a53
 Installed-Size: 3020800
 Filename: hwinfo_21.71-r4_aarch64_cortex-a53.ipk
-Size: 916483
-SHA256sum: 806abef3080fa86dad70b2155b7d3a3bd890067700f2f9a95fd8a3fac5b94924
+Size: 916023
+SHA256sum: baf128d922368f225126fedeb1f220618ac3622609164d4a2157324935844969
 Description:  hwinfo/libhd are used to probe for the hardware present in the system.
  It can be used to generate a system overview log which can be later 
  used for support.
@@ -1557,8 +1586,8 @@ URL: https://www.open-mpi.org/projects/hwloc/
 Architecture: aarch64_cortex-a53
 Installed-Size: 399360
 Filename: hwloc-utils_2.10.0-r1_aarch64_cortex-a53.ipk
-Size: 163460
-SHA256sum: bc787f01c8fcfaf4832cbf293d9a7b9c92e23883528ea474c35b1bc193b3ab77
+Size: 163420
+SHA256sum: 8cd1a6ff4a6512e2b81c3d93129a5eb27179afbbfa6fbbf2429cc796196b4325
 Description:  The Portable Hardware Locality (hwloc) software package provides a
  portable abstraction (across OS, versions, architectures, ...) of the
  hierarchical topology of modern architectures, including NUMA memory
@@ -1567,21 +1596,6 @@ Description:  The Portable Hardware Locality (hwloc) software package provides a
  information as well as the locality of I/O devices such as network
  interfaces, InfiniBand HCAs or GPUs.
  This package contains the hwloc utilities.
-
-Package: i2c-tools
-Version: 4.3-r3
-Depends: libc, libi2c
-License: GPL-2.0-or-later LGPL-2.1-or-later
-Section: utils
-URL: https://i2c.wiki.kernel.org/index.php/I2C_Tools
-CPE-ID: cpe:/a:i2c-tools_project:i2c-tools
-Architecture: aarch64_cortex-a53
-Installed-Size: 92160
-Filename: i2c-tools_4.3-r3_aarch64_cortex-a53.ipk
-Size: 27417
-SHA256sum: 4a45892ea0665d7137f15c3a48191d902e443507aad5b248825decfcdf6f9cea
-Description:  This package contains an heterogeneous set of I2C tools for Linux. These tools
- were originally part of the lm-sensors package.
 
 Package: iftop
 Version: 2018.10.03~77901c8c-r2
@@ -1592,8 +1606,8 @@ URL: http://www.ex-parrot.com/~pdw/iftop/
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: iftop_2018.10.03~77901c8c-r2_aarch64_cortex-a53.ipk
-Size: 28041
-SHA256sum: c7d922bb96220c075ad5e56cff89505d60a5961fea30814e3856c8b65b752e20
+Size: 28050
+SHA256sum: 125733fa79511e87d9530ba4394290cf1ac75c5665d4b4d12548aee0f0af7016
 Description:  iftop does for network usage what top(1) does for CPU usage. It
  listens to network traffic on a named interface and displays a
  table of current bandwidth usage by pairs of hosts. Handy for
@@ -1608,8 +1622,8 @@ URL: https://github.com/rvoicilas/inotify-tools/wiki
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: inotifywait_4.23.9.0-r2_aarch64_cortex-a53.ipk
-Size: 9334
-SHA256sum: de786d2ec170c9757d6a4b7896ebd4040bc57fa862522d370778529569573e7e
+Size: 9332
+SHA256sum: 242bdcf7173791412c383f4262e62dd9e515c820e5f5b35b601caab78d6a9225
 Description:  inotify-tools is a C library and a set of command-line programs for
  Linux providing a simple interface to inotify. These programs can be
  used to monitor and act upon filesystem events. A more detailed
@@ -1628,8 +1642,8 @@ URL: https://github.com/rvoicilas/inotify-tools/wiki
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: inotifywatch_4.23.9.0-r2_aarch64_cortex-a53.ipk
-Size: 9021
-SHA256sum: eaa4c402116a0267cd0dc3fa142135625ad8fb38c4f29d1650af67e7beaba82c
+Size: 9022
+SHA256sum: 02c5d54c97ad96e8aeaf6cdf30d0c484296f414a20f801e2f2a38eb4cca39bd7
 Description:  inotify-tools is a C library and a set of command-line programs for
  Linux providing a simple interface to inotify. These programs can be
  used to monitor and act upon filesystem events. A more detailed
@@ -1649,8 +1663,8 @@ CPE-ID: cpe:/a:es:iperf3
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: iperf3_3.17.1-r1_aarch64_cortex-a53.ipk
-Size: 3204
-SHA256sum: b7e7b170ae29297d6d7c67c2c9ab5ccc610b181bfb60c4440aecdd3017716ba5
+Size: 3186
+SHA256sum: 8bd60140434a53743c7259f73f3eecdaa3ca9ace065b4dfcc29e1f9270c10900
 Description:  Iperf is a modern alternative for measuring TCP and UDP bandwidth
  performance, allowing the tuning of various parameters and
  characteristics.
@@ -1666,8 +1680,8 @@ CPE-ID: cpe:/a:iputils_project:iputils
 Architecture: aarch64_cortex-a53
 Installed-Size: 92160
 Filename: iputils-ping_20240117-r1_aarch64_cortex-a53.ipk
-Size: 34429
-SHA256sum: b49f48d08b35bad365b6fe7344215c2ab7bf204c77edb9292273db8975310589
+Size: 34432
+SHA256sum: 3697aa26fe2da23318aa720118866ede99dd20993275accbc7dba77a5ac527c7
 Description:  Send ICMP_ECHOREQUEST packets to IP hosts and report on replies
 
 Package: iputils-tracepath
@@ -1680,8 +1694,8 @@ CPE-ID: cpe:/a:iputils_project:iputils
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: iputils-tracepath_20240117-r1_aarch64_cortex-a53.ipk
-Size: 7493
-SHA256sum: d4ef9cd4845f2b5d52b1b393c7b63376dfd49ad358d9b523c6033b988e29d417
+Size: 7494
+SHA256sum: f054b78c72c2ead747d58bbb4449753ee67dacebf3935ff350abfea49c0a2871
 Description:  trace network path to a host, discovering PMTU
 
 Package: jose
@@ -1693,8 +1707,8 @@ URL: https://github.com/latchset/jose
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: jose_11-r6_aarch64_cortex-a53.ipk
-Size: 24850
-SHA256sum: a9a2686a92bd7aedd726cf1f30e61e47f62cd2216b92bb6cc10a200d958cf1d7
+Size: 24828
+SHA256sum: 24bba8cfacc341de0d0f4017817b90a502748f384342bae2e1b7c0a7e9eee3d4
 Description:  jose is a command line utility for performing various tasks on JSON
  Object Signing and Encryption (JOSE) objects. José provides a full
  crypto stack including key generation, signing and encryption.
@@ -1708,8 +1722,8 @@ URL: https://jqlang.github.io/jq/
 Architecture: aarch64_cortex-a53
 Installed-Size: 358400
 Filename: jq_1.7.1-r1_aarch64_cortex-a53.ipk
-Size: 166177
-SHA256sum: 5c22f4f236a18800569439a08a20b7082f2d90fd62c0cf4fe2f3dda0ac7a6d30
+Size: 166139
+SHA256sum: 509025228380fd5d21b198b4ec390d388b9fdc9193155d2a2605be92e60f7209
 Description:  Lightweight and flexible command-line JSON processor.
 
 Package: keyctl
@@ -1721,8 +1735,8 @@ CPE-ID: cpe:/a:keyutils_project:keyutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: keyctl_1.6.3-r1_aarch64_cortex-a53.ipk
-Size: 19722
-SHA256sum: 8c781a7b34781e5620418313f4a3ebf7ab74758e7c1edee92ec26974025b047b
+Size: 19729
+SHA256sum: d09ef61e644963fd31de26a0cd89be3c196fed49525107026b6dfad549ae12aa
 Description:  keyctl
 
 Package: keyutils
@@ -1734,8 +1748,8 @@ CPE-ID: cpe:/a:keyutils_project:keyutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: keyutils_1.6.3-r1_aarch64_cortex-a53.ipk
-Size: 17208
-SHA256sum: 3e029cdec85fde7a4529ecf1414a5a6b3fd5dbc682da0391b63ed78eba9d5881
+Size: 17203
+SHA256sum: f5cf5a1af073083c1f8f884f665bfafb21299665dbc2a36e3bf9bee37fcd92e4
 Description:  Key utilities
 
 Package: ksmbd-avahi-service
@@ -1747,8 +1761,8 @@ URL: https://github.com/cifsd-team/ksmbd-tools
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: ksmbd-avahi-service_3.5.2-r1_aarch64_cortex-a53.ipk
-Size: 1218
-SHA256sum: 80a0c33101d8c661624353f5d88c772d39d49cd74f91ddc2d5b504963d4113ea
+Size: 1217
+SHA256sum: e338fb63b87814280fb4a469bf6af702fdb60eb875066cdad8267a43da6a0728
 Description:  installs: smb.service
  
  This package contains the service definition for announcing the
@@ -1763,8 +1777,8 @@ URL: https://github.com/cifsd-team/ksmbd-tools
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: ksmbd-hotplug_3.5.2-r1_aarch64_cortex-a53.ipk
-Size: 1452
-SHA256sum: df1163729cd1307f8d690caed55ef5197b9a1e27cb2cc048acca5b1bc6ac07ee
+Size: 1449
+SHA256sum: 66039b18a3ae8d3ce360d36303b5f5acfa4b034ac606ad8471e47494c12e4b65
 Description:  Kernel SMB hotplug script for auto sharing
 
 Package: ksmbd-server
@@ -1776,8 +1790,8 @@ URL: https://github.com/cifsd-team/ksmbd-tools
 Architecture: aarch64_cortex-a53
 Installed-Size: 471040
 Filename: ksmbd-server_3.5.2-r1_aarch64_cortex-a53.ipk
-Size: 171124
-SHA256sum: dca6bd22a625451cd6fdda625cc8c320a759298d88c509a7ec6a43b4c44ae9d9
+Size: 170979
+SHA256sum: 8cdd8044b79ca66f153ed9810a6a098f10bd21cab32d05042dde34b892a640ad
 Description:  installs: ksmbd.mountd
  
  This provides the basic fileserver service and is the minimum needed to serve 'guest only' file shares or use a existing user database file ksmbdpwd.db.
@@ -1794,8 +1808,8 @@ CPE-ID: cpe:/a:gnu:less
 Architecture: aarch64_cortex-a53
 Installed-Size: 235520
 Filename: less_643-r1_aarch64_cortex-a53.ipk
-Size: 115554
-SHA256sum: bf18e6561cecf30d93dedc589977d0762a3efccfd40a3bbadb5485a35df153d9
+Size: 115563
+SHA256sum: 342cfc11594f1da0f1589914db8640ec2174bfd145d9d6b949e3cc817e08c5b5
 Description:  Full version of GNU less utility
 
 Package: libacl
@@ -1808,8 +1822,8 @@ CPE-ID: cpe:/a:acl_project:acl
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: libacl_2.3.2-r2_aarch64_cortex-a53.ipk
-Size: 15673
-SHA256sum: ddba62067d13abd07ae03198cc51222b6ec323fd95c21879c021807a45a80c6a
+Size: 15670
+SHA256sum: 422d5feefc26120ab293854eb17fbd52073f27d8ae33c03761888c65f0f3413d
 Description:  Access control list support
  This package provides libacl
 
@@ -1822,8 +1836,8 @@ URL: https://gnupg.org/software/libassuan/index.html
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: libassuan_2.5.6-r1_aarch64_cortex-a53.ipk
-Size: 36332
-SHA256sum: a34017e40998350283f5fa080e9e0e552c77f867a814f8f75ecf599d667c9d9b
+Size: 36326
+SHA256sum: 3fa83510b8f704b40461ad14512dea8e10d4015cdb83ab5a3a42b5868909e7ab
 Description:  Libassuan is a small library implementing the so-called Assuan
  protocol. This protocol is used for IPC between most newer GnuPG
  components. Both, server and client side functions are provided. 
@@ -1838,8 +1852,8 @@ CPE-ID: cpe:/a:attr_project:attr
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: libattr_2.5.2-r3_aarch64_cortex-a53.ipk
-Size: 8423
-SHA256sum: 82385188e0d9b11703bd2dcd6b583eec8edbf38279ed5d8c191d63d86ad53342
+Size: 8431
+SHA256sum: c136f54f96e0cc621e4a9b74bcd96c586c1826fd5b4e2927bfffbd47ccb7a560
 Description:  Extended attributes support
  This package provides libattr
 
@@ -1854,8 +1868,8 @@ CPE-ID: cpe:/a:avahi:avahi
 Architecture: aarch64_cortex-a53
 Installed-Size: 235520
 Filename: libavahi-dbus-support_0.8-r9_aarch64_cortex-a53.ipk
-Size: 94488
-SHA256sum: ee2c9e5f65f7fee80dbee9e595d5216c48c6e634ff2e462caaf94af59492f9d6
+Size: 94500
+SHA256sum: c8ce50817d563b4e31843fa94d03acbd2d6f536dff492503a6adfa61402e060f
 Description:  Avahi is an mDNS/DNS-SD (aka RendezVous/Bonjour/ZeroConf)
  implementation (library). It facilitates
  service discovery on a local network -- this means that
@@ -1890,8 +1904,8 @@ CPE-ID: cpe:/a:libcgroup_project:libcgroup
 Architecture: aarch64_cortex-a53
 Installed-Size: 122880
 Filename: libcgroup_2.0.3-r1_aarch64_cortex-a53.ipk
-Size: 52081
-SHA256sum: 716109e8d1cee1261e9ac3f0b715887a70a3b4e1bfe1132f093dafe2ac30b11a
+Size: 52086
+SHA256sum: a60b9ca7d61dc7c2ced1ae8fd1f24f8c91be6c279229e1f65d5cf4cd4ce91595
 Description:  Helpers utils for working with cgroups.
 
 Package: libcurl4
@@ -1906,8 +1920,8 @@ CPE-ID: cpe:/a:haxx:libcurl
 Architecture: aarch64_cortex-a53
 Installed-Size: 716800
 Filename: libcurl4_8.7.1-r2_aarch64_cortex-a53.ipk
-Size: 347277
-SHA256sum: a0edc727c7a96507466bd6ebaeeba29dc96f99158a940078587fa638e4bcfd94
+Size: 347289
+SHA256sum: efcdd91b4a228e9790df0b400989e3db50d9080a98e73151a6e49992ce062161
 Description:  A client-side URL transfer library
 
 Package: libdaemon
@@ -1919,8 +1933,8 @@ CPE-ID: cpe:/a:libdaemon_project:libdaemon
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: libdaemon_0.14-r5_aarch64_cortex-a53.ipk
-Size: 11545
-SHA256sum: b389ee5ca3cd53073b69501de2ff4ba32f818bda34ebc68769da667edf4f0b3a
+Size: 11546
+SHA256sum: 0e055da132bbd6fdf1f28b62c433f25f7f85f6182ddb6ae2866083a63e69cd7f
 Description:  libdaemon is a lightweight C library that eases the writing of UNIX daemons.
  It consists of the following parts:
  - A wrapper around fork() which does the correct daemonization procedure of a process
@@ -1942,8 +1956,8 @@ CPE-ID: cpe:/a:freedesktop:dbus
 Architecture: aarch64_cortex-a53
 Installed-Size: 430080
 Filename: libdbus_1.14.10-r1_aarch64_cortex-a53.ipk
-Size: 177397
-SHA256sum: 9ac09fc735d8069a08c4a2bbd5b56b4dd011bc92fdf99beb1efc5b0388ddb76b
+Size: 177430
+SHA256sum: 2b66dab859d12a4c0253f583bec628f84f34d6f8996d476f08d86ab619eee578
 Description:  Simple interprocess messaging system (library)
 
 Package: libev
@@ -1955,8 +1969,8 @@ URL: http://software.schmorp.de/pkg/libev.html
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: libev_4.33-r2_aarch64_cortex-a53.ipk
-Size: 28723
-SHA256sum: cbd2a48100445cf4aac9b8f6c66e00bef5a963f2a87a9c0c528846c974724666
+Size: 28714
+SHA256sum: 4e2b3cc8d2f790cdcd276c9acc33fb66e725b1c0a6307c9fd2f95931a2cf357c
 Description:  A full-featured and high-performance event loop that is loosely modelled after
  libevent, but without its limitations and bugs.
 
@@ -1969,8 +1983,8 @@ URL: https://www.freedesktop.org/wiki/Software/libevdev/
 Architecture: aarch64_cortex-a53
 Installed-Size: 122880
 Filename: libevdev_1.13.1-r1_aarch64_cortex-a53.ipk
-Size: 38672
-SHA256sum: 408c5dcd07303c01a5a42bfa9fcbb1a5159639290165f9c4c1ba816cc3fad2ea
+Size: 38664
+SHA256sum: e06506846d6cc3fbd249537e2fcc9812e384d0834e51bafd491eb8338db8f211
 Description:  libevdev is a wrapper library for evdev devices. it moves the common
  tasks when dealing with evdev devices into a library and provides a
  library interface to the callers, thus avoiding erroneous ioctls, etc.
@@ -1988,8 +2002,8 @@ CPE-ID: cpe:/a:libexpat_project:libexpat
 Architecture: aarch64_cortex-a53
 Installed-Size: 143360
 Filename: libexpat_2.6.2-r1_aarch64_cortex-a53.ipk
-Size: 58632
-SHA256sum: e2501d94c1d3ce6be8d50b2c08d21954622602333e48efe1c66e37a84cf37b92
+Size: 58658
+SHA256sum: 6cbb1f305890bf7a37a55e3f82e1179fa80bfe5c6af3fe5583a2946de2cf6fab
 Description:  A fast, non-validating, stream-oriented XML parsing library.
 
 Package: libffi
@@ -2002,8 +2016,8 @@ CPE-ID: cpe:/a:libffi_project:libffi
 Architecture: aarch64_cortex-a53
 Installed-Size: 102400
 Filename: libffi_3.4.6-r1_aarch64_cortex-a53.ipk
-Size: 20952
-SHA256sum: 741ba43c1ab237f1e6014ffee22b3c0a4891420b55fd094512a962c05cc2ae34
+Size: 20957
+SHA256sum: 36155fa5e5883c70218549016bb35e7716efebe63c223a109974e13f1fb8ac06
 Description:  The libffi library provides a portable, high level programming interface to
  various calling conventions. This allows a programmer to call any function
  specified by a call interface description at run-time.
@@ -2025,8 +2039,8 @@ CPE-ID: cpe:/a:gnupg:libgcrypt
 Architecture: aarch64_cortex-a53
 Installed-Size: 1136640
 Filename: libgcrypt_1.10.3-r1_aarch64_cortex-a53.ipk
-Size: 578632
-SHA256sum: 216de4571b17f8d29dd830dd195e057c95dc4d7440219fa7fd9efb51e2c763ac
+Size: 579651
+SHA256sum: d7a87d31a787a5aad93490560866091ad071f5e9e00a06660a5febd187683063
 Description:  This is a general purpose cryptographic library based on the code from
  GnuPG. It provides functions for all cryptograhic building blocks:
  symmetric ciphers (AES, DES, Arcfour, CAST5), hash algorithms (MD5, SHA-1,
@@ -2046,8 +2060,8 @@ CPE-ID: cpe:/a:gnu:gnutls
 Architecture: aarch64_cortex-a53
 Installed-Size: 2406400
 Filename: libgnutls_3.8.5-r1_aarch64_cortex-a53.ipk
-Size: 1032727
-SHA256sum: ddfc98b61ddb3953ac4a4f86fdcc935883c1ff41b588adc6aa8d6f0e46b83693
+Size: 1032687
+SHA256sum: 1d5197fd0021c20c44b3b7b93ecbde1ec0cf29ac0352088fd304b228696aedd2
 Description:  GnuTLS is a secure communications library implementing the SSL, TLS
  and DTLS protocols and technologies around them. It provides a simple
  C language application programming interface (API) to access the secure
@@ -2066,8 +2080,8 @@ CPE-ID: cpe:/a:gnupg:libgpg-error
 Architecture: aarch64_cortex-a53
 Installed-Size: 174080
 Filename: libgpg-error_1.49-r1_aarch64_cortex-a53.ipk
-Size: 76989
-SHA256sum: f2a738d1fe043000bbad1c9ef4ccf35c5e0e598dd9ac26f913c8a58ca0505341
+Size: 76993
+SHA256sum: a6f225c9e2b83d22f63bbace24e40aa67abbd276384139b94e56ec9be2688214
 Description:  An helper library for common error codes and descriptions.
  This is a library that defines common error values for all GnuPG
  components. Among these are GPG, GPGSM, GPGME, GPG-Agent, libgcrypt,
@@ -2083,8 +2097,8 @@ URL: https://github.com/nodejs/http-parser
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: libhttp-parser_2.9.4-r1_aarch64_cortex-a53.ipk
-Size: 14455
-SHA256sum: 1cc58b2b988abe172b78e1220e6ceb4770c876911abc6b3d6dc9482ce4d0c8f4
+Size: 14452
+SHA256sum: 7b17eba4495720eb378c8f5320861dcbe4513813ad6d987470a99449976ecd20
 Description:  A parser for HTTP messages written in C. It parses both requests and responses.
  The parser is designed to be used in performance HTTP applications.
  It does not make any syscalls nor allocations, it does not buffer data,
@@ -2101,8 +2115,8 @@ URL: https://www.open-mpi.org/projects/hwloc/
 Architecture: aarch64_cortex-a53
 Installed-Size: 450560
 Filename: libhwloc_2.10.0-r1_aarch64_cortex-a53.ipk
-Size: 196206
-SHA256sum: 13689046fb482a907b144bdb2455fd5258c2dd91450f12939cc366c1417bac07
+Size: 196209
+SHA256sum: db23c4c40ee4a5d724083959be03a58bad72f3bdacddf06fa562c5128ebbfb34
 Description:  The Portable Hardware Locality (hwloc) software package provides a
  portable abstraction (across OS, versions, architectures, ...) of the
  hierarchical topology of modern architectures, including NUMA memory
@@ -2122,8 +2136,8 @@ CPE-ID: cpe:/a:i2c-tools_project:i2c-tools
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: libi2c_4.3-r3_aarch64_cortex-a53.ipk
-Size: 3097
-SHA256sum: 2f89d41df8e73516846127e928392b85f0f3e6be90b59f322a6e123a015f851f
+Size: 3090
+SHA256sum: 92f65ef3771c6b3c0b0252ad0ad7af1869611fd15a96b7c02c9828494d7794a8
 Description:  This package contains i2c functionality needed by i2c-tools.
 
 Package: libinotifytools
@@ -2135,8 +2149,8 @@ URL: https://github.com/rvoicilas/inotify-tools/wiki
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: libinotifytools_4.23.9.0-r2_aarch64_cortex-a53.ipk
-Size: 19382
-SHA256sum: a1d5085cae4ab81e4c90e40f82a91bf86b68d2e31d6a04b62afe712f4fbffd24
+Size: 19376
+SHA256sum: be70a5595a0a3372c9c65b80494380778e58570d3d54c86402a791514dcc6286
 Description:  inotify-tools is a C library and a set of command-line programs for
  Linux providing a simple interface to inotify. These programs can be
  used to monitor and act upon filesystem events. A more detailed
@@ -2156,8 +2170,8 @@ CPE-ID: cpe:/a:es:iperf3
 Architecture: aarch64_cortex-a53
 Installed-Size: 204800
 Filename: libiperf3_3.17.1-r1_aarch64_cortex-a53.ipk
-Size: 78665
-SHA256sum: c3f4c9a8476b2d2fd351fd453f96dea07719234f676c505e42db8b325ab71b7c
+Size: 78670
+SHA256sum: 1171ee1479e34d784aa832a320b3b3474b6a6a684ab949dcade9ebaa402d679e
 Description:  Libiperf is a library providing an API for iperf3 functionality.
 
 Package: libjose
@@ -2169,8 +2183,8 @@ URL: https://github.com/latchset/jose
 Architecture: aarch64_cortex-a53
 Installed-Size: 133120
 Filename: libjose_11-r6_aarch64_cortex-a53.ipk
-Size: 48446
-SHA256sum: bd937b2f21feeb73e958b93f8ca9e703eca3fb9fd43a56d15d554e4ca056ab49
+Size: 48447
+SHA256sum: d353d4f3d4b85f9027b53c97168be0306c99ce9aedbd688465b8cf6602e0014e
 Description:  libjose is a library for performing various tasks on JSON
  Object Signing and Encryption (JOSE) objects. José provides a full
  crypto stack including key generation, signing and encryption.
@@ -2187,8 +2201,8 @@ CPE-ID: cpe:/a:keyutils_project:keyutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: libkeyutils1_1.6.3-r1_aarch64_cortex-a53.ipk
-Size: 6779
-SHA256sum: e9f16283ac373d74007dd915eeb116548201fc4009f2e256d5f46983c5d71236
+Size: 6789
+SHA256sum: 80eddde9522cee1a0f8d2534afced819df905baa9e4c8108ab7acd435202911f
 Description:  Key utilities library
 
 Package: libksba
@@ -2201,8 +2215,8 @@ CPE-ID: cpe:/a:gnupg:libksba
 Architecture: aarch64_cortex-a53
 Installed-Size: 327680
 Filename: libksba_1.6.4-r1_aarch64_cortex-a53.ipk
-Size: 142399
-SHA256sum: f66426fb0cbbe691b3015818719549770dc8cf971af1d6a452c6a409aba4f9c4
+Size: 142396
+SHA256sum: 74960783b9b26b6855c22ef82ac1f69107e3d6f3fd6bc2cc8b80f19c4e8047f8
 Description:  Libksba is a library to make the tasks of working with X.509 certificates, CMS data and related objects more easy. 
 
 Package: libldns
@@ -2215,8 +2229,8 @@ CPE-ID: cpe:/a:nlnetlabs:ldns
 Architecture: aarch64_cortex-a53
 Installed-Size: 491520
 Filename: libldns_1.8.3-r1_aarch64_cortex-a53.ipk
-Size: 188326
-SHA256sum: 7304c0c7ef14529c963c91d4c384ba58b14274458f4da0d21136621f9f8c1c1e
+Size: 188292
+SHA256sum: 516fa42b412f56427971f7b52f19d2f882f6113176e583a07656f266a58d539e
 Description:  The goal of ldns is to simplify DNS programming, it supports recent RFCs like
  the DNSSEC documents, and allows developers to easily create software
  conforming to current RFCs, and experimental software for current Internet
@@ -2234,8 +2248,8 @@ CPE-ID: cpe:/a:lua:lua
 Architecture: aarch64_cortex-a53
 Installed-Size: 399360
 Filename: liblua5.4-5.4_5.4.6-r1_aarch64_cortex-a53.ipk
-Size: 156369
-SHA256sum: 277274e9ecf459e9b5b6f813e8e1916feae5601aa674b88a132be3b31ffb175e
+Size: 156387
+SHA256sum: 16d55ec1ca748d97b89edf7d928da4d9565ea7abc17a174a727e4dadcd01865f
 Description:  Lua is a powerful, efficient, lightweight, embeddable scripting language. It
  supports procedural programming, object-oriented programming, functional
  programming, data-driven programming, and data description.
@@ -2253,8 +2267,8 @@ CPE-ID: cpe:/a:lz4_project:lz4
 Architecture: aarch64_cortex-a53
 Installed-Size: 194560
 Filename: liblz4-1_1.9.4-r1_aarch64_cortex-a53.ipk
-Size: 105863
-SHA256sum: 14d16e2f48ed118b8a7f4283ae31388bebfbdd5401fb78cb62eb82c51022a40e
+Size: 105869
+SHA256sum: 1c164a1d88c71b21905eab2a21695b8c4622db5505429a04f548841bc21cbbad
 Description:  LZ4 is a compression codec that features a very fast encoder and an
  even faster decoder. This package provides the liblz4 shared library.
 
@@ -2268,8 +2282,8 @@ CPE-ID: cpe:/a:tukaani:xz
 Architecture: aarch64_cortex-a53
 Installed-Size: 215040
 Filename: liblzma_5.4.6-r1_aarch64_cortex-a53.ipk
-Size: 102129
-SHA256sum: 0e134fc4c83f9849e469df5542133685922dad3b75e8e9527975359352ded199
+Size: 102136
+SHA256sum: c9e13916b284d08ccc2f2da7b97d0e694fd6d8702128773338f05ca85bdab176
 Description:  liblzma library from XZ Utils
 
 Package: liblzo2
@@ -2284,8 +2298,8 @@ CPE-ID: cpe:/a:oberhumer:lzo
 Architecture: aarch64_cortex-a53
 Installed-Size: 184320
 Filename: liblzo2_2.10-r4_aarch64_cortex-a53.ipk
-Size: 68946
-SHA256sum: 64d07b6b7f461f61357d739383dfdf52936359cc4d60b912f06b7225b3910e12
+Size: 68943
+SHA256sum: 11edd2656c47ea4b4cf14b7b8253d4b1af0c30df170ac4da30ab3f8b14bfc9ee
 Description:  LZO is a data compression library which is suitable for data de-/compression
  in real-time. This means it favours speed over compression ratio.
 
@@ -2298,8 +2312,8 @@ URL: https://darwinsys.com/file/
 Architecture: aarch64_cortex-a53
 Installed-Size: 1075200
 Filename: libmagic_5.45-r1_aarch64_cortex-a53.ipk
-Size: 311331
-SHA256sum: 0068f6a0f973e02f6d3b79141afc7b5ffc5796771c03c2f3652b029cd44c0ae3
+Size: 311333
+SHA256sum: 37835a18fc933184b8e436ed557b3a0aa453a02a3469a084b3193f3d9a16cb57
 Description:  File type determination library
 
 Package: libnet-1.2.x
@@ -2311,8 +2325,8 @@ CPE-ID: cpe:/a:libnet_project:libnet
 Architecture: aarch64_cortex-a53
 Installed-Size: 112640
 Filename: libnet-1.2.x_1.2-rc3-r4_aarch64_cortex-a53.ipk
-Size: 44242
-SHA256sum: 762882f794da683d9c95c4094149f6f933d100aaed14e2fb2c8795c48887008e
+Size: 44244
+SHA256sum: a2019831e8b3da1ed99cabccbbffc8c142be79e870b564f2614f56922a536e37
 Description:  Low-level packet creation library
 
 Package: libnetsnmp
@@ -2325,8 +2339,8 @@ CPE-ID: cpe:/a:net-snmp:net-snmp
 Architecture: aarch64_cortex-a53
 Installed-Size: 1382400
 Filename: libnetsnmp_5.9.4-r2_aarch64_cortex-a53.ipk
-Size: 556233
-SHA256sum: ceaa3f0c2a9a068faaabbf2c10d91f36ec5322777ee88a0aad805b4cdeae4a34
+Size: 556258
+SHA256sum: d4937289fe350c966a446ac69a12951e40795e645c917f9b9375db62be2f88a8
 Description:  Simple Network Management Protocol (SNMP) is a widely used protocol for
  monitoring the health and welfare of network equipment (eg. routers),
  computer equipment and even devices like UPSs. Net-SNMP is a suite of
@@ -2346,8 +2360,8 @@ CPE-ID: cpe:/a:nghttp2:nghttp2
 Architecture: aarch64_cortex-a53
 Installed-Size: 184320
 Filename: libnghttp2-14_1.61.0-r1_aarch64_cortex-a53.ipk
-Size: 78160
-SHA256sum: 1b5df1e1da5d37a415b8b3d983bfafcc30239c84eadd1a232ab1601f4bfc0a3d
+Size: 78216
+SHA256sum: a9603b783261ec9a39174176aa8b328f4a1d4c3ff5cea13f4bd23f8042d84d01
 Description:  C library implementing the framing layer of the HTTP/2 protocol. It can be used to build a HTTP/2-capable HTTP client or server
 
 Package: libnghttp3
@@ -2359,8 +2373,8 @@ URL: https://nghttp2.org/nghttp3
 Architecture: aarch64_cortex-a53
 Installed-Size: 440320
 Filename: libnghttp3_1.2.0-r1_aarch64_cortex-a53.ipk
-Size: 202662
-SHA256sum: e13fb9c1c5f9573e3bf709a4354be8acbad970f2d56bb5b087fd7c05234346dd
+Size: 202732
+SHA256sum: 61ae2c75b4222a8ce88a1ef02e3f4f36246bbf2efd9e7ddcb5844951caf9e885
 Description:  nghttp3 is a thin HTTP/3 layer over an underlying QUIC stack.
 
 Package: libnpth
@@ -2372,9 +2386,24 @@ URL: https://gnupg.org/software/npth/index.html
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: libnpth_1.6-r1_aarch64_cortex-a53.ipk
-Size: 5871
-SHA256sum: a97880f4c94d44153d4d324605afc036fa264c3d2549e152eb76d13939d251ca
+Size: 5867
+SHA256sum: 42be9239bd05752add062db4b989dc2a02f140f74e0f88e661f8c11a323a6214
 Description:  nPth is a library to provide the GNU Pth API and thus a non-preemptive threads implementation. 
+
+Package: libowipcalc
+Version: 7
+Depends: libc
+License: Apache-2.0
+Section: libs
+Architecture: aarch64_cortex-a53
+Installed-Size: 71680
+Filename: libowipcalc_7_aarch64_cortex-a53.ipk
+Size: 7065
+SHA256sum: bde4446ee9a2ab352f87150066d1cf65874885f9516dd6c94ca5f80a9ad98ad4
+Description:  The owipcalc library supports a number of calculations and tests to work
+ with ip-address ranges, this is useful for programms that e.g. need to
+ partition ipv6-prefixes into small subnets or to calculate address ranges
+ for dhcp pools.
 
 Package: libp11
 Version: 0.4.12-r1
@@ -2386,8 +2415,8 @@ URL: https://www.opensc-project.org/opensc/wiki/libp11
 Architecture: aarch64_cortex-a53
 Installed-Size: 174080
 Filename: libp11_0.4.12-r1_aarch64_cortex-a53.ipk
-Size: 65222
-SHA256sum: 7630b5a09ecbf37bda33d3ca5380670d82f0ca8c3cd561691281e7ef3f1aa4b9
+Size: 65233
+SHA256sum: d13a9ebea67bb2eede7ea667051588699ed4e21ed312610e58d1ff115b47334f
 Description:  Libp11 is a library implementing a small layer on top of PKCS#11 API
  to make using PKCS#11 implementations easier.
 
@@ -2400,8 +2429,8 @@ URL: http://mj.ucw.cz/pciutils.shtml
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: libpci_3.12.0-r2_aarch64_cortex-a53.ipk
-Size: 35740
-SHA256sum: 8af9da1d47f91aa64c86d07c4a551c2d2a3e7b0716c8ca7997e9e6a3d20253db
+Size: 35742
+SHA256sum: 106325ae895a1b1e479c1d5cb24c061c903d9a8c5c8cdfd533139b98aef1f9b0
 Description:  Linux PCI Libraries
 
 Package: libpciaccess
@@ -2413,8 +2442,8 @@ URL: https://gitlab.freedesktop.org/xorg/lib/libpciaccess
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: libpciaccess_0.18.1-r1_aarch64_cortex-a53.ipk
-Size: 16062
-SHA256sum: 7fd2b0faf69fd00e653cb2e0c30c1fc330f1623f0d18c23ddf2f0ac609347ed4
+Size: 16068
+SHA256sum: a08376bc163a1ff58d26d484f63e0554d887c0718838bb9a498117bd8a6a0f81
 Description:  Generic PCI access library
 
 Package: libpfring
@@ -2426,8 +2455,8 @@ URL: https://github.com/ntop/pf_ring
 Architecture: aarch64_cortex-a53
 Installed-Size: 399360
 Filename: libpfring_8.6.1-r1_aarch64_cortex-a53.ipk
-Size: 101713
-SHA256sum: f7eafd2fc41b4f4fb26a22b996dbd9dfc3846ecb0127704397a79140492c4fa4
+Size: 101715
+SHA256sum: ffa8145a6c3cf6c2f0742d066aa6bd4e129327a5d14cdc5191a795932e5a7359
 Description:  PF_RING is a high speed packet capture library that turns a commodity PC into an efficient and cheap
  network measurement box suitable for both packet and active traffic analysis and manipulation.
  Moreover, PF_RING opens totally new markets as it enables the creation of efficient application such as
@@ -2443,8 +2472,8 @@ CPE-ID: cpe:/a:protobuf-c_project:protobuf-c
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: libprotobuf-c_1.4.1-r1_aarch64_cortex-a53.ipk
-Size: 18478
-SHA256sum: 28d587d7a087e7ba14083e939754fe00597c3334e276a2d7529878fbfd8a8392
+Size: 18480
+SHA256sum: ceaa5ff1b41eb0cabb0f4f04ac61d115a7e266c8fc5138ab1158d09423a21052
 Description:  Runtime library to use Google Protocol Buffers from C applications.
  Protocol Buffers are a way of encoding structured data in an efficient yet
  extensible format. Google uses Protocol Buffers for almost all of its
@@ -2459,8 +2488,8 @@ URL: https://www.radiotap.org/
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: libradiotap_2020-06-22-r5_aarch64_cortex-a53.ipk
-Size: 2557
-SHA256sum: 699f516d2096ba8f4a60c526cbb1e34513356f0183237a7c0b2dc81b6c7a6589
+Size: 2552
+SHA256sum: 613487be7793c97d3827eaa88379da972691965bdf1bca611fa5e59f70ce14ca
 Description:  Library that supplies additional information about frames from the driver to userspace applications.
 
 Package: librrd1
@@ -2472,8 +2501,8 @@ URL: http://oss.oetiker.ch/rrdtool/
 Architecture: aarch64_cortex-a53
 Installed-Size: 655360
 Filename: librrd1_1.0.50-r6_aarch64_cortex-a53.ipk
-Size: 178306
-SHA256sum: 7c8af785585c9fedfc1781c53bf32b9be34b0ba7a4d3e4db449ddce8508640fa
+Size: 178298
+SHA256sum: 28c57fcd11a1b4230dab08c9fffb7a402f3954c36d5d8f581b28c84ae2c56bfc
 Description:  RRD is the Acronym for Round Robin Database. RRD is a system to store and
  display time-series data (i.e. network bandwidth, machine-room temperature,
  server load average). It stores the data in a very compact way that will
@@ -2499,8 +2528,8 @@ CPE-ID: cpe:/a:lm_sensors:lm_sensors
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: libsensors5_3.6.0-r1_aarch64_cortex-a53.ipk
-Size: 24287
-SHA256sum: e6197845cadf56e5c209e3dd6ba2ec7bf14f38608ec66fe04b52332d72f03f1e
+Size: 24289
+SHA256sum: db2479802454d6e4fb96beead688af8678aff78c38a5bde682fb28e99bc49c78
 Description:  lm-sensors libraries
 
 Package: libsodium
@@ -2512,8 +2541,8 @@ URL: https://github.com/jedisct1/libsodium
 Architecture: aarch64_cortex-a53
 Installed-Size: 358400
 Filename: libsodium_1.0.19-r1_aarch64_cortex-a53.ipk
-Size: 184112
-SHA256sum: d3741e49ae00dd97908b0e00cf4799e097d2c00d233659a2879baeadf5c8a178
+Size: 184120
+SHA256sum: 3a4f15edfb7ca5c24f5beb52184bedfdaa9f4af31cb7fbe23c6d026beefc77cb
 Description:  NaCl (pronounced "salt") is a new easy-to-use high-speed software library for network communication, encryption, decryption, signatures, etc.
  NaCl's goal is to provide all of the core operations needed to build higher-level cryptographic tools.
  Sodium is a portable, cross-compilable, installable, packageable fork of NaCl (based on the latest released upstream version nacl-20110221), with a compatible API.
@@ -2530,8 +2559,8 @@ URL: https://github.com/oskarirauta/speedtestcpp
 Architecture: aarch64_cortex-a53
 Installed-Size: 112640
 Filename: libspeedtestcpp_1.20.3-r1_aarch64_cortex-a53.ipk
-Size: 50407
-SHA256sum: b12bcb65063e17556dccfa511e9434254d22ef9a8f528a73ae1291ecaa7d9b40
+Size: 50398
+SHA256sum: e754c83f1208dcb817236b6689a290c951cc7d3276043e8d3827506282e53e81
 Description:  Shared library that provides support for ookla's speedtest
 
 Package: libssh2-1
@@ -2546,8 +2575,8 @@ CPE-ID: cpe:/a:libssh2:libssh2
 Architecture: aarch64_cortex-a53
 Installed-Size: 327680
 Filename: libssh2-1_1.11.0-r1_aarch64_cortex-a53.ipk
-Size: 137447
-SHA256sum: 7f02a606f9f2b233cc2c116811d165d18c046fef6106fbe68015419c5ed9f28d
+Size: 137445
+SHA256sum: 28ba68f6f651fa30bde0dbf416d2096236de344d4617938a581fc04cd0a45ef5
 Description:  libssh2 is a client-side C library implementing the SSH2 protocol.
 
 Package: libtasn1
@@ -2560,8 +2589,8 @@ CPE-ID: cpe:/a:gnu:libtasn1
 Architecture: aarch64_cortex-a53
 Installed-Size: 102400
 Filename: libtasn1_4.19.0-r2_aarch64_cortex-a53.ipk
-Size: 44977
-SHA256sum: dce58918388e9e2fa9fb30ecd2780100d93678f6f094e9d18874887501eb7900
+Size: 44980
+SHA256sum: c66bd2c9cfeb10ed1bf080fa9a1672a2fd8d9499ae75ca49e977c2a02b61ee5c
 Description:  This is a library for Abstract Syntax Notation One (ASN.1) and
  Distinguish Encoding Rules (DER) manipulation.
 
@@ -2575,8 +2604,8 @@ CPE-ID: cpe:/a:libtirpc_project:libtirpc
 Architecture: aarch64_cortex-a53
 Installed-Size: 174080
 Filename: libtirpc_1.3.3-r1_aarch64_cortex-a53.ipk
-Size: 73309
-SHA256sum: 615a3f4415e1778343a3599b7b5f5ed05c6d572e31257a3e2b6fdf603f67689b
+Size: 73320
+SHA256sum: ed4267a46574fca8b1ec2ec40e48ebdb3efff594e8d76b48efbdc6783748200f
 Description:  Library TI RPC for RPC bindings
 
 Package: libuci2
@@ -2588,8 +2617,8 @@ URL: https://github.com/sartura/uci2
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: libuci2_1.0-r2_aarch64_cortex-a53.ipk
-Size: 18337
-SHA256sum: 110e5f283553910ae6aaf432aff8513d616f832a0a6a166d45d304c8207caf1d
+Size: 18340
+SHA256sum: cacc5986bcc8a676e314f07d42ced299abda01d6954b32146a568f171f08ec76
 Description:  UCI2 is a C library that provides an alternative UCI parser with an Abstract
  Syntax Tree (AST) representation of configuration files.
 
@@ -2604,8 +2633,8 @@ URL: https://github.com/illiliti/libudev-zero
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: libudev-zero_1.0.3-r1_aarch64_cortex-a53.ipk
-Size: 11797
-SHA256sum: f70102b530a424ec506613d58cb52de43873a9f6f9ff0a81dce5afda138f94f2
+Size: 11794
+SHA256sum: 51b1e56b425d74b1194f12456ec22f6c176ab829d93d1271dd5f89a9efef5c70
 Description:  Drop-in replacement for libudev
 
 Package: libuhttpd-openssl
@@ -2618,8 +2647,8 @@ URL: https://github.com/zhaojh329/libuhttpd
 Architecture: aarch64_cortex-a53
 Installed-Size: 92160
 Filename: libuhttpd-openssl_3.14.1-r2_aarch64_cortex-a53.ipk
-Size: 35215
-SHA256sum: e29aa60917eb0787307c774835f6b8d0b2641d9c2b87c47b9a3370dbc757e8e1
+Size: 35227
+SHA256sum: 85c45ce5fbf7ecfda58f9dc3e0b0b88f31895bf960858dfa4adfd167bdf60491
 Description:  A lightweight HTTP server library based on libev
 
 Package: libunbound
@@ -2632,14 +2661,14 @@ CPE-ID: cpe:/a:nlnetlabs:unbound
 Architecture: aarch64_cortex-a53
 Installed-Size: 1433600
 Filename: libunbound_1.19.3-r2_aarch64_cortex-a53.ipk
-Size: 600825
-SHA256sum: b262bf654faacf908ae8c324bca635168a1377a6bd2287364411645c1c77ab4d
+Size: 600816
+SHA256sum: b70b6c582607f3aed0afb905b74c939c257a2a18b405129fe43f6ac624fe2485
 Description:  This package contains the Unbound library including 'libevent', 'libmnl', and
  'libpthread' to better handle large networks with heavy query loads. Options
  are available to custom trim Unbound for smaller targets.
 
 Package: libunrar
-Version: 7.0.7-r1
+Version: 7.0.9-r1
 Depends: libc, libstdcpp6, libpthread
 License: UnRAR
 Section: libs
@@ -2647,9 +2676,9 @@ URL: https://www.rarlab.com/
 CPE-ID: cpe:/a:rarlab:unrar
 Architecture: aarch64_cortex-a53
 Installed-Size: 450560
-Filename: libunrar_7.0.7-r1_aarch64_cortex-a53.ipk
-Size: 215349
-SHA256sum: 85c124136ac8d3afb9ccb23d412cf5ce249d8e8f244d99680f8c9f3b7801d47c
+Filename: libunrar_7.0.9-r1_aarch64_cortex-a53.ipk
+Size: 215358
+SHA256sum: 6f55b40118a878b65fd6bbb922da79bae3df02b5c50e2038411f65f81f2ac123
 Description:  UnRAR library is a shared library that provides file extraction from RAR
  archives
 
@@ -2662,8 +2691,8 @@ URL: https://git.kernel.dk/cgit/liburing
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: liburing_2.6-r1_aarch64_cortex-a53.ipk
-Size: 9673
-SHA256sum: 2195ac3bfc4f4986ccd1cb7a701a3e2eee3d5c083bf14427f5a7376a0c1953e7
+Size: 9672
+SHA256sum: 52c54edd737c6f5d42be2c42e06340c0159da349f15c923f78737f8670617795
 Description:  liburing provides helpers to setup and teardown io_uring instances,
  and also a simplified interface for applications that don't need
  (or want) to deal with the full kernel side implementation.
@@ -2681,8 +2710,8 @@ CPE-ID: cpe:/a:libuv_project:libuv
 Architecture: aarch64_cortex-a53
 Installed-Size: 215040
 Filename: libuv1_1.48.0-r1_aarch64_cortex-a53.ipk
-Size: 89570
-SHA256sum: 7d1d66cc34363c26f9f5979924e6f711782cd04ceac54967af0a642566bef6c1
+Size: 89581
+SHA256sum: 2752e9b8ded0e457a90a0ca630499d2ef5625636184c9789d904b406a62c9ca0
 Description:  libuv is a multi-platform support library with a focus on asynchronous I/O. It
  was primarily developed for use by Node.js, but it's also used by Luvit, Julia,
  pyuv, and others.
@@ -2695,8 +2724,8 @@ Section: libs
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: libuwifi_2020-03-10-r2_aarch64_cortex-a53.ipk
-Size: 25756
-SHA256sum: 462ca237fc7742746db28add3baae44b050d4e468eb2e24c1c2d0eab552c87a9
+Size: 25759
+SHA256sum: 039abb1c83df7b507dd2ef854362164e899034b0b085665e108cf86762da284f
 Description:  Library for parsing, generating and analyzing Wifi (WLAN 802.11) frames in userspace and related functions.
 
 Package: libwebsockets-full
@@ -2709,8 +2738,8 @@ URL: https://libwebsockets.org
 Architecture: aarch64_cortex-a53
 Installed-Size: 491520
 Filename: libwebsockets-full_4.3.3-r1_aarch64_cortex-a53.ipk
-Size: 232049
-SHA256sum: a54b46bdde3ebfb963f427e2dbb53980a1f4e79bc78906d2431af0e78e6f324d
+Size: 232050
+SHA256sum: 83d31bae44cd477a5c41edd93058657d28e6c690703e4aba6d5d3d8b864d8f39
 Description:  libwebsockets (Full - OpenSSL, libuv, plugins, CGI)
 
 Package: libwrap
@@ -2722,8 +2751,8 @@ URL: ftp://ftp.porcupine.org/pub/security/index.html
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: libwrap_7.6-r4_aarch64_cortex-a53.ipk
-Size: 16013
-SHA256sum: 5e204dda23c0739263bd381a291c062a4ba0a246ca1d2000e0086ea366627499
+Size: 16020
+SHA256sum: 66d4dd946b5b5c0cad94b56be39da380652cec95cafddeeff061593aadc3d0b5
 Description:  Security wrapper library for TCP services
 
 Package: libxxhash
@@ -2735,8 +2764,8 @@ URL: https://xxhash.com/
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: libxxhash_0.8.2-r2_aarch64_cortex-a53.ipk
-Size: 21709
-SHA256sum: 5f0f81dcda68913bc04b808ef8c0b90b88ec756a397da37332f3798311ad66b3
+Size: 21704
+SHA256sum: 7b1e2b1f3454d38228cc20d2cede0097e0be5a2470fbc1263a9f24005c9ec763
 Description:  xxHash is an Extremely fast Hash algorithm, running at RAM speed
  limits. It successfully completes the SMHasher test suite which
  evaluates collision, dispersion and randomness qualities of hash
@@ -2756,21 +2785,21 @@ CPE-ID: cpe:/a:libzip:libzip
 Architecture: aarch64_cortex-a53
 Installed-Size: 143360
 Filename: libzip-openssl_1.10.1-r1_aarch64_cortex-a53.ipk
-Size: 65822
-SHA256sum: 11938d0435b1ddf2493d6067dc1bd83192d384b02d31769db4a48d177249dd83
+Size: 65844
+SHA256sum: 9ba42fbec118a8b17a6fadf1f84137dc7ee6f69e052a09281b0a3ab20f84d45e
 Description:  A C library for reading, creating, and modifying zip archives.
 
 Package: libzstd
-Version: 1.5.5-r1
+Version: 1.5.6-r1
 Depends: libc
 License: GPL-2.0-or-later
 Section: libs
 URL: https://github.com/facebook/zstd
 Architecture: aarch64_cortex-a53
-Installed-Size: 737280
-Filename: libzstd_1.5.5-r1_aarch64_cortex-a53.ipk
-Size: 333202
-SHA256sum: 9d50fdd48e68d1caa62c1c8023db5f60dae4265c87d5ddc6ba2fc89224aabde7
+Installed-Size: 747520
+Filename: libzstd_1.5.6-r1_aarch64_cortex-a53.ipk
+Size: 338416
+SHA256sum: a6b7e72887ead578bd021be0d6bf2a8dc6e56e334d7dd55e9c66bfbfa17983dc
 Description:  Zstandard - Fast real-time compression algorithm.
  This package provides libzstd library.
 
@@ -2784,8 +2813,8 @@ CPE-ID: cpe:/a:lm_sensors:lm_sensors
 Architecture: aarch64_cortex-a53
 Installed-Size: 225280
 Filename: lm-sensors-detect_3.6.0-r1_aarch64_cortex-a53.ipk
-Size: 47345
-SHA256sum: 53d9fe9c14d8403904eb4041e4b717a685b04d8651db2908dd3e0c1b0486fb0d
+Size: 47347
+SHA256sum: dd56c5925e285c013e672cef9150397068c6aead002f0f2ba37577d748fd7fe9
 Description:  script to autodetect sensor hardware
 
 Package: lm-sensors
@@ -2798,8 +2827,8 @@ CPE-ID: cpe:/a:lm_sensors:lm_sensors
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: lm-sensors_3.6.0-r1_aarch64_cortex-a53.ipk
-Size: 10704
-SHA256sum: 8872558f9c377abf968fa674479baaaa0564f85862d6ec61b348ad84b78de0b8
+Size: 10705
+SHA256sum: a27b75ef04d8a0f7d198e2ae0d83942c3dc31dad4b48cbc584117e6ca8ab2f5f
 Description:  utility to read hardware sensor data
 
 Package: lsof
@@ -2811,8 +2840,8 @@ URL: http://people.freebsd.org/~abe/
 Architecture: aarch64_cortex-a53
 Installed-Size: 184320
 Filename: lsof_4.99.0-r1_aarch64_cortex-a53.ipk
-Size: 93036
-SHA256sum: 282abfa627322e2bb613017d6e861192b02918d2a1195cf6fa4e520c8f9bd022
+Size: 92226
+SHA256sum: 534f4dff85665388d6dfb226441870d8329450ffd8b035ad46cbf7961b7f851d
 Description:  LiSt Open Files - a diagnostic tool
 
 Package: luabitop
@@ -2824,8 +2853,8 @@ URL: http://bitop.luajit.org/
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: luabitop_1.0.2-r1_aarch64_cortex-a53.ipk
-Size: 3584
-SHA256sum: 943acc0cdcbf3b94afaf0590cd0dc3d980526e2f4b37c31677f192af83d47ee3
+Size: 3580
+SHA256sum: 3466eaa79fde62bc53630f6527c22acd18cb2d683b7793710f384e84b9f5942f
 Description:  Lua BitOp is a C extension module for Lua 5.1/5.2 which adds bitwise operations on numbers.
 
 Package: lz4
@@ -2838,8 +2867,8 @@ CPE-ID: cpe:/a:lz4_project:lz4
 Architecture: aarch64_cortex-a53
 Installed-Size: 225280
 Filename: lz4_1.9.4-r1_aarch64_cortex-a53.ipk
-Size: 121474
-SHA256sum: 12f0a04b75dd5cc1fbb915ca38b1fbdb48644fc6d8a090d1d059da8be5985cea
+Size: 121451
+SHA256sum: 4d2f41045551a78583cb99e415aa476806b3831facd2f29762c5bd0db3bd30f9
 Description:  LZ4 - Fast real-time compression algorithm.
  This package provides the lz4 binaries.
 
@@ -2851,8 +2880,8 @@ Section: utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: mhz_2023.06.17~11aac239-r2_aarch64_cortex-a53.ipk
-Size: 3180
-SHA256sum: f071e14243583d0c21210c39b1e8a276c5158187a487497a302b835e7236eb54
+Size: 3177
+SHA256sum: a3ba414fcde393c4e2b28361c1a3726c30cf3b88347f22ef9b0763475dce9edf
 Description:  Tool to mathematically calculate the current CPU frequency.
 
 Package: monit
@@ -2865,8 +2894,8 @@ CPE-ID: cpe:/a:tildeslash:monit
 Architecture: aarch64_cortex-a53
 Installed-Size: 962560
 Filename: monit_5.33.0-r1_aarch64_cortex-a53.ipk
-Size: 386848
-SHA256sum: 0d0d80ab2b16c2d79a6519c02e47cf7e443518c8ef9ad7328d2cf79812f7b802
+Size: 386863
+SHA256sum: d4e0f6d92894cc47072ee281d6c4fa2eee7c704aa03c6c97f3e8715234db5be8
 Description:  An utility for monitoring services on a Unix system
  This package is built with SSL support.
 
@@ -2879,8 +2908,8 @@ URL: https://joeyh.name/code/moreutils/
 Architecture: aarch64_cortex-a53
 Installed-Size: 112640
 Filename: moreutils_0.69-r1_aarch64_cortex-a53.ipk
-Size: 34683
-SHA256sum: b8bbcfca9ff5077e8819c7a9ac2a2407d1dd6156a0aca067a7367662381ea067
+Size: 34671
+SHA256sum: 4ea0f56debe58682d8aba761997e6f41e8556b4dbf2cc309afdf03d09b826164
 Description:  This is a growing collection of the Unix tools that nobody thought
  to write long ago, when Unix was young.
  .
@@ -2911,8 +2940,8 @@ CPE-ID: cpe:/a:nmap:nmap
 Architecture: aarch64_cortex-a53
 Installed-Size: 184320
 Filename: ncat-full_7.95-r1_aarch64_cortex-a53.ipk
-Size: 89028
-SHA256sum: 7642e7be768cab519348437aed5185249f57ad16221519a7da289ad0eb68ada0
+Size: 89035
+SHA256sum: d75d69bc962d84fd39124341968e875875f3898663160ca5f3032d17202bf6e0
 Description:  Ncat (with OpenSSL and scripting support)
 
 Package: net-tools-route
@@ -2927,8 +2956,8 @@ CPE-ID: cpe:/a:net-tools_project:net-tools
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: net-tools-route_2.10-r1_aarch64_cortex-a53.ipk
-Size: 27079
-SHA256sum: 92be8bf4aaf7d386d3b41ec60b7b862666090a31745b50d86dd6f09061d4ccc2
+Size: 27080
+SHA256sum: 2121ce73ba95506cf1b8cb27859f1c9093ee23daedee4d7191cb2fcba6e130e9
 Description:  Replace busybox version of the route command with the full net-tools
  version. This is normally not needed as busybox is smaller and provides
  sufficient functionality, but some users may want or need the full
@@ -2944,7 +2973,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: netatop_3.1-r1_aarch64_cortex-a53.ipk
 Size: 4132
-SHA256sum: 42df92a35f0aa3d1f0ec9771a67d44ab0f8f5a623248aaf2f59e227adc2ef772
+SHA256sum: 331853e6bf5d6354b41cee030ebdd75bc41a3b31993639eda8a0eedeb3ea6b98
 Description:  The daemon netatopd is packaged with the netatop kernel module. This
  daemon takes care that information is gathered about processes that are
  finished. For every finished process that has transferred network packets,
@@ -2961,8 +2990,8 @@ URL: https://sourceforge.net/projects/netdiscover
 Architecture: aarch64_cortex-a53
 Installed-Size: 942080
 Filename: netdiscover_0.3-pre-beta7-r2_aarch64_cortex-a53.ipk
-Size: 374271
-SHA256sum: 3e1767b5e2ab45b07d5a59cc22348d8c08e00008c8dcea65056c6a92121d7afc
+Size: 374283
+SHA256sum: 084db23708c5b95ab92459147524dcdbb16fd6b068cb52b15f20b1ac20270a11
 Description:  An active/passive address reconnaissance tool
 
 Package: netperf
@@ -2975,9 +3004,21 @@ CPE-ID: cpe:/a:netperf:netperf
 Architecture: aarch64_cortex-a53
 Installed-Size: 266240
 Filename: netperf_2.7.0-r3_aarch64_cortex-a53.ipk
-Size: 104011
-SHA256sum: a740e0618f803cbecca5bec0e867d4c6c54ac566587447ccbebfe6949c765c78
+Size: 103999
+SHA256sum: a6157888dc2bd881194ee0584bcef0ef21d514fae9a9c4d3ee060196fbf89ead
 Description:  Network performance measurement tool
+
+Package: nlbwmon
+Version: 2024.02.21~c7616bcf-r1
+Depends: libc, libubox20240329, libnl-tiny1, zlib, kmod-nf-conntrack-netlink
+License: ISC
+Section: net
+Architecture: aarch64_cortex-a53
+Installed-Size: 61440
+Filename: nlbwmon_2024.02.21~c7616bcf-r1_aarch64_cortex-a53.ipk
+Size: 21842
+SHA256sum: 244c3a0c924dab951f27aa48bdf9afb028a629f08462cc2029a16f6253980486
+Description:  OpenWrt Traffic Usage Monitor
 
 Package: nload
 Version: 0.7.4-r1
@@ -2988,8 +3029,8 @@ URL: https://github.com/rolandriegel/nload
 Architecture: aarch64_cortex-a53
 Installed-Size: 112640
 Filename: nload_0.7.4-r1_aarch64_cortex-a53.ipk
-Size: 47809
-SHA256sum: aca2848dcb8d50f992151332fb2b89fcec2fd8575394643357715bfd346626fc
+Size: 47807
+SHA256sum: d0389d2c113c0a410351db9ed8e833ce09324526ea7575962402ef88fcbe3b9a
 Description:  Monitors network traffic and bandwidth usage.
 
 Package: nmap-ssl
@@ -3002,8 +3043,8 @@ CPE-ID: cpe:/a:nmap:nmap
 Architecture: aarch64_cortex-a53
 Installed-Size: 13015040
 Filename: nmap-ssl_7.95-r1_aarch64_cortex-a53.ipk
-Size: 2690124
-SHA256sum: f14436e91c2081e3d23871b7773e56ddc44e970bffb8db6884d772b365dc9060
+Size: 2689370
+SHA256sum: 21d9ffe34a6931520dfd52fdb9f080aba9498f597f143700680b8149ff9dedff
 Description:  Nmap (with OpenSSL support)
 
 Package: nsutils
@@ -3015,8 +3056,8 @@ URL: https://github.com/rd235/nsutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: nsutils_0.2-2022-05-13-d6570bde-r2_aarch64_cortex-a53.ipk
-Size: 16302
-SHA256sum: 1d6b54f839257ba3a3e1eea9874b926a5f9b681c053852c60a68ef6af1e9d801
+Size: 16294
+SHA256sum: c5e7f898d75281b560f514706f67b206a34d838d9647beb04d8eb346db93af1b
 Description:  Nsutils suite includes a number of utilities to list, add/remove tag, and join namespaces.
 
 Package: ntfs-3g-utils
@@ -3029,8 +3070,8 @@ CPE-ID: cpe:/a:tuxera:ntfs-3g
 Architecture: aarch64_cortex-a53
 Installed-Size: 655360
 Filename: ntfs-3g-utils_2022.5.17-r1-fuseint_aarch64_cortex-a53.ipk
-Size: 281091
-SHA256sum: 9d20335cd0fb9026e91817a2dbe0b69707ff1fc500fbd9cace4bdc1b66eba5f2
+Size: 281035
+SHA256sum: 9120b62aea981dc0692569f9894509a9e90737b056c8ad6d6770676452265691
 Description:  Suite of NTFS utilities for doing neat things with NTFS.
  Contains:
  - mkntfs - Create an NTFS filesystem.
@@ -3058,8 +3099,8 @@ CPE-ID: cpe:/a:tuxera:ntfs-3g
 Architecture: aarch64_cortex-a53
 Installed-Size: 512000
 Filename: ntfs-3g_2022.5.17-r1-fuseint_aarch64_cortex-a53.ipk
-Size: 233152
-SHA256sum: fc3b7e8c9c387c5f18d7dfe01bf01c0683f7820181f2dbb219345b58244d71b4
+Size: 233158
+SHA256sum: 9590fadc150d0ef1595dbfa151bad4fa40965d32255af83d8abdc69d32696a76
 Description:  Ntfs-3g is a NTFS driver, which can create, remove, rename,
  move files, directories, hard links, and streams. It can read
  and write files, including streams and sparse files. It can
@@ -3082,8 +3123,8 @@ CPE-ID: cpe:/a:openssh:openssh
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: openssh-sftp-avahi-service_9.7p1-r2_aarch64_cortex-a53.ipk
-Size: 1258
-SHA256sum: 9b7969fa0022b11be13afd0571548560655c17ff5d76d270eda47c5e43401c8c
+Size: 1263
+SHA256sum: 2d66ceed7758c38ba1596a4f7dc4a219a099d1a83a43331b2cc5a7fac3aa7b0d
 Description:  This package contains the service definition for announcing
  SFTP support via mDNS/DNS-SD.
 
@@ -3097,8 +3138,8 @@ CPE-ID: cpe:/a:openssh:openssh
 Architecture: aarch64_cortex-a53
 Installed-Size: 163840
 Filename: openssh-sftp-client_9.7p1-r2_aarch64_cortex-a53.ipk
-Size: 73882
-SHA256sum: 118e4763df729da6add4c93d092ef06bc9476040251622c57e6546db3dd96dba
+Size: 73892
+SHA256sum: 4300506ad0bb98f4651036220b393d5599d23a455892ffe6783d3c90036828bf
 Description:  OpenSSH SFTP client.
 
 Package: openssh-sftp-server
@@ -3111,9 +3152,24 @@ CPE-ID: cpe:/a:openssh:openssh
 Architecture: aarch64_cortex-a53
 Installed-Size: 92160
 Filename: openssh-sftp-server_9.7p1-r2_aarch64_cortex-a53.ipk
-Size: 37757
-SHA256sum: 9d46b608bf1ac230db73cf8404c554ca0a031af4837e97ce11129fb394b256fa
+Size: 37705
+SHA256sum: 378adcd3d6e00796656395306d28dc56504103e6c76ee2397e2c95f154a40e09
 Description:  OpenSSH SFTP server.
+
+Package: owipcalc
+Version: 7
+Depends: libc, libowipcalc
+License: Apache-2.0
+Section: utils
+Architecture: aarch64_cortex-a53
+Installed-Size: 71680
+Filename: owipcalc_7_aarch64_cortex-a53.ipk
+Size: 4997
+SHA256sum: 6259ae2b0cb12dfa4d29760894d4b8f54669b6a5eca5d25b394cc6bbceacb059
+Description:  The owipcalc utility supports a number of calculations and tests to work
+ with ip-address ranges, this is useful for scripts that e.g. need to
+ partition ipv6-prefixes into small subnets or to calculate address ranges
+ for dhcp pools.
 
 Package: p11-kit
 Version: 0.24.1-r2
@@ -3125,8 +3181,8 @@ CPE-ID: cpe:/a:p11-kit_project:p11-kit
 Architecture: aarch64_cortex-a53
 Installed-Size: 1320960
 Filename: p11-kit_0.24.1-r2_aarch64_cortex-a53.ipk
-Size: 271605
-SHA256sum: 6318a4388f48ecb31ae7f734a75d63e52f2f9cf20db3b0d93fe3b51a73c1ab66
+Size: 271635
+SHA256sum: 9e7eb2cfb83a3a90f3b19a9b9f38bc6cd3dd245e0d1af4ff3664c847f279edde
 Description:  Provides a way to load and enumerate PKCS11 modules. Provides a
  standard configuration setup for installing PKCS11 modules in such a
  way that they are discoverable.
@@ -3141,8 +3197,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 4198400
 Filename: perl_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 1370590
-SHA256sum: 5cf7134ce86875251b12569554fa4dbd7df945d8d1610a4eb715a8779d34c599
+Size: 1370702
+SHA256sum: 11b39f6f1e00e67160fd3215c0c50e3694f4b757cd77b44c3ce57c574cdd1292
 Description:  Perl is a stable, cross platform programming language.
  It is used for mission critical projects in the public and private sectors
  and is widely used to program web applications of all needs.
@@ -3157,8 +3213,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: perlbase-base_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 4380
-SHA256sum: 595f1d129214fb91eca89f8dfa8631117eefefd6db7861247963c70c66306601
+Size: 4379
+SHA256sum: 84816bbabc1b51f78c6015a72d02bea8895111ec00db65f6cb47d26be633c69b
 Description:  base perl module
 
 Package: perlbase-bytes
@@ -3172,7 +3228,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: perlbase-bytes_5.38.2-r2_aarch64_cortex-a53.ipk
 Size: 1482
-SHA256sum: 172fd5b948148ecb929b3ded890bfa18fe2ae4f524a4a5386b9d3a7c832f8af9
+SHA256sum: de0bf05a725ea3dfce654f98bccb3374a00401416b98b7d416f283e23110287b
 Description:  bytes perl module
 
 Package: perlbase-class
@@ -3185,8 +3241,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: perlbase-class_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 3094
-SHA256sum: 8c39a1f68361f68b0dc5d37f0c89290bd053c334091826c9b219f2a5b21e6b6a
+Size: 3092
+SHA256sum: cdb57fa277bca09cfa4459ca1558ec893fd8072a6995e0fa5807a37c0ac54e17
 Description:  Class perl module
 
 Package: perlbase-config
@@ -3199,8 +3255,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: perlbase-config_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 20732
-SHA256sum: e964ecc1002560fd74620657b534ad1f7a77ede3d9354eed62dcc87fb9f45335
+Size: 20640
+SHA256sum: 23139703a04286ee007904173107c33bc7d675a99dcd51a25ecd4e19289ebcf5
 Description:  Config perl module
 
 Package: perlbase-cwd
@@ -3214,7 +3270,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: perlbase-cwd_5.38.2-r2_aarch64_cortex-a53.ipk
 Size: 12065
-SHA256sum: bfce2887a7d74da0dbea7b5a4ef7f3cb56388fdbec7216da4783de7e0acfd707
+SHA256sum: 393c59d92e9de2bf3c04b1e2d8f757e3123e42a479bf5c2020b50df5bafab021
 Description:  Cwd perl module
 
 Package: perlbase-errno
@@ -3227,8 +3283,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: perlbase-errno_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 3299
-SHA256sum: 2d6ab0d8e4f7059ef4e8f66a6ff5c7ca540b6492a7a12666d78c0148132f4d64
+Size: 3297
+SHA256sum: f4a5456aebb755dd745691c3ccab101bd8dc068050a17cbe77df3935923194c0
 Description:  Errno perl module
 
 Package: perlbase-essential
@@ -3241,8 +3297,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 112640
 Filename: perlbase-essential_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 24346
-SHA256sum: b8d691fe796354b8146b1d269f64dcc09e433e6462c7143612d7d576abacded8
+Size: 24350
+SHA256sum: 3ca7ce530003138f32f80801cfa3fb5061df3c21283b2cad3793a9b52d02ee52
 Description:  essential perl module
 
 Package: perlbase-fcntl
@@ -3255,8 +3311,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: perlbase-fcntl_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 7704
-SHA256sum: 7c22a37c18a905ee41226c6a22cd822ccde8811d9f0248d8f746ed900f6f761b
+Size: 7693
+SHA256sum: 3f13f9afc8b7d2289faf71e69a5d90efce42c2ef313bf3cbead9885ee518b272
 Description:  Fcntl perl module
 
 Package: perlbase-file
@@ -3269,8 +3325,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 276480
 Filename: perlbase-file_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 74836
-SHA256sum: 3e4db1fff9b0e17bd349da71c84326f43ca144f0550379ec08327ee67145f32f
+Size: 74835
+SHA256sum: dcfcfd77ea17456a63f9fc9b9373923e22e825dede92989635ce6289bf6d707d
 Description:  File perl module
 
 Package: perlbase-filehandle
@@ -3283,8 +3339,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: perlbase-filehandle_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 1863
-SHA256sum: e3509392cab2686d02b3b403c9a831b09c2605fe9987a3026d3e13e80449bad1
+Size: 1865
+SHA256sum: 681818f5b8a8ea8e6eec3a2474bd8354118926917faf29b80571034604157825
 Description:  FileHandle perl module
 
 Package: perlbase-getopt
@@ -3297,8 +3353,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: perlbase-getopt_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 14396
-SHA256sum: 8fca613d41de215c8586d134304a0a982d76cd3f84a3ef5f94c044e60569c7f7
+Size: 14398
+SHA256sum: 627205c7ac8af6f558b2bb353c2b780a01d98927feca615b8bc77caf77d19415
 Description:  Getopt perl module
 
 Package: perlbase-i18n
@@ -3311,8 +3367,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: perlbase-i18n_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 21232
-SHA256sum: 6b6fafa385f41691fbd8365de2da523e7ea86bddcbfd356753aa801d2b99f200
+Size: 21237
+SHA256sum: 48962814b058fe18c45ecd2ce61a8668307d1ae153692faafe2a88691bb4370b
 Description:  I18N perl module
 
 Package: perlbase-integer
@@ -3326,7 +3382,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: perlbase-integer_5.38.2-r2_aarch64_cortex-a53.ipk
 Size: 1156
-SHA256sum: fbb3cb228e62a73859c2f818177c2802411f68f4f87939af0246e0a03d7a8595
+SHA256sum: a0a0082a4be76640b5b0cc2b8476d3e0ed26fe03e2bbf8761ab1c3694a1385cb
 Description:  integer perl module
 
 Package: perlbase-io
@@ -3339,8 +3395,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 337920
 Filename: perlbase-io_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 69910
-SHA256sum: 95ed304e9a2e73a8041907f0bbda01482502cb200e2fc5e3f5dcf4355c2bc718
+Size: 69905
+SHA256sum: 24d2b3bfe14b90c92619ed80447eaefa65ba0a5edda968912aea616c4a2017ba
 Description:  IO perl module
 
 Package: perlbase-ipc
@@ -3354,7 +3410,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 102400
 Filename: perlbase-ipc_5.38.2-r2_aarch64_cortex-a53.ipk
 Size: 28283
-SHA256sum: 5ef417304406f5b505457c9189f62e3f621510e8e3c140781e98e50f15eee971
+SHA256sum: 479c1d8461d49426b47508b06a9e8cf0a5285dfc7f5df5219302d68bc1b606ee
 Description:  IPC perl module
 
 Package: perlbase-list
@@ -3367,8 +3423,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: perlbase-list_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 23839
-SHA256sum: 17e174cc3b35d6b898ae8c44b6e86ca79d0e8a4c7a76a4f1212945b8c69c87bb
+Size: 23847
+SHA256sum: 2d413f07bc6cc64b81e0ac25c2747daf9a760d6dd68c87da3d4436ebe6838385
 Description:  List perl module
 
 Package: perlbase-locale
@@ -3381,8 +3437,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: perlbase-locale_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 11242
-SHA256sum: 9fd14787a3bcd09b3cb53e9aabea81825ea895afba276addab29b762e6e37c34
+Size: 11241
+SHA256sum: 36e0ba913e72dbe3b8e58ac2806de3ea268b18065b8f7d250aab9e46f535d0f7
 Description:  Locale perl module
 
 Package: perlbase-params
@@ -3395,8 +3451,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: perlbase-params_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 4126
-SHA256sum: 69f87263ad71212f7354b7b8d0ccafb2b582b0a18c08fd18652f46ea0e44e14a
+Size: 4125
+SHA256sum: caba32150270ff9220ac70be1a49cfe5de0c08a30763dd7f9ac777edcac78d72
 Description:  Params perl module
 
 Package: perlbase-posix
@@ -3409,8 +3465,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 133120
 Filename: perlbase-posix_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 42199
-SHA256sum: c5a5e43556d80df47a6c64f209c728e47d81d0d2a5d49ea2784be276fdf7a5f1
+Size: 42191
+SHA256sum: 2a76da510e60617a2d78d776ef719fd78491997362d58c7410374081a09b1948
 Description:  POSIX perl module
 
 Package: perlbase-re
@@ -3423,8 +3479,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 675840
 Filename: perlbase-re_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 278125
-SHA256sum: 3acc02de30a743b4be32792ee2f6cf26d85e5f98d253670c396099462280f077
+Size: 278152
+SHA256sum: 6dfc90c5e9417e0ebc4bcdcbaf491dcb22e9a022a9fb8e719887443fa9da8149
 Description:  re perl module
 
 Package: perlbase-scalar
@@ -3437,8 +3493,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: perlbase-scalar_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 1642
-SHA256sum: 24bd1c4d831924505d9e7bd4310f2106197ad56f476b39406fca2425eac2bd68
+Size: 1640
+SHA256sum: 46caa8f194b838833d4f16c1fbe402500bb7d9d10142785a638383119ae46d2f
 Description:  Scalar perl module
 
 Package: perlbase-selectsaver
@@ -3451,8 +3507,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: perlbase-selectsaver_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 1313
-SHA256sum: 113fb15050d804e6ec350c37a9167586b94dd4f991d97a12b1e35ffa970dff63
+Size: 1311
+SHA256sum: 45ef641d4d973c9a770f90bdb6b8084a1e5352d7f3e5d5ed37eceda3e3f6ba9f
 Description:  SelectSaver perl module
 
 Package: perlbase-selfloader
@@ -3465,8 +3521,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: perlbase-selfloader_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 3249
-SHA256sum: 35d12c9b3c1b4c91935beaf1f5ea6d30e5c17d6c786b03db8146d75ba216b434
+Size: 3241
+SHA256sum: 6357723eb503d5918480673f97c46874b3e913aef26ebdd7efdf69b6460ffc90
 Description:  SelfLoader perl module
 
 Package: perlbase-socket
@@ -3479,8 +3535,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: perlbase-socket_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 20021
-SHA256sum: 4bb23aad11e9ed9a631feb0de75d946badac61416f4676f285c3078b070fb687
+Size: 20030
+SHA256sum: a2f40781d7ac4f25f4c3787d60536873b2fead63cfa8235354bfab7912a781fd
 Description:  Socket perl module
 
 Package: perlbase-symbol
@@ -3493,8 +3549,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: perlbase-symbol_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 1995
-SHA256sum: 552fd576be9a03b7b7a874518fb99dde7563d81e27129e80f1f2ec8f280d4a72
+Size: 1993
+SHA256sum: 82db7e6909f5c7b50bbfba76fda3df66caf0c9a403e08395603e22095678264b
 Description:  Symbol perl module
 
 Package: perlbase-text
@@ -3507,8 +3563,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: perlbase-text_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 12483
-SHA256sum: fd421c1a91fcbe97a86bc9975497945196a4100f2715b21e0da7837fa8261db3
+Size: 12482
+SHA256sum: e99e0d4f9cefd24c2f7c82d011e4230e6c2571a9c21d59ebe5ac69f8556e58c2
 Description:  Text perl module
 
 Package: perlbase-tie
@@ -3521,8 +3577,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: perlbase-tie_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 18911
-SHA256sum: 5dbeabae1e54f67cbf05910b7217cf0c59942b3735cfce1fd3f3006709cf9452
+Size: 18907
+SHA256sum: 4b1339347084d5b4f3b31b5f3e1c4a2c500e3ed91dd41e5b579b00282c5a652b
 Description:  Tie perl module
 
 Package: perlbase-unicore
@@ -3535,8 +3591,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 4945920
 Filename: perlbase-unicore_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 798257
-SHA256sum: d52fdd554d537a2e87292628faf252a346e9b35239e4fd7dc4174026b6ef84b7
+Size: 798337
+SHA256sum: 737dad094c423507e03800e4f38547259e57812ab944e2474e5a79ad9ff8b988
 Description:  unicore perl module
 
 Package: perlbase-utf8
@@ -3549,8 +3605,8 @@ CPE-ID: cpe:/a:perl:perl
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: perlbase-utf8_5.38.2-r2_aarch64_cortex-a53.ipk
-Size: 1286
-SHA256sum: a26b51620529184345d9a216f5cbdc783203064ffc84be79bbc7d6a1e466df85
+Size: 1287
+SHA256sum: 843f0cd96f874f411c0c311419285453cac27747e80a9dbfbb76a192071ca8d3
 Description:  utf8 perl module
 
 Package: perlbase-xsloader
@@ -3564,7 +3620,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: perlbase-xsloader_5.38.2-r2_aarch64_cortex-a53.ipk
 Size: 2602
-SHA256sum: 43113f25453aaa095bcb7516262a6b66275fe7c84fd0165e02f49dbbfc69bb2e
+SHA256sum: 1d21f05cb7ba6d15103ffad1ebb19a95ab32e3931aef95b199f97597d9f337c8
 Description:  XSLoader perl module
 
 Package: procps-ng-free
@@ -3578,8 +3634,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: procps-ng-free_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 7611
-SHA256sum: 096b31aa83d93402d910a8353a50271a64d0dd9e00c66531918255b3ad4a5d4b
+Size: 7604
+SHA256sum: 4dd12f04962dcb4583a36f57968208c63dcbdb1c4760c88ee6e19ff91608d570
 Description:  Installs the applet free.
 
 Package: procps-ng-kill
@@ -3593,8 +3649,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: procps-ng-kill_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 5737
-SHA256sum: d9635285d2d0f399258134736e795e041b7b1324c061c67905d57d4a2967f8cb
+Size: 5738
+SHA256sum: af233ea4f8781662ff8a5005f95635967e1a7e6a1045e03d0ff3b2647434f402
 Description:  Installs the applet kill.
 
 Package: procps-ng-pgrep
@@ -3608,8 +3664,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: procps-ng-pgrep_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 12157
-SHA256sum: 73dc073b467e65808ae3c7b55dedbc9782a56a8ce77d120bba51f86e536a2fc2
+Size: 12155
+SHA256sum: a284c3f0bfdee1b4ebcd59c7fef62d1d3c57ab828d955f3e8bb61ed13bafa5c6
 Description:  Installs the applet pgrep.
 
 Package: procps-ng-pkill
@@ -3623,8 +3679,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: procps-ng-pkill_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 12150
-SHA256sum: e7316e6067f1c4b910b86dc78a6e6d9461beb34c574e37854a659908cce42a5a
+Size: 12163
+SHA256sum: 3e02323498fa1e1419fcd62ab6fc69d4ce3cdcdd3ef87ac332afeb6ba4e8a216
 Description:  Installs the applet pkill.
 
 Package: procps-ng-pmap
@@ -3638,8 +3694,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: procps-ng-pmap_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 13627
-SHA256sum: b1bde439fc04c57334d6058fb425a51947f6f71b2f4b7b036ea4c55827c39c01
+Size: 13617
+SHA256sum: ef08604c022e7d9293c17c857a80b8b3e13e4b167e3e555110be7644c6f05d43
 Description:  Installs the applet pmap.
 
 Package: procps-ng-ps
@@ -3653,8 +3709,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 133120
 Filename: procps-ng-ps_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 48769
-SHA256sum: 8afc2af0860c595e81c8579f8f66cb55b4f955da460f0f4004529cc3692ec1f4
+Size: 48788
+SHA256sum: cf601eeb823823964a382476826299ef3149355600e7fe661d47e900ccb8cda4
 Description:  Installs the applet ps.
 
 Package: procps-ng-pwdx
@@ -3668,8 +3724,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: procps-ng-pwdx_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 4052
-SHA256sum: ffc6a56a55a76697ed43dc08ea788664a76e55bf1a158028101257b5d2c0c2b0
+Size: 4050
+SHA256sum: c2314780144043c6d8cf154887d85e8864dd621ad7a7e5e3327839f42656d166
 Description:  Installs the applet pwdx.
 
 Package: procps-ng-skill
@@ -3683,8 +3739,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: procps-ng-skill_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 8895
-SHA256sum: 9d5b2d05cf73df4366dcfb0ccb9ea249d515169624ede3585c19d5714005526a
+Size: 8896
+SHA256sum: d77c7bad0f6df83d3b23f414a6e4045383683085ec9f158f11466b69c061bc24
 Description:  Installs the applet skill.
 
 Package: procps-ng-slabtop
@@ -3698,8 +3754,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: procps-ng-slabtop_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 6310
-SHA256sum: 5c0f6d2283bb392c8d66eebfa9479f8fd72364a96ba2f7d5de4b4b122051c7d5
+Size: 6321
+SHA256sum: 33f119821460ba87a5352432481985644f728e0175aee146abeaab448b06ab43
 Description:  Installs the applet slabtop.
 
 Package: procps-ng-snice
@@ -3713,8 +3769,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: procps-ng-snice_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 8905
-SHA256sum: 097d46a259d8c8de4716f1b41933146721abfea498aa0edc7e2ee9c696736c23
+Size: 8902
+SHA256sum: ee7e922374eeab6ed99bbb0ec6eaa89efc05ebb267e9d9825f64bbbf7f3c7e3e
 Description:  Installs the applet snice.
 
 Package: procps-ng-sysctl
@@ -3728,8 +3784,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: procps-ng-sysctl_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 10923
-SHA256sum: 7ef758537804ee86ae019f85c031907ac399126d2566cf8cc1cfc4e70878b4ea
+Size: 10926
+SHA256sum: 0a9366ebfea57bb0b72aecdb15bbce2fa3dfbc39299156fb57e55142d14026e3
 Description:  Installs the applet sysctl.
 
 Package: procps-ng-tload
@@ -3743,8 +3799,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: procps-ng-tload_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 5940
-SHA256sum: 1374d5f5552a108ca39c319cc027078efbc269ae9923a8e9d60aee09b9a3229f
+Size: 5939
+SHA256sum: 64496fd73e5b7207d68121b2a2fcd8460dd5bfb38134764419177d959efc6681
 Description:  Installs the applet tload.
 
 Package: procps-ng-top
@@ -3758,8 +3814,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 133120
 Filename: procps-ng-top_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 64873
-SHA256sum: 17b2b00f18ceb87c53375eaf84e02ae050e31b098880ec0aa6387379456444e1
+Size: 64877
+SHA256sum: 4c81aa479281b280bc7de76ddc5c28575ffd6140e64df32d3efe559e655a016c
 Description:  Installs the applet top.
 
 Package: procps-ng-uptime
@@ -3773,8 +3829,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: procps-ng-uptime_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 3916
-SHA256sum: ded492fd5b96df2a0a0bb02db634512df1f1399fb758e7f6cb6bf31443a02a04
+Size: 3909
+SHA256sum: ba88691ff96d5a171b4fcc3845c125f53940946e37dcd98e21777efb18fc43bc
 Description:  Installs the applet uptime.
 
 Package: procps-ng-vmstat
@@ -3788,8 +3844,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: procps-ng-vmstat_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 11105
-SHA256sum: 38f90f9554de821c82ed1e34865acdd8dcc1a5f48d51108db8702b5f17f83d87
+Size: 11109
+SHA256sum: 0dbb918d47b72868e672f4a373ddd99b5ba640e485631c0282db0a3fbe0e8a9e
 Description:  Installs the applet vmstat.
 
 Package: procps-ng-w
@@ -3803,8 +3859,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: procps-ng-w_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 7799
-SHA256sum: 3b3486c48ed75b350e5fbcf7e94af7a846571ad48343aff5aa716bd8219b893f
+Size: 7801
+SHA256sum: 1456d6c6cc1bf1d4fed7fbe1ca378dd86745402d7197845b848e294c3fae21d1
 Description:  Installs the applet w.
 
 Package: procps-ng-watch
@@ -3818,8 +3874,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: procps-ng-watch_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 10004
-SHA256sum: 5ade8df49fc8650ba2d6868169fc4b79808f4ec6216757245615bc2eb12fa7ed
+Size: 10003
+SHA256sum: e23b6428351f66a4c7f6f5a889761c8458fbe58b7c750f5db1b2143a323c9f0b
 Description:  Installs the applet watch.
 
 Package: procps-ng
@@ -3832,8 +3888,8 @@ CPE-ID: cpe:/a:procps-ng_project:procps-ng
 Architecture: aarch64_cortex-a53
 Installed-Size: 204800
 Filename: procps-ng_4.0.4-r1_aarch64_cortex-a53.ipk
-Size: 58893
-SHA256sum: f471ef61b5db3f50fa2f6cbf9a04b1feb1c52247e6a282f60eac0676c5bb8c8a
+Size: 58897
+SHA256sum: 7e74530957d4883f99d0a5481562e57b54c035e1f542ee2de6e37fd791317089
 Description:  procps is a set of command line and full-screen utilities that provide information out of the pseudo-filesystem
  most commonly located at /proc. This filesystem provides a simple interface to the kernel data structures.
  The programs of procps generally concentrate on the structures that describe the processess running on the system.
@@ -3850,8 +3906,8 @@ URL: https://github.com/dalance/procs/
 Architecture: aarch64_cortex-a53
 Installed-Size: 3747840
 Filename: procs_0.14.3-r1_aarch64_cortex-a53.ipk
-Size: 1696891
-SHA256sum: 871f85e03d8558cf53134554265a77f67704d38a2b43f5d8e92e30fe47aaa42f
+Size: 1695816
+SHA256sum: ca227e3c80f4c040fbe90175f3bbb20fc81e270f12911e46221d5862820c9974
 Description:  Procs is a 'ps' command replacement written in Rust, offering 
  enhanced usability and information display. 
  Features include color-coded output, theme auto-detection, advanced
@@ -3869,8 +3925,8 @@ URL: https://github.com/Xfennec/progress
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: progress_0.15-r1_aarch64_cortex-a53.ipk
-Size: 10675
-SHA256sum: 89040d18a2ce9fc11e90462dfd84abb84d1b54968251d3552300ec7665bb37ea
+Size: 10687
+SHA256sum: 4cd2dc241f14c49802c21437ac63bbf6debfbe28fe9073dc56f6ee7e7c26a645
 Description:  This tool can be described as a Tiny, Dirty, Linux-and-OSX-Only
  C command that looks for coreutils basic commands (cp, mv, dd, tar,
  gzip/gunzip, cat, etc.) currently running on your system and
@@ -3892,8 +3948,8 @@ Section: net
 Architecture: all
 Installed-Size: 10240
 Filename: proto-bonding_2021-04-09-r3_all.ipk
-Size: 2584
-SHA256sum: 73d4b9b4dee62b677f2c14c9f05d512cb740cbcf2d21be81a0306fecbb06fc7b
+Size: 2586
+SHA256sum: acaa80fa1f221e715db1fc43792aae03825ea5972c609f993e6869f051f1dd5f
 Description:  This package contains the channel bonding proto handler for netifd
 
 Package: protobuf-lite
@@ -3906,8 +3962,8 @@ CPE-ID: cpe:/a:google:protobuf
 Architecture: aarch64_cortex-a53
 Installed-Size: 604160
 Filename: protobuf-lite_3.17.3-r2_aarch64_cortex-a53.ipk
-Size: 193809
-SHA256sum: 0d428aa53918a452867e8aa5d83d74ca7a73ff239eb7cf49967ad2d788002906
+Size: 193805
+SHA256sum: 1884d68451411acf9019e3a118100334880910f2c1b4ac2c089a67ab9971d461
 Description:  Protocol Buffers are a way of encoding structured data in an efficient
  yet extensible format. Google uses Protocol Buffers for almost all
  of its internal RPC protocols and file formats.
@@ -3922,8 +3978,8 @@ Section: utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: pservice_2017-08-29-r3_aarch64_cortex-a53.ipk
-Size: 1814
-SHA256sum: 8ddc05620e69f656f0d8869b22a18e7bf5fc7e120b22abae4071a26cce6d1d9d
+Size: 1809
+SHA256sum: fb00577338cc51f728328127e63dfdb3a9739cdb0ef190d292c1906583e24e90
 Description:  Wrap commands as procd services
 
 Package: psmisc
@@ -3936,8 +3992,8 @@ URL: https://gitlab.com/psmisc/psmisc/
 Architecture: aarch64_cortex-a53
 Installed-Size: 122880
 Filename: psmisc_23.7-r1_aarch64_cortex-a53.ipk
-Size: 48103
-SHA256sum: f3d6e1b1b712db837bc4eeceefbf5a2f048a927aeb7868f2e8ea9fdd35085990
+Size: 48111
+SHA256sum: ad9ae478b0f2b0398e9def634b3699ac3afd1210c5c0804a2c9a166b4525f142
 Description:  psmisc is a set of additional small useful utilities that use
  the proc filesystem like fuser, killall, prtstat, pstree.
 
@@ -3950,8 +4006,8 @@ URL: https://bitbucket.org/comnets/ratechecker/
 Architecture: aarch64_cortex-a53
 Installed-Size: 153600
 Filename: ratechecker_2020.01.30~a2b8b958-r2_aarch64_cortex-a53.ipk
-Size: 66843
-SHA256sum: 01a518402b5f5b9dd058cc4fd89314f89d630b174cafc556a25d2253c11547cd
+Size: 66836
+SHA256sum: 6a28f61cd68be4c4bfe7b98c6c6333efb871f9987022aa9880e1828a8a9a801d
 Description:  IEEE 802.11 bitrate analysis tool
 
 Package: rng-tools
@@ -3964,8 +4020,8 @@ CPE-ID: cpe:/a:rng-tools_project:rng-tools
 Architecture: aarch64_cortex-a53
 Installed-Size: 122880
 Filename: rng-tools_6.15-r2_aarch64_cortex-a53.ipk
-Size: 55256
-SHA256sum: bf1987c3c21d1030b867f6392718b1a4aafd3a62b55670517006bcc4480e7c46
+Size: 55274
+SHA256sum: cc519245a7069e3298a64b5105a7199572aa04662ff3c3af2463954b0d176565
 Description:  Daemon for adding entropy to kernel entropy pool. By default it uses
  /dev/urandom as the source but the init script can be modified
  to use a hardware source like /dev/hwrng if present
@@ -3980,8 +4036,8 @@ CPE-ID: cpe:/a:rpcbind_project:rpcbind
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: rpcbind_1.2.6-r2_aarch64_cortex-a53.ipk
-Size: 32725
-SHA256sum: c036d355bb371436a0087bf1e8a782b231a5fa83bd60a487591b29d5739de995
+Size: 32718
+SHA256sum: f3e37bdb74db344c7935341a4f6ec647bca8ef135790e37678e7d8467e63fd6b
 Description:  The rpcbind utility is a server that converts RPC program numbers into universal addresses.
  It must be running on the host to be able to make RPC calls on a server on that machine.
  
@@ -3997,8 +4053,8 @@ URL: http://oss.oetiker.ch/rrdtool/
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: rrdtool1_1.0.50-r6_aarch64_cortex-a53.ipk
-Size: 13136
-SHA256sum: 2593d7a1d24138991a7e3e7046b391ec8e83b14ed6230a417471e6af0bbd2958
+Size: 13122
+SHA256sum: 54a8c3ba3cd461d7e9911622e6323fc483ce4c5e636fc5e33f8892021cb8aa31
 Description:  RRD is the Acronym for Round Robin Database. RRD is a system to store and
  display time-series data (i.e. network bandwidth, machine-room temperature,
  server load average). It stores the data in a very compact way that will
@@ -4022,8 +4078,8 @@ CPE-ID: cpe:/a:rsync:rsync
 Architecture: aarch64_cortex-a53
 Installed-Size: 491520
 Filename: rsync_3.3.0-r2_aarch64_cortex-a53.ipk
-Size: 257138
-SHA256sum: da9e988bb128b65c4182bf7892fb6f9dbc5e0c2bf07234ab17663465b2b8f228
+Size: 257145
+SHA256sum: 2d70f336c43f4356533b114d5a87186eb6648fc7d266ac3daad65fa200680202
 Description:  rsync is a program that allows files to be copied to and from remote machines
  in much the same way as rcp. It has many more options than rcp, and uses the
  rsync remote-update protocol to greatly speed up file transfers when the
@@ -4042,8 +4098,8 @@ CPE-ID: cpe:/a:rsync:rsync
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: rsyncd_3.3.0-r2_aarch64_cortex-a53.ipk
-Size: 1444
-SHA256sum: fef81e0a903b91912ce5acf24629f85cf401ddd2035ac892e1bee5351710dc13
+Size: 1445
+SHA256sum: 3b3b0ed356fe094f463f87694e0a0688cd623fc7fce2e37515c566d72e37286d
 Description:  rsyncd is a configuration file and initscript to utilize rsync as a daemon. It
  uses the same binary as rsync.
 
@@ -4058,8 +4114,8 @@ CPE-ID: cpe:/a:gnu:sed
 Architecture: aarch64_cortex-a53
 Installed-Size: 194560
 Filename: sed_4.9-r1_aarch64_cortex-a53.ipk
-Size: 102080
-SHA256sum: 996307bca9fd8a4b72681b67e922fbbd38c787eaa04026b2ce083030d87701a4
+Size: 102102
+SHA256sum: 6d64839938108366d67db223677948eac77358ad983f8ab1e409f96d58bb0bb6
 Description:  sed (stream editor) is a non-interactive command-line text editor. sed is commonly 
  used to filter text, i.e., it takes text input, performs some operation (or set of 
  operations) on it, and outputs the modified text. sed is typically used for 
@@ -4075,8 +4131,8 @@ URL: https://freedesktop.org/wiki/Software/shared-mime-info/
 Architecture: aarch64_cortex-a53
 Installed-Size: 4925440
 Filename: shared-mime-info_2.4-r2_aarch64_cortex-a53.ipk
-Size: 1179076
-SHA256sum: 373e739b8870332f84aea297b27e404992e31b8051ca6f88eb219fc63d40aa35
+Size: 1179321
+SHA256sum: bc08c8140c3f5ceb7ca12637f3573299880cf79025ee23370c6115e0d5479157
 Description:  The shared-mime-info package contains a database of MIME types and their file extensions.
 
 Package: smartmontools-drivedb
@@ -4089,8 +4145,8 @@ CPE-ID: cpe:/a:smartmontools:smartmontools
 Architecture: all
 Installed-Size: 256000
 Filename: smartmontools-drivedb_7.4-r1_all.ipk
-Size: 57307
-SHA256sum: de7b9c8a47e6f151084a8e72e09498482174b42910f4ac1d618173c9dad785f9
+Size: 57299
+SHA256sum: 000784b0c291b2a113a9d6ab6bcdad278a9ec79e3ced5d94e7174c44cca605cb
 Description:  Database of known drives and USB bridges for smartctl and smartd.
 
 Package: smartmontools
@@ -4104,7 +4160,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 819200
 Filename: smartmontools_7.4-r1_aarch64_cortex-a53.ipk
 Size: 374552
-SHA256sum: 196ab5351ca07ef70ca46d92e5db51490b3810f19d6eba894026bba2caab9cf7
+SHA256sum: b79e81bc6709a042e2053997b28058c95f7728472ef2a16c277b75f035afaece
 Description:  smartmontools contains utility programs (smartctl) to
  control/monitor storage systems using the Self-Monitoring, Analysis
  and Reporting Technology System (S.M.A.R.T.) built into most modern
@@ -4120,8 +4176,8 @@ CPE-ID: cpe:/a:samba:cifs-utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: smbinfo_6.11-r2_aarch64_cortex-a53.ipk
-Size: 10343
-SHA256sum: 33d17525ba31ba52ff73bafd7c8e57c43588ca831c43ba8f084f5cdd7891d061
+Size: 10346
+SHA256sum: 52275184bbc74636b144b39c85545bbbccfc66ef7550a358dae00df2450c6c90
 Description:  SMB info
 
 Package: speedtest-netperf
@@ -4133,8 +4189,8 @@ Section: net
 Architecture: all
 Installed-Size: 20480
 Filename: speedtest-netperf_1.0.0-r1_all.ipk
-Size: 5690
-SHA256sum: c26c69fb26df2b70ffc9b208e23cd49ca42def9a9db73578491ac194ba6a245b
+Size: 5691
+SHA256sum: 2e6df4d346eec2cccbe612647c2fb58c38290c80127e22f24503daefc3972bfd
 Description:  Script to measure the performance of your network and router.
  
  Please see https://github.com/openwrt/packages/blob/master/net/speedtest-netperf/files/README.md for further information.
@@ -4149,8 +4205,8 @@ URL: https://github.com/oskarirauta/speedtestcpp
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: speedtestcpp_1.20.3-r1_aarch64_cortex-a53.ipk
-Size: 12447
-SHA256sum: bb9a171003a3d9edd6556272db7ec6e4df0ed5e6d633d118e168fef7397ff991
+Size: 12455
+SHA256sum: 61d9dece9edacc470ece98d4309e35993256b0bc7ebe96547f9f03f50cfec100
 Description:  Yet another unofficial speedtest.net client cli interface
  forked from taganaka's SpeedTest with few improments and
  lesser depends.
@@ -4163,8 +4219,8 @@ Section: net
 Architecture: all
 Installed-Size: 30720
 Filename: sqm-scripts-extra_2016-06-08-r1_all.ipk
-Size: 3118
-SHA256sum: 3a58f7b1fcfe69ffc5911854008cff124e37536df1bb72f792599e3b1879ed08
+Size: 3120
+SHA256sum: 717f0d733824fb8285b7a10a6f564cc9e96237e832ff244987f5985090001e2e
 Description:  A set of experimental scripts for sqm-scripts QoS package. The contents of this package may
  change as new qdiscs like 'cake' are developed and tested.
 
@@ -4176,8 +4232,8 @@ Section: net
 Architecture: all
 Installed-Size: 92160
 Filename: sqm-scripts_1.6.0-r1_all.ipk
-Size: 19384
-SHA256sum: d452147be5237efb4fa94bc415b6e1b36a792c8ab342b554dac093e3a06c521b
+Size: 19383
+SHA256sum: 7b151b5b02c299eba7f1a262d31cea855309017585bfa671aa88a4bd84ef3a04
 Description:  A set of scripts that does simple SQM configuration.
 
 Package: squashfs-tools-mksquashfs
@@ -4190,8 +4246,8 @@ CPE-ID: cpe:/a:squashfs-tools_project:squashfs-tools
 Architecture: aarch64_cortex-a53
 Installed-Size: 317440
 Filename: squashfs-tools-mksquashfs_4.6.1-r1_aarch64_cortex-a53.ipk
-Size: 147150
-SHA256sum: 351dbdda9a92ebb3769b35ceccb780fc18e28537ccf9e2d85296908e24fdada0
+Size: 147170
+SHA256sum: 06f6ad1e8fb372a6b6a959daebfb013c041271cca9b6525defa353b677b36321
 Description:  Tools to create and extract Squashfs filesystems mksquashfs
 
 Package: squashfs-tools-unsquashfs
@@ -4204,8 +4260,8 @@ CPE-ID: cpe:/a:squashfs-tools_project:squashfs-tools
 Architecture: aarch64_cortex-a53
 Installed-Size: 153600
 Filename: squashfs-tools-unsquashfs_4.6.1-r1_aarch64_cortex-a53.ipk
-Size: 66128
-SHA256sum: beffa4d865af8e35598c438c2e0a7c3f284865a2f8b892595364e0009549fe08
+Size: 66125
+SHA256sum: 624f7ccf4b8572501e7d3c60877a6ea6b9667c0556628639a93e18bd60369dfc
 Description:  Tools to create and extract Squashfs filesystems unsquashfs
 
 Package: sstp-client
@@ -4217,8 +4273,8 @@ URL: http://sstp-client.sourceforge.net/
 Architecture: aarch64_cortex-a53
 Installed-Size: 112640
 Filename: sstp-client_1.0.19-r2_aarch64_cortex-a53.ipk
-Size: 44180
-SHA256sum: 9eac30719f701330052fdd8956c911d425d87540d11fec8744b578da866c07e7
+Size: 44463
+SHA256sum: 96ecc3d8a3daeb5f0778dfb1f4f78d1a4f6585cd6dc53664aa4b5b84874be307
 Description:  The advantage of SSTP compared to other vpn protocols like PPTP and L2TP is that it cannot be easily blocked by firewalls since the traffic is transmitted over HTTPS on port 443.
  This software has a similar commandline and configuration to the standard linux pptp-client software.
  
@@ -4239,8 +4295,8 @@ CPE-ID: cpe:/a:sudo_project:sudo
 Architecture: aarch64_cortex-a53
 Installed-Size: 1331200
 Filename: sudo_1.9.15p5-r1_aarch64_cortex-a53.ipk
-Size: 575446
-SHA256sum: 4ff3d8824bf02d42723c06123c8d9a5d7cee514111321d3ee99b650f1e43ac4b
+Size: 575419
+SHA256sum: 125c342fe0c0f7543b10ee75d0eb9d3c262f47551d7d81082f5744b6d970fee7
 Description:  Sudo (su "do") allows a system administrator to delegate authority to
  give certain users (or groups of users) the ability to run some (or
  all) commands as root or another user while providing an audit trail of
@@ -4255,8 +4311,8 @@ URL: https://github.com/latchset/tang
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: tang_14-r4_aarch64_cortex-a53.ipk
-Size: 15751
-SHA256sum: 4572f822fb65584182ec5ec016d99b29f6e322b9725525c5d06beffb6a4db8b1
+Size: 15747
+SHA256sum: 40df0d3cb9adc9d1e69e4e9597bf901b10d7920eae94a58521f76a8806cc8f56
 Description:  Tang is a small daemon for binding data to the presence of a third party.
 
 Package: tar
@@ -4270,8 +4326,8 @@ CPE-ID: cpe:/a:gnu:tar
 Architecture: aarch64_cortex-a53
 Installed-Size: 542720
 Filename: tar_1.35-r1_aarch64_cortex-a53.ipk
-Size: 269827
-SHA256sum: d092709e2e8f578be4822ce9d6be8ae06c44a2776ec37e7f95b0199132fd3a17
+Size: 269756
+SHA256sum: bb0ce3ddf75e388d48852407a6394848e8fe5edda6f5c50c11aad1b2a040b4ce
 Description:  Tar is a program for packaging a set of files as a
  single archive in tar format.
 
@@ -4282,8 +4338,8 @@ Section: utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: tree_2.1.1-r1_aarch64_cortex-a53.ipk
-Size: 34883
-SHA256sum: 34b388bde83cd3e682c81b46ff67341c44f1aeb603d485ced6890e3cfceae7db
+Size: 34876
+SHA256sum: 48d30783d29f72ad6b58580c8d192b81b669fd0828d2bbaa0b6769c6a09620e0
 Description:  List contents of directories in a tree-like format
 
 Package: unbound-anchor
@@ -4296,8 +4352,8 @@ CPE-ID: cpe:/a:nlnetlabs:unbound
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: unbound-anchor_1.19.3-r2_aarch64_cortex-a53.ipk
-Size: 26709
-SHA256sum: f1214efa3fe378ca41847c5d6334b0b787f25ca305728ff5f8fc53c75987290b
+Size: 26714
+SHA256sum: 729dd6acf3580104c410ee1768cb565273db65de84ab4f763b3d744812fa96e7
 Description:  This package contains the Unbound anchor utility.
 
 Package: unbound-checkconf
@@ -4310,8 +4366,8 @@ CPE-ID: cpe:/a:nlnetlabs:unbound
 Architecture: aarch64_cortex-a53
 Installed-Size: 184320
 Filename: unbound-checkconf_1.19.3-r2_aarch64_cortex-a53.ipk
-Size: 73231
-SHA256sum: 7ab66b1f95b21b91487564b3e632f46e432170ae9433dff9ddd0f8ac5829e77a
+Size: 73237
+SHA256sum: be501a2ca29d6edf9def66aa97956b129dc3dda5e4c941bd66a0ce47732fb329
 Description:  This package contains the Unbound DNS configuration checker utility.
 
 Package: unbound-control-setup
@@ -4324,8 +4380,8 @@ CPE-ID: cpe:/a:nlnetlabs:unbound
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: unbound-control-setup_1.19.3-r2_aarch64_cortex-a53.ipk
-Size: 3469
-SHA256sum: f69574ac945326741d1be34a3d345aa4fdbe852aa11c490b2d8ebdf26509b48f
+Size: 3462
+SHA256sum: 0d5a65043fb2e51a915ad6fc423af23c66f88c7706dcf2b017edb2896d003f76
 Description:  This package contains the Unbound control setup utility.
 
 Package: unbound-control
@@ -4338,8 +4394,8 @@ CPE-ID: cpe:/a:nlnetlabs:unbound
 Architecture: aarch64_cortex-a53
 Installed-Size: 184320
 Filename: unbound-control_1.19.3-r2_aarch64_cortex-a53.ipk
-Size: 75051
-SHA256sum: 48b98236e4db5d76c475653c85cae05f5ea6200217cda98740a6dd6bc54017be
+Size: 75045
+SHA256sum: c775f523849be78f7e96622cf2b59fb85e74464554a909fe2598c1e325af344d
 Description:  This package contains the Unbound control utility.
 
 Package: unbound-daemon
@@ -4353,7 +4409,7 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 481280
 Filename: unbound-daemon_1.19.3-r2_aarch64_cortex-a53.ipk
 Size: 176642
-SHA256sum: ac59fd90be3b47883ee7ac84a02dec4ef1396b04a0d4bcaafccb887479db1639
+SHA256sum: cfff3903d0ccf338982ecbc2c611dbf6cb6d9d4e6459cc5ff7c07ffb30ed32e5
 Description:  This package contains the Unbound daemon including 'libevent', 'libmnl', and
  'libpthread' to better handle large networks with heavy query loads. Options
  are available under libraries/network/libunbound to custom trim Unbound for
@@ -4369,12 +4425,12 @@ CPE-ID: cpe:/a:nlnetlabs:unbound
 Architecture: aarch64_cortex-a53
 Installed-Size: 163840
 Filename: unbound-host_1.19.3-r2_aarch64_cortex-a53.ipk
-Size: 65465
-SHA256sum: 1cc80367120064d8ca27427b8b2b8fbf520044057ebc88e41d46c2d834e5310b
+Size: 65472
+SHA256sum: f672255f376d3a7df381d183b6a0084c32509685fd32e492e6d2da2e4d51c78c
 Description:  This package contains the Unbound DNS lookup utility.
 
 Package: unrar
-Version: 7.0.7-r1
+Version: 7.0.9-r1
 Depends: libc, libstdcpp6, libpthread
 License: UnRAR
 Section: utils
@@ -4382,9 +4438,9 @@ URL: https://www.rarlab.com/
 CPE-ID: cpe:/a:rarlab:unrar
 Architecture: aarch64_cortex-a53
 Installed-Size: 419840
-Filename: unrar_7.0.7-r1_aarch64_cortex-a53.ipk
-Size: 217104
-SHA256sum: 53ea6ec336aa8e4c38686c094c03ca0ae78a9358163f543109ae40cb508fdb69
+Filename: unrar_7.0.9-r1_aarch64_cortex-a53.ipk
+Size: 216926
+SHA256sum: 4fd41549bc5f72d88119593396aa498dcecb4a4e40765c540fafd8c3490095d1
 Description:  UnRAR is an application that can decompress files and archives created using
  the RAR compression scheme
 
@@ -4398,24 +4454,24 @@ CPE-ID: cpe:/a:info-zip:unzip
 Architecture: aarch64_cortex-a53
 Installed-Size: 276480
 Filename: unzip_6.0-r8_aarch64_cortex-a53.ipk
-Size: 123572
-SHA256sum: 68c051aec4d83593925d5426e093c6d02150e0fdf55b837a506cbc8b41bee15a
+Size: 123582
+SHA256sum: 5a9614c1eb3801597e94393ca38fe8d7a0d984bc2923ba0fe3a502e1ac5ab4e2
 Description:  InfoZIP's unzip program. With the exception of multi-volume archives
  (ie, .ZIP files that are split across several disks using PKZIP's /& option),
  this can handle any file produced either by PKZIP, or the corresponding
  InfoZIP zip program.
 
 Package: usbids
-Version: 0.381-r1
+Version: 0.383-r1
 Depends: libc
 License: GPL-2.0-or-later  XFree86-1.0
 Section: utils
 URL: https://github.com/vcrhonek/hwdata
 Architecture: aarch64_cortex-a53
 Installed-Size: 737280
-Filename: usbids_0.381-r1_aarch64_cortex-a53.ipk
-Size: 255663
-SHA256sum: c8130009bc7fde7ed47b7441da565da5e9dfd8f4ff9eab395b7d988890f19ec3
+Filename: usbids_0.383-r1_aarch64_cortex-a53.ipk
+Size: 255668
+SHA256sum: 04150b235f604d9d0ead8a0624b838867252d132d6f592179879f535bc24b094
 Description:  USB ID list
 
 Package: usbutils
@@ -4427,8 +4483,8 @@ URL: http://www.linux-usb.org/
 Architecture: aarch64_cortex-a53
 Installed-Size: 204800
 Filename: usbutils_017-r1_aarch64_cortex-a53.ipk
-Size: 69550
-SHA256sum: ad917e96e5bb57e6ea8a277baa8eb36efc1744cc040574add0ad0b1a403fd1d7
+Size: 69553
+SHA256sum: 7be60eceff44694cdd40821ea4f723fa5c6bfbf54e6358eb1fcab29c6dd3501a
 Description:  USB devices listing utilities
 
 Package: usteer
@@ -4439,8 +4495,8 @@ Section: net
 Architecture: aarch64_cortex-a53
 Installed-Size: 92160
 Filename: usteer_2022.08.18~7d2b17c9-r1_aarch64_cortex-a53.ipk
-Size: 34055
-SHA256sum: 274ed51b121d5793de3889663606d73fdc8cc391c00c64b883d207609daf1dcf
+Size: 34050
+SHA256sum: 02028aa3825962c94e81a1d870483286656a4ad1af2e370ffaa05b36243af0fd
 Description:  OpenWrt AP roaming assist daemon
 
 Package: uvol
@@ -4451,8 +4507,8 @@ Section: utils
 Architecture: all
 Installed-Size: 51200
 Filename: uvol_0.9-r3_all.ipk
-Size: 9683
-SHA256sum: 2ac33917a27e5ee8f8057e2b97a243a1fced8eb372dc668249bf5a81fe5c1bb0
+Size: 9679
+SHA256sum: 0dfade369ab280fa143b36fba869a5cb49f82dd7a80b5016e9a07d3f63e855b7
 Description:  'uvol' is a tool to automate storage volume handling on embedded
  devices in a generic way.
  Depending on what is available, 'uvol' will use either UBI or LVM2
@@ -4484,8 +4540,8 @@ CPE-ID: cpe:/a:vim:vim
 Architecture: aarch64_cortex-a53
 Installed-Size: 14878720
 Filename: vim-fuller_9.0-r1_aarch64_cortex-a53.ipk
-Size: 4375276
-SHA256sum: 288694fee48abb431b8838a69f0b55548b6a2d4339fa26ee0ca8b0dc3184a063
+Size: 4375230
+SHA256sum: 48f9fa92ba7af155dd369df16e3a78181f32a30a64e4b91d730f83ff2e3d0b8f
 Description:  Vim is an almost compatible version of the UNIX editor Vi.
  (Big build)
 
@@ -4497,9 +4553,33 @@ Section: utils
 Architecture: all
 Installed-Size: 30720
 Filename: watchcat_1-r17_all.ipk
-Size: 4434
-SHA256sum: 967743c7e7f661ff695cf48ab1ea91dcb089e4d78db297a3bc5cd9312c91ac0c
+Size: 4430
+SHA256sum: 6e278f00c2cf2373e68bfb5de783cf12a738357b1a676f789e777077822a8251
 Description:  Restart network interfaces or reboot if pings to hosts fail, or set up periodic reboots. Configured via UCI /etc/config/watchcat
+
+Package: wg-installer-client
+Version: 28
+Depends: libc, kmod-wireguard, wireguard-tools, owipcalc, curl
+Section: net
+URL: https://github.com/Freifunk-Spalter/
+Architecture: all
+Installed-Size: 20480
+Filename: wg-installer-client_28_all.ipk
+Size: 3256
+SHA256sum: a6015487f7e1aef6e8e415628764d4ad1e08cb982006d1d65dbf2a5a882c8a17
+Description:  WireGuard Installer (client)
+
+Package: wg-installer-server
+Version: 28
+Depends: libc, kmod-wireguard, wireguard-tools, owipcalc, rpcd, uhttpd, uhttpd-mod-ubus, coreutils-dirname
+Section: net
+URL: https://github.com/Freifunk-Spalter/
+Architecture: all
+Installed-Size: 20480
+Filename: wg-installer-server_28_all.ipk
+Size: 3606
+SHA256sum: a840bc61cf8a5d46d56f6b427f31039b8ec2a573e362eba36a24fd74d95298cb
+Description:  WireGuard Installer (server)
 
 Package: wget-ssl
 Version: 1.24.5-r1
@@ -4513,8 +4593,8 @@ CPE-ID: cpe:/a:gnu:wget
 Architecture: aarch64_cortex-a53
 Installed-Size: 563200
 Filename: wget-ssl_1.24.5-r1_aarch64_cortex-a53.ipk
-Size: 288169
-SHA256sum: baebc2b3b0933b5d8c309069603599c945366d935b5ddf76604c36dc39c5807b
+Size: 288247
+SHA256sum: e9d7f88845858b8c8e385f0d93aa1478fe073025954ef48515bbb5d81b34088b
 Description:  Wget is a network utility to retrieve files from the Web using http
  and ftp, the two most widely used Internet protocols. It works
  non-interactively, so it will work in the background, after having
@@ -4533,21 +4613,21 @@ URL: https://carlowood.github.io/which/
 Architecture: aarch64_cortex-a53
 Installed-Size: 30720
 Filename: which_2.21-r1_aarch64_cortex-a53.ipk
-Size: 9716
-SHA256sum: 8b12a5f136f8a9e67bbaab4e05e2bdfc95f38bf9f385facbc74d0890f05b5ef0
+Size: 9717
+SHA256sum: a6f25e242dcb5a39b647f39298ffe8c4e71e1479040767be46cf769d2ae5a7e5
 Description:  The which command shows the full pathname of a specified program, if the specified program is in your PATH.
 
 Package: whois
-Version: 5.5.22-r1
+Version: 5.5.23-r1
 Depends: libc
 License: GPL-2.0-only
 Section: utils
 URL: https://github.com/rfc1036/whois
 Architecture: aarch64_cortex-a53
 Installed-Size: 92160
-Filename: whois_5.5.22-r1_aarch64_cortex-a53.ipk
-Size: 32308
-SHA256sum: 7a9263dd6283353f7df33379f90c1ef48f14a44f3c5da32f37f9d59399c7e9a0
+Filename: whois_5.5.23-r1_aarch64_cortex-a53.ipk
+Size: 32296
+SHA256sum: 06ae090827acc5b1d98301ff13cc03e7ec1c2f87df842e02aa702abf4ca9a494
 Description:  This client is intelligent and can automatically select the appropriate whois
  server for most queries.
  
@@ -4565,20 +4645,20 @@ Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: wipe_0.24-r1_aarch64_cortex-a53.ipk
 Size: 19727
-SHA256sum: ef75e36548edacf90123cc9827cdee28c6d07e1a250928a9e875d01bc825025c
+SHA256sum: 4c390f469ec0f09c98c88f930ee7a3c6387639fb907824ffd8321c97834b9839
 Description:  wipe is a little command for securely erasing files from magnetic media.
 
 Package: wsdd2
-Version: 2023.12.21~b676d8ac-r1
+Version: 2023.12.21~b676d8ac-r2
 Depends: libc
 License: GPL-3.0-only
 Section: net
 URL: https://github.com/Netgear/wsdd2
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
-Filename: wsdd2_2023.12.21~b676d8ac-r1_aarch64_cortex-a53.ipk
+Filename: wsdd2_2023.12.21~b676d8ac-r2_aarch64_cortex-a53.ipk
 Size: 22967
-SHA256sum: 38136897fa69ebdc7ba556069acd0f4bb69b99034a4d0e01ffdb0b64854898df
+SHA256sum: 7e86d6f9ccfcb7df8d7269a7648f7577ad72e67cc7dbadc52b9c0bb539ad3c36
 Description:  Web Services for Devices or Web Services on Devices (WSD),
  is a Microsoft API to simplify programming connections to web service
  enabled devices, such as printers, scanners and file shares.
@@ -4596,8 +4676,8 @@ CPE-ID: cpe:/a:vim:vim
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: xxd_9.0-r1_aarch64_cortex-a53.ipk
-Size: 7714
-SHA256sum: 1ae88d41f3e671312d1902329a4eea683bdbc15b93fba73d8a098b0df9ee5fe7
+Size: 7711
+SHA256sum: 225c24896844b9a8f3d35349beb03f6046156c9a23b7a4c33d7caac91cd617ec
 Description:  xxd creates a hex dump of a given file or standard input, it can also convert
  a hex dump back to its original binary form.
 
@@ -4610,8 +4690,8 @@ URL: https://xxhash.com/
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: xxhash_0.8.2-r2_aarch64_cortex-a53.ipk
-Size: 19019
-SHA256sum: 5b712f523acc2d8694de4e819ade99237ea4904dd66788300b921f666604d871
+Size: 19011
+SHA256sum: ddea6f1730bac9538a2e4664651a7d75b8072eab067a100c87ad44ef11913c57
 Description:  xxHash is an Extremely fast Hash algorithm, running at RAM speed
  limits. It successfully completes the SMHasher test suite which
  evaluates collision, dispersion and randomness qualities of hash
@@ -4630,8 +4710,8 @@ CPE-ID: cpe:/a:tukaani:xz
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: xz-utils_5.4.6-r1_aarch64_cortex-a53.ipk
-Size: 854
-SHA256sum: 17325ed81d2da6c8d702cc1a0b0535e31abc5af1b9975036a173f1b368214e0a
+Size: 855
+SHA256sum: 49e0ff9573e449702961836a97a8b75430bac6401bfb6311c9cbdd1f97ac41c7
 Description:  XZ Utils (meta)
 
 Package: xz
@@ -4645,8 +4725,8 @@ CPE-ID: cpe:/a:tukaani:xz
 Architecture: aarch64_cortex-a53
 Installed-Size: 81920
 Filename: xz_5.4.6-r1_aarch64_cortex-a53.ipk
-Size: 36782
-SHA256sum: 11e62ef62ac4ea4b1954973ae1548422c93003dbb9c021b85cceb589dc3a8a05
+Size: 36785
+SHA256sum: 2669949fb191fd2e47051ed593f9be4026f339eabf2ca97d00a219dbfc9b6511
 Description:  Contains: xz  lzcat lzma unlzma unxz xzcat
 
 Package: ziptool
@@ -4659,8 +4739,8 @@ CPE-ID: cpe:/a:libzip:libzip
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: ziptool_1.10.1-r1_aarch64_cortex-a53.ipk
-Size: 11621
-SHA256sum: d77be7d47713dc8e96aa590e6ab5857cb742f0ba9bc6ebac95c1436a8f15d0ff
+Size: 11635
+SHA256sum: d395d26645a0ac41b0075d9ccde29d6acd9129776b58b9f6742a9f7bfca91540
 Description:  This package contains the command line tool ziptool from libzip.
 
 Package: zoneinfo-america
@@ -4672,8 +4752,8 @@ Section: utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 460800
 Filename: zoneinfo-america_2024a-r1_aarch64_cortex-a53.ipk
-Size: 86901
-SHA256sum: 90dc8b7c00a7138ec8ebd9da69c1517e220378115f7785dcb976e7dd769b3e3a
+Size: 86944
+SHA256sum: 29c79bd6476a86f2f8e7768359b68345bc7064bb0f251a7be2d549debccb692e
 Description:  Zone Information (America North/South)
 
 Package: zoneinfo-core
@@ -4684,8 +4764,8 @@ Section: utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 102400
 Filename: zoneinfo-core_2024a-r1_aarch64_cortex-a53.ipk
-Size: 20570
-SHA256sum: 91b02aaade52a9b750a080969d5bdcc4b2f1c0720fda6049488291aa5b7b23ad
+Size: 20589
+SHA256sum: 495b0b15db5f546123b3a88ba88ff4ec6aea432adf476543d1c0bfb9f669f126
 Description:  Zone Information (core)
 
 Package: zoneinfo-simple
@@ -4696,21 +4776,21 @@ Section: utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 61440
 Filename: zoneinfo-simple_2024a-r1_aarch64_cortex-a53.ipk
-Size: 17501
-SHA256sum: 14602addcd7111df2e707f5b8e61444d717afc0450e3cbd165ec2a1980fe0a5a
+Size: 17526
+SHA256sum: 86cb90afea847cce0779dd33ed2fc8818969a5c4a4fedc99441f79d237427106
 Description:  Zone Information (simple)
 
 Package: zstd
-Version: 1.5.5-r1
+Version: 1.5.6-r1
 Depends: libc, libzstd
 License: GPL-2.0-or-later
 Section: utils
 URL: https://github.com/facebook/zstd
 Architecture: aarch64_cortex-a53
-Installed-Size: 174080
-Filename: zstd_1.5.5-r1_aarch64_cortex-a53.ipk
-Size: 76506
-SHA256sum: a5e92fcba630b9a64ef43fbaa0c636a12187c2949974d3b83c6576af6594f60a
+Installed-Size: 184320
+Filename: zstd_1.5.6-r1_aarch64_cortex-a53.ipk
+Size: 81913
+SHA256sum: e57140b6bda4e1a932b668700941daec9560857e6a520986573c5b76efcf7cad
 Description:  Zstandard - Fast real-time compression algorithm.
  This package provides the zstd binaries.
 

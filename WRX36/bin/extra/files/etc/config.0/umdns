@@ -1,4 +1,0 @@
-config umdns
-	option jail 1
-	list network lan
-	list network IoT

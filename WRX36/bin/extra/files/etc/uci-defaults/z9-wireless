@@ -1,0 +1,81 @@
+#!/bin/sh
+
+{ [ -f /etc/config/wireless ] && ! [ "$(cat /etc/config/wireless)" = "$(cat /rom/etc/config/wireless)" ]; } || {
+uci batch <<'EOF'
+delete wireless.radio0
+set wireless.radio0=wifi-device
+set wireless.radio0.type='mac80211'
+set wireless.radio0.path='platform/soc@0/c000000.wifi'
+set wireless.radio0.band='5g'
+set wireless.radio0.channel='161'
+set wireless.radio0.htmode='HE80'
+set wireless.radio0.country='US'
+set wireless.radio0.country_ie='1'
+set wireless.radio0.cell_density='0'
+set wireless.radio0.txpower='30'
+set wireless.radio0.diversity='1'
+set wireless.radio0.disabled='0'
+delete wireless.radio1
+set wireless.radio1=wifi-device
+set wireless.radio1.type='mac80211'
+set wireless.radio1.path='platform/soc@0/c000000.wifi+1'
+set wireless.radio1.band='2g'
+set wireless.radio1.channel='2'
+set wireless.radio1.htmode='HE40'
+set wireless.radio1.country='US'
+set wireless.radio1.country_ie='1'
+set wireless.radio1.cell_density='0'
+set wireless.radio1.txpower='30'
+set wireless.radio1.diversity='1'
+set wireless.radio1.disabled='0'
+set wireless.radio1.noscan='1'
+delete wireless.lan_radio0
+set wireless.lan_radio0=wifi-iface
+set wireless.lan_radio0.device='radio0'
+set wireless.lan_radio0.mode='ap'
+set wireless.lan_radio0.ssid='OpenWrt_WiFi'
+set wireless.lan_radio0.encryption='psk2+ccmp'
+set wireless.lan_radio0.network='lan'
+set wireless.lan_radio0.ieee80211r='1'
+set wireless.lan_radio0.ieee80211w='1'
+set wireless.lan_radio0.ieee80211k='1'
+set wireless.lan_radio0.ft_psk_generate_local='1'
+set wireless.lan_radio0.ft_over_ds='0'
+set wireless.lan_radio0.na_mcast_to_ucast='1'
+set wireless.lan_radio0.rrm_neighbor_report='1'
+set wireless.lan_radio0.rrm_beacon_report='1'
+set wireless.lan_radio0.wmm='1'
+set wireless.lan_radio0.wnm_sleep_mode='1'
+set wireless.lan_radio0.wnm_sleep_mode_no_keys='1'
+set wireless.lan_radio0.bss_transition='1'
+set wireless.lan_radio0.reassociation_deadline='8192'
+set wireless.lan_radio0.proxy_arp='1'
+set wireless.lan_radio0.multicast_to_unicast_all='0'
+set wireless.lan_radio0.key='password'
+delete wireless.lan_radio1
+set wireless.lan_radio1=wifi-iface
+set wireless.lan_radio1.device='radio1'
+set wireless.lan_radio1.mode='ap'
+set wireless.lan_radio1.ssid='OpenWrt_WiFi'
+set wireless.lan_radio1.encryption='psk2+ccmp'
+set wireless.lan_radio1.network='lan'
+set wireless.lan_radio1.ieee80211r='1'
+set wireless.lan_radio1.ieee80211w='1'
+set wireless.lan_radio1.ieee80211k='1'
+set wireless.lan_radio1.ft_psk_generate_local='1'
+set wireless.lan_radio1.ft_over_ds='0'
+set wireless.lan_radio1.na_mcast_to_ucast='1'
+set wireless.lan_radio1.rrm_neighbor_report='1'
+set wireless.lan_radio1.rrm_beacon_report='1'
+set wireless.lan_radio1.wmm='1'
+set wireless.lan_radio1.wnm_sleep_mode='1'
+set wireless.lan_radio1.wnm_sleep_mode_no_keys='1'
+set wireless.lan_radio1.bss_transition='1'
+set wireless.lan_radio1.reassociation_deadline='8192'
+set wireless.lan_radio1.proxy_arp='1'
+set wireless.lan_radio1.multicast_to_unicast_all='0'
+set wireless.lan_radio1.key='password'
+EOF
+uci commit wireless
+}
+exit 0

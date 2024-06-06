@@ -8,8 +8,8 @@ URL: https://gitlab.alpinelinux.org/alpine/apk-tools.git
 Architecture: aarch64_cortex-a53
 Installed-Size: 389120
 Filename: apk-openssl_3.0.0_pre20240519-r1_aarch64_cortex-a53.ipk
-Size: 170873
-SHA256sum: 37f90243a8baf52e17886040d12f731e2985ac9dde5fb7499e9d684debd62d12
+Size: 170860
+SHA256sum: ddd1c19c7060696e05d03af17fd397482d93c1f405a204291e7fd2e47a149c26
 Description:  apk package manager (openssl)
 
 Package: ath11k-firmware-ipq8074
@@ -94,8 +94,8 @@ Essential: yes
 Architecture: aarch64_cortex-a53
 Installed-Size: 614400
 Filename: busybox_1.36.1-r1_aarch64_cortex-a53.ipk
-Size: 296395
-SHA256sum: 246dc3d688a05963638aedd7fd91ab23f8122bd357af9974f5ba770cfc7887ea
+Size: 296405
+SHA256sum: ad9453bbb88d378d6daaad4095db072d56d07c5aed79747073a2359ab2748d63
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 
@@ -172,6 +172,20 @@ Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
  This is a fully configurable variant with DHCPv4, DHCPv6, DNSSEC, Authoritative DNS
  and nftset, Conntrack support & NO_ID enabled by default.
 
+Package: dnsmasq
+Version: 2.90-r2
+Depends: libc, libubus20231128
+License: GPL-2.0
+Section: net
+URL: http://www.thekelleys.org.uk/dnsmasq/
+CPE-ID: cpe:/a:thekelleys:dnsmasq
+Architecture: aarch64_cortex-a53
+Installed-Size: 450560
+Filename: dnsmasq_2.90-r2_aarch64_cortex-a53.ipk
+Size: 206417
+SHA256sum: 6868dd8dd6df7498b7398ad05e9bc1a3a6df0b847393588ed65c456fdb8c2e4f
+Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
+
 Package: e2fsprogs
 Version: 1.47.0-r2
 Depends: libc, libuuid1, libext2fs2, libe2p2
@@ -211,8 +225,8 @@ Section: base
 Architecture: all
 Installed-Size: 10240
 Filename: fantastic-keyring_20240427-r1_all.ipk
-Size: 1061
-SHA256sum: a85e960a7fe285c1260d4b220f01eea04037044ce68e1f570b41cfaff2232e7c
+Size: 1055
+SHA256sum: 96e1cadd0138874e2286674164d9e0b7c26bfe13b73cb28cfb903a3ef3f91d51
 Description:  The keyring of with the developer using.
 
 Package: fantastic-packages-feeds
@@ -224,7 +238,7 @@ Architecture: all
 Installed-Size: 10240
 Filename: fantastic-packages-feeds_20240504-r1_all.ipk
 Size: 1513
-SHA256sum: f2c162833fcce4b16b6ce4140b9317b3fa6b07947be82a2bf16322f8a3432b0d
+SHA256sum: 91a8e3614b380ed627a8a4d8f80c9d1d0a8bd09c419be42533b461051b0ec983
 Description:  Installer for fantastic-packages feeds
 
 Package: fdisk
@@ -353,7 +367,7 @@ SHA256sum: 60b30f9839d0123365c56dfd28b613a3d5ddecc6639e32044c9d14cf09096427
 Description:  hwclock is a tool for accessing the Hardware Clock
 
 Package: ip-full
-Version: 6.7.0-r1
+Version: 6.9.0-r1
 Depends: libc, libnl-tiny1, libbpf1
 Provides: ip
 Alternatives: 300:/sbin/ip:/usr/libexec/ip-full
@@ -363,9 +377,9 @@ URL: http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
 CPE-ID: cpe:/a:iproute2_project:iproute2
 Architecture: aarch64_cortex-a53
 Installed-Size: 757760
-Filename: ip-full_6.7.0-r1_aarch64_cortex-a53.ipk
-Size: 357023
-SHA256sum: 719b30069b02c86f4c1b553800de9a7eabcda161b95cf309b8cd4754bbc2bcfd
+Filename: ip-full_6.9.0-r1_aarch64_cortex-a53.ipk
+Size: 358685
+SHA256sum: 68092f30e15f07383ef102dea2cb734f659c5df027ff7f2a0f03daa20de77c4d
 Description:  Routing control utility (full)
 
 Package: iw-full
@@ -575,8 +589,8 @@ CPE-ID: cpe:/a:elfutils_project:elfutils
 Architecture: aarch64_cortex-a53
 Installed-Size: 122880
 Filename: libelf1_0.191-r1_aarch64_cortex-a53.ipk
-Size: 54335
-SHA256sum: c7b74abc711e4fc40dd5a47950b7461fb65a4fe43fe2e15f30bd8d28676d5daa
+Size: 54334
+SHA256sum: 5dc7cc029427d40b97668079edcbf36e6a308923c3527690ea5fec1781616779
 Description:  ELF manipulation libraries (libelf)
 
 Package: libevent2-7
@@ -849,8 +863,8 @@ CPE-ID: cpe:/a:gnu:libtool
 Architecture: aarch64_cortex-a53
 Installed-Size: 51200
 Filename: libltdl7_2.4.7-r1_aarch64_cortex-a53.ipk
-Size: 20324
-SHA256sum: 4a77b5de22815fc99d00733a99c30bb95728f078c30951e4f0c4743f6147e8e3
+Size: 20332
+SHA256sum: 66c64b3abbadc82700dc5a6b780523e8ecf92aefa268905dc254d9624f6d7ef2
 Description:  A generic dynamic object loading library
 
 Package: liblua5.1.5
@@ -1184,8 +1198,8 @@ CPE-ID: cpe:/a:openssl:openssl
 Architecture: aarch64_cortex-a53
 Installed-Size: 5437440
 Filename: libopenssl3_3.0.13-r1_aarch64_cortex-a53.ipk
-Size: 2115489
-SHA256sum: 8b970404c2386f04ffd05e523ff10b7202710baf483f057fe1bd575e9c218ee5
+Size: 2115722
+SHA256sum: 2e767aefad34cf05c5c84330dfa8d0fc75330d9936c027e4a2f4929bc529079c
 Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  commercial-grade, full-featured, and Open Source toolkit implementing the
  Transport Layer Security (TLS) protocol as well as a full-strength
@@ -1839,6 +1853,18 @@ Description:  odhcpd is a daemon for serving and relaying IP management protocol
  NDP between routed (non-bridged) interfaces in case no delegated prefixes
  are available.
 
+Package: omcproxy
+Version: 2021.11.04~bfba2aa7-r9
+Depends: libc, libubox20240329, libubus20231128
+License: Apache-2.0
+Section: net
+Architecture: aarch64_cortex-a53
+Installed-Size: 51200
+Filename: omcproxy_2021.11.04~bfba2aa7-r9_aarch64_cortex-a53.ipk
+Size: 21463
+SHA256sum: d35b601e2cbeb5749ecdbf6835baf00d1dffec01c21277b8ee7aa4a8e164c87d
+Description:  IGMPv3 and MLDv2 Multicast Proxy
+
 Package: openssl-util
 Version: 3.0.13-r1
 Depends: libc, libopenssl3, libopenssl-conf
@@ -1981,8 +2007,8 @@ Section: utils
 Architecture: aarch64_cortex-a53
 Installed-Size: 194560
 Filename: px5g-standalone_10_aarch64_cortex-a53.ipk
-Size: 100512
-SHA256sum: cc722d7b5af35facf09d60f5140069c76042d092d1c9339eadf2e98628ad5011
+Size: 100534
+SHA256sum: 0958d7002dba34b7b84f0eb12e8e5300e24794ec658028bbddcb6a190d3eb39b
 Description:  Px5g is a tiny standalone X.509 certificate generator.
  It suitable to create key files and certificates in DER
  and PEM format for use with stunnel, uhttpd and others.
@@ -2123,8 +2149,8 @@ SHA256sum: e92f89fbd9a27e7cbf15c1420598fe44ecda30c6a86cd8578c49ce74bec6eb94
 Description:  contains: taskset
 
 Package: tc-full
-Version: 6.7.0-r1
-Depends: libc, kmod-sched-core, libbpf1, libxtables12, tc-mod-iptables
+Version: 6.9.0-r1
+Depends: libc, kmod-sched-core, libbpf1, libxtables12
 Provides: tc
 Alternatives: 400:/sbin/tc:/usr/libexec/tc-full
 License: GPL-2.0
@@ -2132,25 +2158,11 @@ Section: net
 URL: http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
 CPE-ID: cpe:/a:iproute2_project:iproute2
 Architecture: aarch64_cortex-a53
-Installed-Size: 624640
-Filename: tc-full_6.7.0-r1_aarch64_cortex-a53.ipk
-Size: 289667
-SHA256sum: 39fcf4b723a01121340241b4fc8139f0a9a3c123f615cd1916b57ea34f7eab99
+Installed-Size: 737280
+Filename: tc-full_6.9.0-r1_aarch64_cortex-a53.ipk
+Size: 329901
+SHA256sum: b19c7d35b7e20bbb14f252c721d693157a47c8c5ccf85056dd1a671cfa5015ee
 Description:  Traffic control utility (full)
-
-Package: tc-mod-iptables
-Version: 6.7.0-r1
-Depends: libc, libxtables12, libbpf1
-License: GPL-2.0
-Section: net
-URL: http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
-CPE-ID: cpe:/a:iproute2_project:iproute2
-Architecture: aarch64_cortex-a53
-Installed-Size: 20480
-Filename: tc-mod-iptables_6.7.0-r1_aarch64_cortex-a53.ipk
-Size: 4670
-SHA256sum: d99ad6983a48fbee49b95f4d5052a0fec5222fb7d4abb0a6cd7f092c67204c67
-Description:  Traffic control module - iptables action
 
 Package: tcpdump
 Version: 4.99.4-r1
@@ -2514,6 +2526,18 @@ Size: 18349
 SHA256sum: 0b085ab2b4ac4c42170cd7648b83e43cb22f75e4fc75736c110f595f6850fdd9
 Description:  OpenWrt Multicast DNS Daemon
 
+Package: unetd
+Version: 2024.03.31~80645766
+Depends: libc, libubox20240329, libubus20231128, libblobmsg-json20240329, libnl-tiny1, kmod-wireguard
+License: GPL-2.0
+Section: net
+Architecture: aarch64_cortex-a53
+Installed-Size: 133120
+Filename: unetd_2024.03.31~80645766_aarch64_cortex-a53.ipk
+Size: 52583
+SHA256sum: 0934f3b70b45a1d0d28dd756d48b873ba8c88a784ead12c5dacbc62ad307f0b3
+Description:  WireGuard based VPN connection manager for OpenWrt
+
 Package: urandom-seed
 Version: 3
 Depends: libc, getrandom
@@ -2619,6 +2643,18 @@ Size: 12703
 SHA256sum: 7534a13d701280d4110bbb7a6dfc12d383ee3477ad67eeb3c0e1bfff04d3ba02
 Description:  OpenWrt container management
 
+Package: vxlan
+Version: 7
+Depends: libc, kmod-vxlan
+License: GPL-2.0
+Section: net
+Architecture: all
+Installed-Size: 10240
+Filename: vxlan_7_all.ipk
+Size: 2226
+SHA256sum: d3f0f23a71d1a8f545d4eeffbd8257ff32d5e4e341cac8ed26226379ab49a78e
+Description:  Virtual eXtensible LAN config support in /etc/config/network.
+
 Package: whereis
 Version: 2.39.3-r1
 Depends: libc, librt
@@ -2644,6 +2680,27 @@ Filename: wifi-scripts_1.0-r1_all.ipk
 Size: 29512
 SHA256sum: f68282e30eeb1209955e6d29291b18c4ec3bf233a88301cb6dbdedb964d89291
 Description:  A set of scripts that handle setup and configuration of Wi-Fi devices.
+
+Package: wireguard-tools
+Version: 1.0.20210914-r3
+Depends: libc, kmod-wireguard
+License: GPL-2.0
+Section: net
+URL: https://www.wireguard.com
+Architecture: aarch64_cortex-a53
+Installed-Size: 102400
+Filename: wireguard-tools_1.0.20210914-r3_aarch64_cortex-a53.ipk
+Size: 55064
+SHA256sum: 5576a281bf093d30bda958f7014b0c4a21e97dfb43ded173f26c2206443a8b80
+Description:  WireGuard is a novel VPN that runs inside the Linux Kernel and utilizes
+ state-of-the-art cryptography. It aims to be faster, simpler, leaner, and
+ more useful than IPSec, while avoiding the massive headache. It intends to
+ be considerably more performant than OpenVPN.  WireGuard is designed as a
+ general purpose VPN for running on embedded interfaces and super computers
+ alike, fit for many different circumstances. It uses UDP.
+ 
+ This package provides the userspace control program for WireGuard,
+ `wg(8)`, a netifd protocol helper, and a re-resolve watchdog script.
 
 Package: wireless-regdb
 Version: 2024.05.08-r1

@@ -1,0 +1,26 @@
+#!/bin/sh
+
+{ [ -f /etc/config/adblock ] && ! [ "$(cat /etc/config/adblock)" = "$(cat /rom/etc/config/adblock)" ]; } || {
+uci batch <<'EOF'
+delete adblock.global
+set adblock.global=adblock
+set adblock.global.adb_enabled='1'
+set adblock.global.adb_debug='0'
+set adblock.global.adb_forcedns='1'
+set adblock.global.adb_safesearch='0'
+set adblock.global.adb_dnsfilereset='0'
+set adblock.global.adb_mail='0'
+set adblock.global.adb_report='0'
+set adblock.global.adb_backup='1'
+set adblock.global.adb_dns='unbound'
+set adblock.global.adb_fetchutil='curl'
+set adblock.global.adb_dnsflush='1'
+set adblock.global.adb_trigger='lan'
+set adblock.global.adb_zonelist='IoT' 'lan'
+set adblock.global.adb_lookupdomain='gstatic.com'
+set adblock.global.adb_portlist='53' '53'
+set adblock.global.adb_sources='adaway' 'adguard' 'adguard_tracking' 'android_tracking' 'anti_ad' 'anudeep' 'bitcoin' 'disconnect' 'easylist' 'easyprivacy' 'firetv_tracking' 'notracking' 'openphish' 'phishing_army' 'smarttv_tracking' 'spam404' 'wally3k' 'whocares' 'winspy' 'yoyo'
+EOF
+uci commit adblock
+}
+exit 0

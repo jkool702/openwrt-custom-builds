@@ -1,0 +1,56 @@
+#!/bin/sh
+
+{ [ -f /etc/config/dhcp ] && ! [ "$(cat /etc/config/dhcp)" = "$(cat /rom/etc/config/dhcp)" ]; } || {
+uci batch <<'EOF'
+delete dhcp.lan
+set dhcp.lan=dhcp
+set dhcp.lan.interface='lan'
+set dhcp.lan.start='100'
+set dhcp.lan.limit='150'
+set dhcp.lan.leasetime='4h'
+set dhcp.lan.dhcpv4='server'
+set dhcp.lan.dhcpv6='server'
+set dhcp.lan.ra='server'
+set dhcp.lan.ra_management='1'
+set dhcp.lan.ra_default='2'
+set dhcp.lan.netmask='255.255.255.0'
+set dhcp.lan.force='1'
+set dhcp.lan.router='10.0.0.1'
+set dhcp.lan.domain='lan'
+set dhcp.lan.ra_flags='managed-config' 'other-config'
+set dhcp.lan.dhcp_option='1,255.255.255.0' '3,10.0.0.1' '6,10.0.0.1' '12,OpenWrt_WRX36' '15,lan'
+delete dhcp.wan
+set dhcp.wan=dhcp
+set dhcp.wan.interface='wan'
+set dhcp.wan.ignore='1'
+delete dhcp.odhcpd
+set dhcp.odhcpd=odhcpd
+set dhcp.odhcpd.maindhcp='1'
+set dhcp.odhcpd.leasefile='/var/lib/unbound/odhcpd/dhcp.leases'
+set dhcp.odhcpd.leasetrigger='/usr/lib/unbound/odhcpd.sh'
+set dhcp.odhcpd.loglevel='4'
+delete dhcp.IoT
+set dhcp.IoT=dhcp
+set dhcp.IoT.interface='IoT'
+set dhcp.IoT.start='100'
+set dhcp.IoT.limit='150'
+set dhcp.IoT.leasetime='12h'
+set dhcp.IoT.dhcpv4='server'
+set dhcp.IoT.dhcpv6='server'
+set dhcp.IoT.ra='server'
+set dhcp.IoT.ra_management='1'
+set dhcp.IoT.ra_default='2'
+set dhcp.IoT.netmask='255.255.255.0'
+set dhcp.IoT.force='1'
+set dhcp.IoT.router='192.168.0.1'
+set dhcp.IoT.domain='lan'
+set dhcp.IoT.ra_flags='managed-config' 'other-config'
+set dhcp.IoT.dhcp_option='1,255.255.255.0' '3,192.168.0.1' '6,192.168.0.1' '12,OpenWrt_WRX36' '15,lan'
+delete dhcp.@host[0]
+set dhcp.@host[0]=host
+set dhcp.@host[0].name='AP_IoT'
+set dhcp.@host[0].ip='192.168.0.254'
+EOF
+uci commit dhcp
+}
+exit 0

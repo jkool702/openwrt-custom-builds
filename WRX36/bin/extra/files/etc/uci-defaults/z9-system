@@ -1,0 +1,41 @@
+#!/bin/sh
+
+{ [ -f /etc/config/system ] && ! [ "$(cat /etc/config/system)" = "$(cat /rom/etc/config/system)" ]; } || {
+uci batch <<'EOF'
+delete system.@system[0]
+set system.@system[0]=system
+set system.@system[0].hostname='OpenWrt_WRX36'
+set system.@system[0].ttylogin='0'
+set system.@system[0].log_size='64'
+set system.@system[0].urandom_seed='0'
+set system.@system[0].log_proto='udp'
+set system.@system[0].conloglevel='8'
+set system.@system[0].cronloglevel='5'
+set system.@system[0].zram_comp_algo='zstd'
+set system.@system[0].description='OpenWrt on Dynalink DL-WRX36 (NSS)'
+set system.@system[0].notes='Custom NSS-enabled OpenWrt firmware for Dynalink DL-WRX36'
+delete system.ntp
+set system.ntp=timeserver
+set system.ntp.enabled='0'
+delete system.led_wan_port_link_green
+set system.led_wan_port_link_green=led
+set system.led_wan_port_link_green.name='WAN-PORT-LINK-GREEN'
+set system.led_wan_port_link_green.sysfs='90000.mdio-1:1c:green:wan'
+set system.led_wan_port_link_green.trigger='netdev'
+set system.led_wan_port_link_green.mode='link 1000 link_2500'
+set system.led_wan_port_link_green.dev='wan'
+delete system.led_wan_port_link_yellow
+set system.led_wan_port_link_yellow=led
+set system.led_wan_port_link_yellow.name='WAN-PORT-LINK-YELLOW'
+set system.led_wan_port_link_yellow.sysfs='90000.mdio-1:1c:yellow:wan'
+set system.led_wan_port_link_yellow.trigger='netdev'
+set system.led_wan_port_link_yellow.mode='tx rx link_10 link_100'
+set system.led_wan_port_link_yellow.dev='wan'
+delete system.@rngd[0]
+set system.@rngd[0]=rngd
+set system.@rngd[0].enabled='1'
+set system.@rngd[0].device='/dev/urandom'
+EOF
+uci commit system
+}
+exit 0

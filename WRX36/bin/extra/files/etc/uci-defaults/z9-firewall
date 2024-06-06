@@ -1,0 +1,148 @@
+#!/bin/sh
+
+{ [ -f /etc/config/firewall ] && ! [ "$(cat /etc/config/firewall)" = "$(cat /rom/etc/config/firewall)" ]; } || {
+uci batch <<'EOF'
+delete firewall.@defaults[0]
+set firewall.@defaults[0]=defaults
+set firewall.@defaults[0].input='REJECT'
+set firewall.@defaults[0].output='ACCEPT'
+set firewall.@defaults[0].forward='REJECT'
+set firewall.@defaults[0].syn_flood='1'
+delete firewall.@zone[0]
+set firewall.@zone[0]=zone
+set firewall.@zone[0].name='lan'
+set firewall.@zone[0].network='lan'
+set firewall.@zone[0].input='ACCEPT'
+set firewall.@zone[0].output='ACCEPT'
+set firewall.@zone[0].forward='ACCEPT'
+delete firewall.@forwarding[0]
+set firewall.@forwarding[0]=forwarding
+set firewall.@forwarding[0].src='lan'
+set firewall.@forwarding[0].dest='wan'
+delete firewall.@rule[0]
+set firewall.@rule[0]=rule
+set firewall.@rule[0].name='Allow-DHCP-Renew'
+set firewall.@rule[0].src='wan'
+set firewall.@rule[0].proto='udp'
+set firewall.@rule[0].dest_port='68'
+set firewall.@rule[0].target='ACCEPT'
+set firewall.@rule[0].family='ipv4'
+delete firewall.@rule[1]
+set firewall.@rule[1]=rule
+set firewall.@rule[1].name='Allow-Ping'
+set firewall.@rule[1].src='wan'
+set firewall.@rule[1].proto='icmp'
+set firewall.@rule[1].icmp_type='echo-request'
+set firewall.@rule[1].family='ipv4'
+set firewall.@rule[1].target='ACCEPT'
+set firewall.@rule[1].enabled='0'
+delete firewall.@rule[2]
+set firewall.@rule[2]=rule
+set firewall.@rule[2].name='Allow-IGMP'
+set firewall.@rule[2].src='wan'
+set firewall.@rule[2].proto='igmp'
+set firewall.@rule[2].family='ipv4'
+set firewall.@rule[2].target='ACCEPT'
+delete firewall.@rule[3]
+set firewall.@rule[3]=rule
+set firewall.@rule[3].name='Allow-DHCPv6'
+set firewall.@rule[3].src='wan'
+set firewall.@rule[3].proto='udp'
+set firewall.@rule[3].dest_port='546'
+set firewall.@rule[3].family='ipv6'
+set firewall.@rule[3].target='ACCEPT'
+delete firewall.@rule[4]
+set firewall.@rule[4]=rule
+set firewall.@rule[4].name='Allow-MLD'
+set firewall.@rule[4].src='wan'
+set firewall.@rule[4].proto='icmp'
+set firewall.@rule[4].src_ip='fe80::/10'
+set firewall.@rule[4].icmp_type='130/0' '131/0' '132/0' '143/0'
+set firewall.@rule[4].family='ipv6'
+set firewall.@rule[4].target='ACCEPT'
+delete firewall.@rule[5]
+set firewall.@rule[5]=rule
+set firewall.@rule[5].name='Allow-ICMPv6-Input'
+set firewall.@rule[5].src='wan'
+set firewall.@rule[5].proto='icmp'
+set firewall.@rule[5].icmp_type='echo-request' 'echo-reply' 'destination-unreachable' 'packet-too-big' 'time-exceeded' 'bad-header' 'unknown-header-type' 'router-solicitation' 'neighbour-solicitation' 'router-advertisement' 'neighbour-advertisement'
+set firewall.@rule[5].limit='1000/sec'
+set firewall.@rule[5].family='ipv6'
+set firewall.@rule[5].target='ACCEPT'
+delete firewall.@rule[6]
+set firewall.@rule[6]=rule
+set firewall.@rule[6].name='Allow-ICMPv6-Forward'
+set firewall.@rule[6].src='wan'
+set firewall.@rule[6].dest='*'
+set firewall.@rule[6].proto='icmp'
+set firewall.@rule[6].icmp_type='echo-request' 'echo-reply' 'destination-unreachable' 'packet-too-big' 'time-exceeded' 'bad-header' 'unknown-header-type'
+set firewall.@rule[6].limit='1000/sec'
+set firewall.@rule[6].family='ipv6'
+set firewall.@rule[6].target='ACCEPT'
+delete firewall.@rule[7]
+set firewall.@rule[7]=rule
+set firewall.@rule[7].name='Allow-IPSec-ESP'
+set firewall.@rule[7].src='wan'
+set firewall.@rule[7].dest='lan'
+set firewall.@rule[7].proto='esp'
+set firewall.@rule[7].target='ACCEPT'
+delete firewall.@rule[8]
+set firewall.@rule[8]=rule
+set firewall.@rule[8].name='Allow-ISAKMP'
+set firewall.@rule[8].src='wan'
+set firewall.@rule[8].dest='lan'
+set firewall.@rule[8].dest_port='500'
+set firewall.@rule[8].proto='udp'
+set firewall.@rule[8].target='ACCEPT'
+delete firewall.@zone[1]
+set firewall.@zone[1]=zone
+set firewall.@zone[1].name='IoT'
+set firewall.@zone[1].input='REJECT'
+set firewall.@zone[1].output='ACCEPT'
+set firewall.@zone[1].forward='REJECT'
+set firewall.@zone[1].network='IoT'
+delete firewall.@zone[2]
+set firewall.@zone[2]=zone
+set firewall.@zone[2].name='wan'
+set firewall.@zone[2].network='wan' 'wan6'
+set firewall.@zone[2].input='REJECT'
+set firewall.@zone[2].output='ACCEPT'
+set firewall.@zone[2].forward='REJECT'
+set firewall.@zone[2].masq='1'
+set firewall.@zone[2].mtu_fix='1'
+delete firewall.@forwarding[1]
+set firewall.@forwarding[1]=forwarding
+set firewall.@forwarding[1].src='IoT'
+set firewall.@forwarding[1].dest='wan'
+delete firewall.adblock_IoT53
+set firewall.adblock_IoT53=redirect
+set firewall.adblock_IoT53.name='Adblock DNS (IoT, 53)'
+set firewall.adblock_IoT53.src='IoT'
+set firewall.adblock_IoT53.proto='tcp udp'
+set firewall.adblock_IoT53.src_dport='53'
+set firewall.adblock_IoT53.dest_port='53'
+set firewall.adblock_IoT53.target='DNAT'
+set firewall.adblock_IoT53.family='any'
+set firewall.adblock_IoT53.enabled='0'
+delete firewall.adblock_lan53
+set firewall.adblock_lan53=redirect
+set firewall.adblock_lan53.name='Adblock DNS (lan, 53)'
+set firewall.adblock_lan53.src='lan'
+set firewall.adblock_lan53.proto='tcp udp'
+set firewall.adblock_lan53.src_dport='53'
+set firewall.adblock_lan53.dest_port='53'
+set firewall.adblock_lan53.target='DNAT'
+set firewall.adblock_lan53.family='any'
+set firewall.adblock_lan53.enabled='0'
+delete firewall.@forwarding[2]
+set firewall.@forwarding[2]=forwarding
+set firewall.@forwarding[2].src='lan'
+set firewall.@forwarding[2].dest='IoT'
+delete firewall.qcanssecm
+set firewall.qcanssecm=include
+set firewall.qcanssecm.type='script'
+set firewall.qcanssecm.path='/etc/firewall.d/qca-nss-ecm'
+EOF
+uci commit firewall
+}
+exit 0

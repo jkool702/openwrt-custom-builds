@@ -1,0 +1,62 @@
+#!/bin/sh
+
+{ [ -f /etc/config/network ] && ! [ "$(cat /etc/config/network)" = "$(cat /rom/etc/config/network)" ]; } || {
+uci batch <<'EOF'
+delete network.loopback
+set network.loopback=interface
+set network.loopback.device='lo'
+set network.loopback.proto='static'
+set network.loopback.ipaddr='127.0.0.1'
+set network.loopback.netmask='255.0.0.0'
+set network.globals=globals
+delete network.@device[0]
+set network.@device[0]=device
+set network.@device[0].name='br-lan'
+set network.@device[0].type='bridge'
+set network.@device[0].ports='lan1' 'lan2' 'lan3'
+set network.@device[0].bridge_empty='1'
+set network.@device[0].stp='1'
+set network.@device[0].igmp_snooping='1'
+delete network.lan
+set network.lan=interface
+set network.lan.device='br-lan'
+set network.lan.proto='static'
+set network.lan.ip6assign='60'
+set network.lan.broadcast='10.0.0.255'
+set network.lan.dns_search='lan'
+set network.lan.ipaddr='10.0.0.1/24'
+set network.lan.dns='10.0.0.1'
+set network.lan.delegate='0'
+delete network.IoT
+set network.IoT=interface
+set network.IoT.device='lan4'
+set network.IoT.proto='static'
+set network.IoT.ip6assign='60'
+set network.IoT.broadcast='192.168.0.255'
+set network.IoT.ipaddr='192.168.0.1/24'
+set network.IoT.dns_search='lan'
+set network.IoT.dns='192.168.0.1'
+set network.IoT.delegate='0'
+delete network.wan
+set network.wan=interface
+set network.wan.device='wan'
+set network.wan.proto='dhcp'
+set network.wan.force_link='1'
+set network.wan.peerdns='0'
+set network.wan.dns='127.0.0.1'
+set network.wan.delegate='0'
+delete network.wan6
+set network.wan6=interface
+set network.wan6.device='wan'
+set network.wan6.proto='dhcpv6'
+set network.wan6.auto='0'
+set network.wan6.reqaddress='try'
+set network.wan6.reqprefix='auto'
+set network.wan6.peerdns='0'
+delete network.@device[1]
+set network.@device[1]=device
+set network.@device[1].name='lan4'
+EOF
+uci commit network
+}
+exit 0

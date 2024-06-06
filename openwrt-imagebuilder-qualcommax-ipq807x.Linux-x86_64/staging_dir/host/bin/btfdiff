@@ -1,0 +1,48 @@
+#!/bin/bash
+# SPDX-License-Identifier: GPL-2.0-only
+# Copyright © 2019 Red Hat Inc, Arnaldo Carvalho de Melo <acme@redhat.com>
+# Use pahole to produce output from BTF and from DWARF, then do a diff
+# Use --flat_arrays with DWARF as BTF, like CTF, flattens arrays.
+# Use --show_private_classes as BTF shows all structs, while pahole knows
+# if some struct is defined only inside another struct/class or in a function,
+# this information is not available when loading from BTF.
+
+if [ $# -eq 0 ] ; then
+	echo "Usage: btfdiff <filename_with_DWARF_and_maybe_BTF_info> [<filename_with_BTF_info>]"
+	exit 1
+fi
+
+dwarf_input=$1
+btf_input=$dwarf_input
+
+if [ $# -eq 2 ] ; then
+	btf_input=$2
+fi
+
+btf_output=$(mktemp /tmp/btfdiff.btf.XXXXXX)
+dwarf_output=$(mktemp /tmp/btfdiff.dwarf.XXXXXX)
+pahole_bin=${PAHOLE-"pahole"}
+
+${pahole_bin} -E -F dwarf \
+	      --flat_arrays \
+	      --sort \
+	      --jobs \
+	      --suppress_aligned_attribute \
+	      --suppress_force_paddings \
+	      --suppress_packed \
+	      --lang_exclude rust \
+	      --show_private_classes $dwarf_input > $dwarf_output &
+dwarf=$!
+
+${pahole_bin} -E -F btf \
+	      --sort \
+	      --suppress_aligned_attribute \
+	      --suppress_packed \
+	      $btf_input > $btf_output
+
+wait $dwarf
+
+diff -up $dwarf_output $btf_output
+
+rm -f $btf_output $dwarf_output
+exit 0
