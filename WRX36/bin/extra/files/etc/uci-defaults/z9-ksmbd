@@ -1,0 +1,20 @@
+#!/bin/sh
+
+{ [ -f /etc/config/ksmbd ] && ! [ "$(cat /etc/config/ksmbd)" = "$(cat /rom/etc/config/ksmbd)" ]; } || {
+uci batch <<'EOF'
+delete ksmbd.@globals[0]
+set ksmbd.@globals[0]=globals
+set ksmbd.@globals[0].workgroup='WORKGROUP'
+set ksmbd.@globals[0].interface='lan'
+set ksmbd.@globals[0].description='OpenWrt_WRX36'
+delete ksmbd.@share[0]
+set ksmbd.@share[0]=share
+set ksmbd.@share[0].read_only='no'
+set ksmbd.@share[0].users='SMBUSER'
+set ksmbd.@share[0].guest_ok='no'
+set ksmbd.@share[0].create_mask='0666'
+set ksmbd.@share[0].dir_mask='0777'
+EOF
+uci commit ksmbd
+}
+exit 0

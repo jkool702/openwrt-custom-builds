@@ -1,0 +1,32 @@
+#!/bin/sh
+
+{ [ -f /etc/config/fstab ] && ! [ "$(cat /etc/config/fstab)" = "$(cat /rom/etc/config/fstab)" ]; } || {
+uci batch <<'EOF'
+delete fstab.@global[0]
+set fstab.@global[0]=global
+set fstab.@global[0].anon_swap='0'
+set fstab.@global[0].anon_mount='0'
+set fstab.@global[0].auto_swap='1'
+set fstab.@global[0].auto_mount='1'
+set fstab.@global[0].delay_root='5'
+set fstab.@global[0].check_fs='1'
+delete fstab.@mount[0]
+set fstab.@mount[0]=mount
+set fstab.@mount[0].target='/mnt/PLEX'
+set fstab.@mount[0].enabled='1'
+set fstab.@mount[0].fstype='ntfs-3g'
+delete fstab.@mount[1]
+set fstab.@mount[1]=mount
+set fstab.@mount[1].target='/tmp/plexmediaserver'
+set fstab.@mount[1].fstype='squashfs'
+delete fstab.@swap[0]
+set fstab.@swap[0]=swap
+set fstab.@swap[0].enabled='1'
+set fstab.@swap[0].device='/dev/zram0'
+delete fstab.@uvol[0]
+set fstab.@uvol[0]=uvol
+set fstab.@uvol[0].initialized='1'
+EOF
+uci commit fstab
+}
+exit 0

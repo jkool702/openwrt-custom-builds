@@ -1,1 +1,1 @@
-{"architecture": "aarch64_cortex-a53", "packages":{"nss-firmware-default": "2022.07.12~ade6bff5-r2", "nss-firmware-ipq8074": "2022.07.12~ade6bff5-r2"}}
+{"architecture": "aarch64_cortex-a53", "packages":{"nss-eip-firmware": "2.5.7-r1", "nss-firmware-default": "2022.07.12~ade6bff5-r2", "nss-firmware-ipq8074": "2022.07.12~ade6bff5-r2"}}
