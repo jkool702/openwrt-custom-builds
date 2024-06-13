@@ -1,6 +1,10 @@
+arch/arm64/crypto/sha1-ce.o
+arch/arm64/crypto/sha2-ce.o
 arch/arm64/crypto/sm4-neon.o
 arch/arm64/crypto/aes-neon-blk.o
+arch/arm64/crypto/sha256-arm64.o
 arch/arm64/crypto/chacha-neon.o
+arch/arm64/crypto/poly1305-neon.o
 arch/arm64/crypto/aes-arm64.o
 arch/arm64/crypto/aes-neon-bs.o
 fs/nfs_common/grace.o
@@ -187,6 +191,7 @@ drivers/tty/serial/8250/8250_exar.o
 drivers/char/lp.o
 drivers/char/ppdev.o
 drivers/char/tpm/tpm.o
+drivers/block/nbd.o
 drivers/block/zram/zram.o
 drivers/misc/lkdtm/lkdtm.o
 drivers/misc/echo/echo.o
@@ -197,6 +202,7 @@ drivers/scsi/libiscsi_tcp.o
 drivers/scsi/iscsi_tcp.o
 drivers/scsi/sg.o
 drivers/mtd/devices/mtdram.o
+drivers/mtd/devices/block2mtd.o
 drivers/mtd/tests/mtd_oobtest.o
 drivers/mtd/tests/mtd_pagetest.o
 drivers/mtd/tests/mtd_readtest.o
@@ -379,6 +385,7 @@ net/netfilter/nft_redir.o
 net/netfilter/nft_hash.o
 net/netfilter/nft_fib.o
 net/netfilter/nft_fib_inet.o
+net/netfilter/nft_fib_netdev.o
 net/netfilter/nft_socket.o
 net/netfilter/nft_osf.o
 net/netfilter/nft_tproxy.o
@@ -404,8 +411,10 @@ net/netfilter/xt_NETMAP.o
 net/netfilter/xt_REDIRECT.o
 net/netfilter/xt_MASQUERADE.o
 net/netfilter/xt_TCPMSS.o
+net/netfilter/xt_bpf.o
 net/netfilter/xt_comment.o
 net/netfilter/xt_connbytes.o
+net/netfilter/xt_connlabel.o
 net/netfilter/xt_connlimit.o
 net/netfilter/xt_conntrack.o
 net/netfilter/xt_dscp.o
@@ -453,7 +462,6 @@ net/ipv4/netfilter/nft_dup_ipv4.o
 net/ipv4/netfilter/ip_tables.o
 net/ipv4/netfilter/iptable_filter.o
 net/ipv4/netfilter/iptable_mangle.o
-net/ipv4/netfilter/iptable_nat.o
 net/ipv4/netfilter/iptable_raw.o
 net/ipv4/netfilter/ipt_ECN.o
 net/ipv4/netfilter/ipt_REJECT.o

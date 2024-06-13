@@ -5,8 +5,8 @@ Section: firmware
 Architecture: aarch64_cortex-a53
 Installed-Size: 40960
 Filename: nss-eip-firmware_2.5.7-r1_aarch64_cortex-a53.ipk
-Size: 9265
-SHA256sum: 0d55a85ffbc95cdd973750b84db8a448c2c3f5d2d221941e3939e266e036d5f2
+Size: 9266
+SHA256sum: 43b524cd02b214f1a545207e5ce9291a2ca45fe04d70046c05133309ace735c5
 Description:  NSS EIP-197 firmware
 
 Package: nss-firmware-default
@@ -17,8 +17,8 @@ URL: https://github.com/quic/qca-sdk-nss-fw.git
 Architecture: aarch64_cortex-a53
 Installed-Size: 10240
 Filename: nss-firmware-default_2022.07.12~ade6bff5-r2_aarch64_cortex-a53.ipk
-Size: 867
-SHA256sum: 2338fd13a829a178af6277ed11cbdacd75156473d92045c1a8c0a68eeec4159c
+Size: 865
+SHA256sum: cebc117d6f779d4b7b2efedb52e1b93f48ca619532c52d316218e58da8abc1a7
 Description:  NSS firmware
 
 Package: nss-firmware-ipq8074
@@ -29,7 +29,7 @@ URL: https://github.com/quic/qca-sdk-nss-fw.git
 Architecture: aarch64_cortex-a53
 Installed-Size: 1136640
 Filename: nss-firmware-ipq8074_2022.07.12~ade6bff5-r2_aarch64_cortex-a53.ipk
-Size: 419381
-SHA256sum: 75304fe7292041201e3490327e2aa7b83ae4f860b3106f1f1c9dcce688ad8467
+Size: 419387
+SHA256sum: 03fd6e21fd8ae0968ecaec0d7868c697e4f8ba27c0f64669e89f8d573cb2eff3
 Description:  NSS firmware
 

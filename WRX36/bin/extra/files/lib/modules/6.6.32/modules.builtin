@@ -1,5 +1,3 @@
-kernel/arch/arm64/crypto/sha1-ce.ko
-kernel/arch/arm64/crypto/sha2-ce.ko
 kernel/arch/arm64/crypto/sha512-ce.ko
 kernel/arch/arm64/crypto/sm3-neon.ko
 kernel/arch/arm64/crypto/sm4-ce.ko
@@ -10,9 +8,7 @@ kernel/arch/arm64/crypto/polyval-ce.ko
 kernel/arch/arm64/crypto/aes-ce-cipher.ko
 kernel/arch/arm64/crypto/aes-ce-ccm.ko
 kernel/arch/arm64/crypto/aes-ce-blk.ko
-kernel/arch/arm64/crypto/sha256-arm64.ko
 kernel/arch/arm64/crypto/sha512-arm64.ko
-kernel/arch/arm64/crypto/poly1305-neon.ko
 kernel/arch/arm64/crypto/nhpoly1305-neon.ko
 kernel/kernel/configs.ko
 kernel/kernel/kheaders.ko

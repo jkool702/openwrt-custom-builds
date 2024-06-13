@@ -1,5 +1,5 @@
 Package: apk-openssl
-Version: 3.0.0_pre20240519-r1
+Version: 3.0.0_pre20240523-r1
 Depends: libc, zlib, libopenssl3
 Provides: apk
 Source: feeds/base/system/apk
@@ -7,14 +7,14 @@ SourceName: apk
 License: GPL-2.0-only
 LicenseFiles: LICENSE
 Section: base
-SourceDateEpoch: 1717147806
+SourceDateEpoch: 1718143100
 URL: https://gitlab.alpinelinux.org/alpine/apk-tools.git
 Maintainer: Paul Spooren <mail@aparcar.org>
 Architecture: aarch64_cortex-a53
 Installed-Size: 389120
-Filename: apk-openssl_3.0.0_pre20240519-r1_aarch64_cortex-a53.ipk
-Size: 170860
-SHA256sum: ddd1c19c7060696e05d03af17fd397482d93c1f405a204291e7fd2e47a149c26
+Filename: apk-openssl_3.0.0_pre20240523-r1_aarch64_cortex-a53.ipk
+Size: 171136
+SHA256sum: ea69b2fa8ccb4aaf64428435fdaec3f0f455241aa71c02d68b10b26d1932b65f
 Description:  apk package manager (openssl)
 
 Package: ath11k-firmware-ipq8074
@@ -126,8 +126,8 @@ Maintainer: Felix Fietkau <nbd@nbd.name>
 Architecture: aarch64_cortex-a53
 Installed-Size: 614400
 Filename: busybox_1.36.1-r1_aarch64_cortex-a53.ipk
-Size: 296405
-SHA256sum: ad9453bbb88d378d6daaad4095db072d56d07c5aed79747073a2359ab2748d63
+Size: 296400
+SHA256sum: 16d26509243aa58fbef4baf50fa17654b516e3802f66c2d6c93a654b86db8bc5
 Description:  The Swiss Army Knife of embedded Linux.
  It slices, it dices, it makes Julian Fries.
 
@@ -226,25 +226,6 @@ Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
  This is a fully configurable variant with DHCPv4, DHCPv6, DNSSEC, Authoritative DNS
  and nftset, Conntrack support & NO_ID enabled by default.
 
-Package: dnsmasq
-Version: 2.90-r2
-Depends: libc, libubus20231128
-Source: feeds/base/network/services/dnsmasq
-SourceName: dnsmasq
-License: GPL-2.0
-LicenseFiles: COPYING
-Section: net
-Require-User: dnsmasq=453:dnsmasq=453
-SourceDateEpoch: 1710893901
-URL: http://www.thekelleys.org.uk/dnsmasq/
-CPE-ID: cpe:/a:thekelleys:dnsmasq
-Architecture: aarch64_cortex-a53
-Installed-Size: 450560
-Filename: dnsmasq_2.90-r2_aarch64_cortex-a53.ipk
-Size: 206417
-SHA256sum: 6868dd8dd6df7498b7398ad05e9bc1a3a6df0b847393588ed65c456fdb8c2e4f
-Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
-
 Package: e2fsprogs
 Version: 1.47.0-r2
 Depends: libc, libuuid1, libext2fs2, libe2p2
@@ -293,13 +274,13 @@ SourceName: fantastic-keyring
 License: MIT
 LicenseFiles: License
 Section: base
-SourceDateEpoch: 1717471652
+SourceDateEpoch: 1717661569
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: all
 Installed-Size: 10240
 Filename: fantastic-keyring_20240427-r1_all.ipk
-Size: 1055
-SHA256sum: 96e1cadd0138874e2286674164d9e0b7c26bfe13b73cb28cfb903a3ef3f91d51
+Size: 1056
+SHA256sum: e8da14264484e3ae81530c8eecb82bc4ecb6232a453965b0c3136876408c5b73
 Description:  The keyring of with the developer using.
 
 Package: fantastic-packages-feeds
@@ -310,13 +291,13 @@ SourceName: fantastic-packages-feeds
 License: MIT
 LicenseFiles: License
 Section: base
-SourceDateEpoch: 1717471652
+SourceDateEpoch: 1717661569
 Maintainer: Anya Lin <hukk1996@gmail.com>
 Architecture: all
 Installed-Size: 10240
 Filename: fantastic-packages-feeds_20240504-r1_all.ipk
-Size: 1513
-SHA256sum: 91a8e3614b380ed627a8a4d8f80c9d1d0a8bd09c419be42533b461051b0ec983
+Size: 1514
+SHA256sum: 5bc732c4518d4c907a377def2eeac4f7c3f60423dc1a9332b77c43a9a6d6a0e4
 Description:  Installer for fantastic-packages feeds
 
 Package: fdisk
@@ -433,14 +414,14 @@ Source: feeds/base/network/services/hostapd
 SourceName: hostapd
 License: BSD-3-Clause
 Section: net
-SourceDateEpoch: 1714582821
+SourceDateEpoch: 1717702460
 CPE-ID: cpe:/a:w1.fi:hostapd
 Maintainer: Felix Fietkau <nbd@nbd.name>
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
 Filename: hostapd-common_2024.03.09~695277a5-r1_aarch64_cortex-a53.ipk
-Size: 2701
-SHA256sum: c32c04e119a4ce549a55de7702d3dc1d369be670e12adb5940e2486bda15d716
+Size: 2712
+SHA256sum: 3fd4e2dad3b62e850922cffb1496968f7760cc81179cce88dd72a66f65aa83c7
 Description:  hostapd/wpa_supplicant common support files
 
 Package: hostapd-utils
@@ -450,15 +431,15 @@ Source: feeds/base/network/services/hostapd
 SourceName: hostapd
 License: BSD-3-Clause
 Section: net
-SourceDateEpoch: 1714582821
+SourceDateEpoch: 1717702460
 URL: http://hostap.epitest.fi/
 CPE-ID: cpe:/a:w1.fi:hostapd
 Maintainer: Felix Fietkau <nbd@nbd.name>
 Architecture: aarch64_cortex-a53
 Installed-Size: 71680
 Filename: hostapd-utils_2024.03.09~695277a5-r1_aarch64_cortex-a53.ipk
-Size: 25745
-SHA256sum: 20630e36f17a260c6528faa778a7bf1c75cf06972bfbd15805a761ea10bf80d0
+Size: 25742
+SHA256sum: 621844d44ce4c5b8223dc63fe1ad4282abb5a0dc993ab24d1a16b53dcb1396e3
 Description:  This package contains a command line utility to control the
  IEEE 802.1x/WPA/EAP/RADIUS Authenticator.
 
@@ -489,15 +470,15 @@ Source: feeds/base/network/utils/iproute2
 SourceName: iproute2
 License: GPL-2.0
 Section: net
-SourceDateEpoch: 1717441255
+SourceDateEpoch: 1717993107
 URL: http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
 CPE-ID: cpe:/a:iproute2_project:iproute2
 Maintainer: Russell Senior <russell@personaltelco.net>
 Architecture: aarch64_cortex-a53
 Installed-Size: 757760
 Filename: ip-full_6.9.0-r1_aarch64_cortex-a53.ipk
-Size: 358685
-SHA256sum: 68092f30e15f07383ef102dea2cb734f659c5df027ff7f2a0f03daa20de77c4d
+Size: 358668
+SHA256sum: 3cdb5c319960aed845c6f2c0218234ebcbf18bc5971f987b4039aaaac21e9e29
 Description:  Routing control utility (full)
 
 Package: iw-full
@@ -647,23 +628,23 @@ SHA256sum: b1f3ff51391bcc4108498f9f4eeb1ac953ca97a58576a84f444a0fb74bb2f279
 Description:  blobmsg <-> json conversion library
 
 Package: libbpf1
-Version: 1.4.2-r1
+Version: 1.4.3-r1
 Depends: libc, libelf1
 Provides: libbpf
 Source: feeds/base/libs/libbpf
 SourceName: libbpf
 License: LGPL-2.1 OR BSD-2-Clause
 Section: libs
-SourceDateEpoch: 1716271375
+SourceDateEpoch: 1717849300
 URL: http://www.kernel.org
 ABIVersion: 1
 CPE-ID: cpe:/a:libbpf_project:libbpf
 Maintainer: Tony Ambardar <itugrok@yahoo.com>
 Architecture: aarch64_cortex-a53
 Installed-Size: 460800
-Filename: libbpf1_1.4.2-r1_aarch64_cortex-a53.ipk
-Size: 203317
-SHA256sum: 51355dd11a27d2734d4d2b05f50be1349c455e896e22308f1f4ea7cc37a9b00c
+Filename: libbpf1_1.4.3-r1_aarch64_cortex-a53.ipk
+Size: 203304
+SHA256sum: 7b0be9b098e741b1c5b2cd344baef4057cce37d188402ccf58828d60a9e38137
 Description:  libbpf is a library for loading eBPF programs and reading and manipulating eBPF objects from user-space.
 
 Package: libbz2-1.0
@@ -766,8 +747,8 @@ Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: aarch64_cortex-a53
 Installed-Size: 122880
 Filename: libelf1_0.191-r1_aarch64_cortex-a53.ipk
-Size: 54334
-SHA256sum: 5dc7cc029427d40b97668079edcbf36e6a308923c3527690ea5fec1781616779
+Size: 54335
+SHA256sum: 69ca43dab3acb319a47c3d2ee1e8bbb41319ee18c6a870d989c7d5d5854859ed
 Description:  ELF manipulation libraries (libelf)
 
 Package: libevent2-7
@@ -1457,22 +1438,22 @@ SHA256sum: cc407018b947d616b21cbffcf4ea88fdc1fd68485aa56fbc2a382905ec84c234
 Description:  libopcodes
 
 Package: libopenssl-conf
-Version: 3.0.13-r1
+Version: 3.0.14-r2
 Depends: libc, libopenssl3
 Source: feeds/base/libs/openssl
 SourceName: openssl
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: libs
-SourceDateEpoch: 1714803264
+SourceDateEpoch: 1717993102
 URL: http://www.openssl.org/
 CPE-ID: cpe:/a:openssl:openssl
 Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
 Architecture: aarch64_cortex-a53
 Installed-Size: 20480
-Filename: libopenssl-conf_3.0.13-r1_aarch64_cortex-a53.ipk
-Size: 6486
-SHA256sum: 9480cf600945c53706f375610388b50b1b3458523197941a77eab0bf8efb87ce
+Filename: libopenssl-conf_3.0.14-r2_aarch64_cortex-a53.ipk
+Size: 6490
+SHA256sum: 5172a15d5082ff12873b04232f3019d7ecf1f417d44167b3cb018ad3c6912780
 Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  commercial-grade, full-featured, and Open Source toolkit implementing the
  Transport Layer Security (TLS) protocol as well as a full-strength
@@ -1480,29 +1461,29 @@ Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  This package installs the OpenSSL configuration file /etc/ssl/openssl.cnf.
 
 Package: libopenssl-legacy
-Version: 3.0.13-r1
+Version: 3.0.14-r2
 Depends: libc, libopenssl3, libopenssl-conf
 Source: feeds/base/libs/openssl
 SourceName: openssl
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: libs
-SourceDateEpoch: 1714803264
+SourceDateEpoch: 1717993102
 URL: http://www.openssl.org/
 CPE-ID: cpe:/a:openssl:openssl
 Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
 Architecture: aarch64_cortex-a53
 Installed-Size: 122880
-Filename: libopenssl-legacy_3.0.13-r1_aarch64_cortex-a53.ipk
-Size: 37296
-SHA256sum: bc992676016db6dbb63f5b889ec0228f41cd4c867bfcf9831d23eac1d1242d1a
+Filename: libopenssl-legacy_3.0.14-r2_aarch64_cortex-a53.ipk
+Size: 37344
+SHA256sum: 9025d2f047b85682a6e43b9d7dd0f4bec90a4df95fc293bfc99918212b14d83d
 Description:  The OpenSSL legacy provider supplies OpenSSL implementations of algorithms that
  have been deemed legacy. Such algorithms have commonly fallen out of use, have
  been deemed insecure by the cryptography community, or something similar.  See
  https://www.openssl.org/docs/man3.0/man7/OSSL_PROVIDER-legacy.html
 
 Package: libopenssl3
-Version: 3.0.13-r1
+Version: 3.0.14-r2
 Depends: libc, zlib
 Provides: libopenssl
 Source: feeds/base/libs/openssl
@@ -1510,16 +1491,16 @@ SourceName: openssl
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: libs
-SourceDateEpoch: 1714803264
+SourceDateEpoch: 1717993102
 URL: http://www.openssl.org/
 ABIVersion: 3
 CPE-ID: cpe:/a:openssl:openssl
 Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
 Architecture: aarch64_cortex-a53
-Installed-Size: 5437440
-Filename: libopenssl3_3.0.13-r1_aarch64_cortex-a53.ipk
-Size: 2115722
-SHA256sum: 2e767aefad34cf05c5c84330dfa8d0fc75330d9936c027e4a2f4929bc529079c
+Installed-Size: 5447680
+Filename: libopenssl3_3.0.14-r2_aarch64_cortex-a53.ipk
+Size: 2119700
+SHA256sum: c43ef103c7d858648b5d1a75c17ec5611809103aa3cc41ea1c0d141eae00c56a
 Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  commercial-grade, full-featured, and Open Source toolkit implementing the
  Transport Layer Security (TLS) protocol as well as a full-strength
@@ -2377,22 +2358,22 @@ SHA256sum: d35b601e2cbeb5749ecdbf6835baf00d1dffec01c21277b8ee7aa4a8e164c87d
 Description:  IGMPv3 and MLDv2 Multicast Proxy
 
 Package: openssl-util
-Version: 3.0.13-r1
+Version: 3.0.14-r2
 Depends: libc, libopenssl3, libopenssl-conf
 Source: feeds/base/libs/openssl
 SourceName: openssl
 License: Apache-2.0
 LicenseFiles: LICENSE
 Section: utils
-SourceDateEpoch: 1714803264
+SourceDateEpoch: 1717993102
 URL: http://www.openssl.org/
 CPE-ID: cpe:/a:openssl:openssl
 Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
 Architecture: aarch64_cortex-a53
-Installed-Size: 890880
-Filename: openssl-util_3.0.13-r1_aarch64_cortex-a53.ipk
-Size: 354221
-SHA256sum: 53e58c83f4be869c25e785f9bc1fad637bbc0fa1b5ab0e359cd6d3c7cc74652c
+Installed-Size: 901120
+Filename: openssl-util_3.0.14-r2_aarch64_cortex-a53.ipk
+Size: 354279
+SHA256sum: 1bcf653ce2f93671aa8803e07057e96ebc0645d91485e860a3446f86ad9d6eca
 Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  commercial-grade, full-featured, and Open Source toolkit implementing the
  Transport Layer Security (TLS) protocol as well as a full-strength
@@ -2753,15 +2734,15 @@ Source: feeds/base/network/utils/iproute2
 SourceName: iproute2
 License: GPL-2.0
 Section: net
-SourceDateEpoch: 1717441255
+SourceDateEpoch: 1717993107
 URL: http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
 CPE-ID: cpe:/a:iproute2_project:iproute2
 Maintainer: Russell Senior <russell@personaltelco.net>
 Architecture: aarch64_cortex-a53
 Installed-Size: 737280
 Filename: tc-full_6.9.0-r1_aarch64_cortex-a53.ipk
-Size: 329901
-SHA256sum: b19c7d35b7e20bbb14f252c721d693157a47c8c5ccf85056dd1a671cfa5015ee
+Size: 329905
+SHA256sum: a4121d43b2889f32155bb65bbd63cdf49ad48789d6f8d99920af6768dd14d67c
 Description:  Traffic control utility (full)
 
 Package: tcpdump
@@ -3242,7 +3223,7 @@ Description:  OpenWrt Multicast DNS Daemon
 
 Package: unetd
 Version: 2024.03.31~80645766
-Depends: libc, libubox20240329, libubus20231128, libblobmsg-json20240329, libnl-tiny1, kmod-wireguard
+Depends: libc, libubox20240329, libubus20231128, libblobmsg-json20240329, libnl-tiny1, kmod-wireguard, libbpf1
 Source: feeds/base/network/services/unetd
 SourceName: unetd
 License: GPL-2.0
@@ -3250,10 +3231,10 @@ Section: net
 SourceDateEpoch: 1712395458
 Maintainer: Felix Fietkau <nbd@nbd.name>
 Architecture: aarch64_cortex-a53
-Installed-Size: 133120
+Installed-Size: 143360
 Filename: unetd_2024.03.31~80645766_aarch64_cortex-a53.ipk
-Size: 52583
-SHA256sum: 0934f3b70b45a1d0d28dd756d48b873ba8c88a784ead12c5dacbc62ad307f0b3
+Size: 59301
+SHA256sum: 1709cb318d51de16b2dad11491ab6c8d3eb0adc687d3c1417fdd97ab3e6de991
 Description:  WireGuard based VPN connection manager for OpenWrt
 
 Package: urandom-seed
@@ -3507,14 +3488,14 @@ Source: feeds/base/network/services/hostapd
 SourceName: hostapd
 License: BSD-3-Clause
 Section: net
-SourceDateEpoch: 1714582821
+SourceDateEpoch: 1717702460
 CPE-ID: cpe:/a:w1.fi:hostapd
 Maintainer: Felix Fietkau <nbd@nbd.name>
 Architecture: aarch64_cortex-a53
 Installed-Size: 143360
 Filename: wpa-cli_2024.03.09~695277a5-r1_aarch64_cortex-a53.ipk
-Size: 43546
-SHA256sum: b337ae891f31937e4cf00bb798107cbf3174cf8704e8d4c756e852f601f7b5f1
+Size: 43539
+SHA256sum: fd4a7cdb57ef6c3f3c133d52d24e87c395acbeca3fafc42b4156aa0f33e4dfac
 Description:  WPA Supplicant command line control utility
 
 Package: wpad-openssl
@@ -3527,15 +3508,15 @@ SourceName: hostapd
 License: BSD-3-Clause
 Section: net
 Require-User: network=101:network=101
-SourceDateEpoch: 1714582821
+SourceDateEpoch: 1717702460
 URL: http://hostap.epitest.fi/
 CPE-ID: cpe:/a:w1.fi:hostapd
 Maintainer: Felix Fietkau <nbd@nbd.name>
 Architecture: aarch64_cortex-a53
 Installed-Size: 2437120
 Filename: wpad-openssl_2024.03.09~695277a5-r1_aarch64_cortex-a53.ipk
-Size: 1211537
-SHA256sum: e5b3cbea2620a60333422b1eba81fe7d977fcfe388821b3bc83f23bc928ec522
+Size: 1211493
+SHA256sum: 8316fa1de707756f4826bf7bf69707ccd64c17cc3dc0aff0729cef914f546852
 Description:  This package contains a full featured IEEE 802.1x/WPA/EAP/RADIUS
  Authenticator and Supplicant
 
