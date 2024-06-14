@@ -4,93 +4,93 @@
 grep -q 'net.netfilter.nf_conntrack_tcp_no_window_check' </etc/sysctl.conf || echo 'net.netfilter.nf_conntrack_tcp_no_window_check=1' >>/etc/sysctl.conf
 
 # change rootr shell to bash
-sed -i -E s/'^(root.*\/bin\/)ash'/'\1bash'/ /etc/passwd
+sed -i -E s/'^(root.*/bin/)ash'/'1bash'/ /etc/passwd
 
 if [ -f /etc/init.d/ksmbd ]; then
-    # setup SMBUSER for ksmbd
-    grep -q 'SMBUSER' </etc/group || echo 'SMBUSER:x:2468:SMBUSER' >>/etc/group
-    grep -q 'SMBUSER' </etc/shadow || echo 'SMBUSER:$5$CN2s9xwg8.EvN2Mp$ZZDnr1e/reUUai15L62aRCpLNRvts70dVwk.1UX2hB.:19818:0:99999:7:::' >>/etc/shadow
-    grep -q 'SMBUSER' </etc/passwd || echo 'SMBUSER:*:2468:2468:SMBUSER:/mnt:/bin/false' >>/etc/passwd
+   # setup SMBUSER for ksmbd
+   grep -q 'SMBUSER' </etc/group || echo 'SMBUSER:x:2468:SMBUSER' >>/etc/group
+   grep -q 'SMBUSER' </etc/shadow || echo 'SMBUSER:$5$CN2s9xwg8.EvN2Mp$ZZDnr1e/reUUai15L62aRCpLNRvts70dVwk.1UX2hB.:19818:0:99999:7:::' >>/etc/shadow
+   grep -q 'SMBUSER' </etc/passwd || echo 'SMBUSER:*:2468:2468:SMBUSER:/mnt:/bin/false' >>/etc/passwd
 
-    ksmbd.adduser -a SMBUSER -p SMBPASSWORD
+   ksmbd.adduser -a SMBUSER -p SMBPASSWORD
 fi
 
 # disable bridger
 if [ -f /etc/init.d/bridger ]; then
-    /etc/init.d/bridger disable
-    /etc/init.d/bridger stop
+   /etc/init.d/bridger disable
+   /etc/init.d/bridger stop
 fi
 
 # generate stuff for unbound
 if [ -f /etc/init.d/unbound ]; then
-    ln /etc/ssl/certs/ca-certificates.crt /etc/unbound/ca-certificates.crt
-    unbound-anchor -a /etc/unbound/root.key
-    unbound mkdir -p /var/lib/unbound
-    chown -R unbound:unbound /etc/unbound /var/lib/unbound
-    cp -p /etc/unbound/root.key /var/lib/unbound
-    unbound-control-setup -d /etc/unbound
-    chown -R unbound:unbound /etc/unbound /var/lib/unbound
-    uci set unbound.ub_main.unbound_control='2'
-    uci commit unbound
-    /etc/init.d/unbound restart
+   ln /etc/ssl/certs/ca-certificates.crt /etc/unbound/ca-certificates.crt
+   unbound-anchor -a /etc/unbound/root.key
+   unbound mkdir -p /var/lib/unbound
+   chown -R unbound:unbound /etc/unbound /var/lib/unbound
+   cp -p /etc/unbound/root.key /var/lib/unbound
+   unbound-control-setup -d /etc/unbound
+   chown -R unbound:unbound /etc/unbound /var/lib/unbound
+   uci set unbound.ub_main.unbound_control='2'
+   uci commit unbound
+   /etc/init.d/unbound restart
 fi
 
 # use chronyd
 if [ -f /etc/init.d/chronyd ]; then
-    /etc/init.d/sysntpd disable
-    /etc/init.d/sysntpd stop
-    chrony-hotplug
-    [ -f /etc/crontabs/root ] || printf '' >>/etc/crontabs/root
-    grep -q 'chrony-hotplug' </etc/crontabs/root || echo '55 2,10,18 * * * chrony-hotplug' >> /etc/crontabs/root
+   /etc/init.d/sysntpd disable
+   /etc/init.d/sysntpd stop
+   chrony-hotplug
+   [ -f /etc/crontabs/root ] || printf '' >>/etc/crontabs/root
+   grep -q 'chrony-hotplug' </etc/crontabs/root || echo '55 2,10,18 * * * chrony-hotplug' >> /etc/crontabs/root
 fi
 
 # disable irqbalance
 if [ -f /etc/init.d/irqbalance ]; then
-    uci set irqbalance.irqbalance.enabled='0'
-    uci commit irqbalance
-    /etc/init.d/irqbalance disable
-    /etc/init.d/irqbalance stop
+   uci set irqbalance.irqbalance.enabled='0'
+   uci commit irqbalance
+   /etc/init.d/irqbalance disable
+   /etc/init.d/irqbalance stop
 fi
 
 # setup sqm using a speedtest to estimate line speed
 # this will still benefit from  manual tuning, but this should at least get it up and running
 if [ -f /etc/init.d/sqm ]; then
-  if ping -c 1 -w 2 1.1.1.1 && ping -c 1 -w 2 www.gstatic.com; then
-    echo $(speedtest 2>&1 | grep -E 'Upload|Download' | sed -E s/'^.* (.*)\.[0-9]* Mbit\/s[ \t]*$'/'\1000'/) | { 
-      u=0
-      d=0 
-      sqmFlag=0
-      read -r -t 30 u d  
-      [ $d -gt 0 ] && { 
-        [ $(uci get sqm.wan.download 2>/dev/null || echo 0) -gt 0 ] || { uci set sqm.wan.download=$d; sqmFlag=1; }
-      }
-      [ $u -gt 0 ] && { 
-        [ $(uci get sqm.wan.upload 2>/dev/null || echo 0) -gt 0 ] || { uci set sqm.wan.upload=$u; sqmFlag=1; }
-      }
-      [ $sqmFlag -gt 0 ] && {
+ if ping -c 1 -w 2 1.1.1.1 && ping -c 1 -w 2 www.gstatic.com; then
+   echo $(speedtest 2>&1 | grep -E 'Upload|Download' | sed -E s/'^.* (.*).[0-9]* Mbit/s[ t]*$'/'1000'/) | { 
+     u=0
+     d=0 
+     sqmFlag=0
+     read -r -t 30 u d  
+     [ $d -gt 0 ] && { 
+       [ $(uci get sqm.wan.download 2>/dev/null || echo 0) -gt 0 ] || { uci set sqm.wan.download=$d; sqmFlag=1; }
+     }
+     [ $u -gt 0 ] && { 
+       [ $(uci get sqm.wan.upload 2>/dev/null || echo 0) -gt 0 ] || { uci set sqm.wan.upload=$u; sqmFlag=1; }
+     }
+     [ $sqmFlag -gt 0 ] && {
 
-        uci commit sqm
-        /etc/init.d/sqm restart
-      }
-    }
-  else
-    # no internet access...disable for now
-    /etc/init.d/sqm disable
-    /etc/init.d/sqm stop
-  fi
+       uci commit sqm
+       /etc/init.d/sqm restart
+     }
+   }
+ else
+   # no internet access...disable for now
+   /etc/init.d/sqm disable
+   /etc/init.d/sqm stop
+ fi
 fi
 
 # fix insmod
 if [ -f /etc/init.d/qca-nss-mirred ]; then
-    grep -qF 'act_nssmirred.ko' </etc/init.d/qca-nss-mirred || sed -i s/'act_nssmirred'/'act_nssmirred.ko'/g /etc/init.d/qca-nss-mirred
+   grep -qF 'act_nssmirred.ko' </etc/init.d/qca-nss-mirred || sed -i s/'act_nssmirred'/'act_nssmirred.ko'/g /etc/init.d/qca-nss-mirred
 fi
 if [ -f /sbin/kmodloader ]; then
-    ln -sf /sbin/kmodloader /sbin/insmod
+   ln -sf /sbin/kmodloader /sbin/insmod
 fi	
 
 # improve irq distrubution
 if [ -f /etc/init.d/qca-nss-drv ]; then
-	sed -i s/"set_affinity 'ppdu\-end\-interrupts\-mac1' 1 1/set_affinity 'ppdu-end-interrupts-mac1' 3 1/" /etc/init.d/qca-nss-drv
+	sed -i s/"set_affinity 'ppdu-end-interrupts-mac1' 1 1/set_affinity 'ppdu-end-interrupts-mac1' 3 1/" /etc/init.d/qca-nss-drv
 	service qca-nss-drv restart
 fi
 

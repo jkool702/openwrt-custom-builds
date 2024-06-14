@@ -57,7 +57,11 @@ set firewall.@rule[4].name='Allow-MLD'
 set firewall.@rule[4].src='wan'
 set firewall.@rule[4].proto='icmp'
 set firewall.@rule[4].src_ip='fe80::/10'
-set firewall.@rule[4].icmp_type='130/0' '131/0' '132/0' '143/0'
+add_list firewall.@rule[4].icmp_type="'130/0'"
+add_list firewall.@rule[4].icmp_type="'131/0'"
+add_list firewall.@rule[4].icmp_type="'132/0'"
+add_list firewall.@rule[4].icmp_type="'143/0'"
+
 set firewall.@rule[4].family='ipv6'
 set firewall.@rule[4].target='ACCEPT'
 delete firewall.@rule[5]
@@ -65,7 +69,18 @@ set firewall.@rule[5]=rule
 set firewall.@rule[5].name='Allow-ICMPv6-Input'
 set firewall.@rule[5].src='wan'
 set firewall.@rule[5].proto='icmp'
-set firewall.@rule[5].icmp_type='echo-request' 'echo-reply' 'destination-unreachable' 'packet-too-big' 'time-exceeded' 'bad-header' 'unknown-header-type' 'router-solicitation' 'neighbour-solicitation' 'router-advertisement' 'neighbour-advertisement'
+add_list firewall.@rule[5].icmp_type="'echo-request'"
+add_list firewall.@rule[5].icmp_type="'echo-reply'"
+add_list firewall.@rule[5].icmp_type="'destination-unreachable'"
+add_list firewall.@rule[5].icmp_type="'packet-too-big'"
+add_list firewall.@rule[5].icmp_type="'time-exceeded'"
+add_list firewall.@rule[5].icmp_type="'bad-header'"
+add_list firewall.@rule[5].icmp_type="'unknown-header-type'"
+add_list firewall.@rule[5].icmp_type="'router-solicitation'"
+add_list firewall.@rule[5].icmp_type="'neighbour-solicitation'"
+add_list firewall.@rule[5].icmp_type="'router-advertisement'"
+add_list firewall.@rule[5].icmp_type="'neighbour-advertisement'"
+
 set firewall.@rule[5].limit='1000/sec'
 set firewall.@rule[5].family='ipv6'
 set firewall.@rule[5].target='ACCEPT'
@@ -75,7 +90,14 @@ set firewall.@rule[6].name='Allow-ICMPv6-Forward'
 set firewall.@rule[6].src='wan'
 set firewall.@rule[6].dest='*'
 set firewall.@rule[6].proto='icmp'
-set firewall.@rule[6].icmp_type='echo-request' 'echo-reply' 'destination-unreachable' 'packet-too-big' 'time-exceeded' 'bad-header' 'unknown-header-type'
+add_list firewall.@rule[6].icmp_type="'echo-request'"
+add_list firewall.@rule[6].icmp_type="'echo-reply'"
+add_list firewall.@rule[6].icmp_type="'destination-unreachable'"
+add_list firewall.@rule[6].icmp_type="'packet-too-big'"
+add_list firewall.@rule[6].icmp_type="'time-exceeded'"
+add_list firewall.@rule[6].icmp_type="'bad-header'"
+add_list firewall.@rule[6].icmp_type="'unknown-header-type'"
+
 set firewall.@rule[6].limit='1000/sec'
 set firewall.@rule[6].family='ipv6'
 set firewall.@rule[6].target='ACCEPT'
@@ -104,7 +126,9 @@ set firewall.@zone[1].network='IoT'
 delete firewall.@zone[2]
 set firewall.@zone[2]=zone
 set firewall.@zone[2].name='wan'
-set firewall.@zone[2].network='wan' 'wan6'
+add_list firewall.@zone[2].network="'wan'"
+add_list firewall.@zone[2].network="'wan6'"
+
 set firewall.@zone[2].input='REJECT'
 set firewall.@zone[2].output='ACCEPT'
 set firewall.@zone[2].forward='REJECT'

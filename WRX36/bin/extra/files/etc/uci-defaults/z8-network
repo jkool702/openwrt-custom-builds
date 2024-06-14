@@ -13,7 +13,10 @@ delete network.@device[0]
 set network.@device[0]=device
 set network.@device[0].name='br-lan'
 set network.@device[0].type='bridge'
-set network.@device[0].ports='lan1' 'lan2' 'lan3'
+add_list network.@device[0].ports="'lan1'"
+add_list network.@device[0].ports="'lan2'"
+add_list network.@device[0].ports="'lan3'"
+
 set network.@device[0].bridge_empty='1'
 set network.@device[0].stp='1'
 set network.@device[0].igmp_snooping='1'

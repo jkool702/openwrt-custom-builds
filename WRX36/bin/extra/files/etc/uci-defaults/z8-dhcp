@@ -17,8 +17,15 @@ set dhcp.lan.netmask='255.255.255.0'
 set dhcp.lan.force='1'
 set dhcp.lan.router='10.0.0.1'
 set dhcp.lan.domain='lan'
-set dhcp.lan.ra_flags='managed-config' 'other-config'
-set dhcp.lan.dhcp_option='1,255.255.255.0' '3,10.0.0.1' '6,10.0.0.1' '12,OpenWrt_WRX36' '15,lan'
+add_list dhcp.lan.ra_flags="'managed-config'"
+add_list dhcp.lan.ra_flags="'other-config'"
+
+add_list dhcp.lan.dhcp_option="'1,255.255.255.0'"
+add_list dhcp.lan.dhcp_option="'3,10.0.0.1'"
+add_list dhcp.lan.dhcp_option="'6,10.0.0.1'"
+add_list dhcp.lan.dhcp_option="'12,OpenWrt_WRX36'"
+add_list dhcp.lan.dhcp_option="'15,lan'"
+
 delete dhcp.wan
 set dhcp.wan=dhcp
 set dhcp.wan.interface='wan'
@@ -44,8 +51,15 @@ set dhcp.IoT.netmask='255.255.255.0'
 set dhcp.IoT.force='1'
 set dhcp.IoT.router='192.168.0.1'
 set dhcp.IoT.domain='lan'
-set dhcp.IoT.ra_flags='managed-config' 'other-config'
-set dhcp.IoT.dhcp_option='1,255.255.255.0' '3,192.168.0.1' '6,192.168.0.1' '12,OpenWrt_WRX36' '15,lan'
+add_list dhcp.IoT.ra_flags="'managed-config'"
+add_list dhcp.IoT.ra_flags="'other-config'"
+
+add_list dhcp.IoT.dhcp_option="'1,255.255.255.0'"
+add_list dhcp.IoT.dhcp_option="'3,192.168.0.1'"
+add_list dhcp.IoT.dhcp_option="'6,192.168.0.1'"
+add_list dhcp.IoT.dhcp_option="'12,OpenWrt_WRX36'"
+add_list dhcp.IoT.dhcp_option="'15,lan'"
+
 delete dhcp.@host[0]
 set dhcp.@host[0]=host
 set dhcp.@host[0].name='AP_IoT'

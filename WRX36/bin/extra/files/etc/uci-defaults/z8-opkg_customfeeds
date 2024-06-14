@@ -1,0 +1,13 @@
+#!/bin/sh
+
+grep -q 'openwrt_nss_packages' </etc/opkg/distfeeds.conf && {
+	echo "$(grep -v 'openwrt_nss_packages' </etc/opkg/distfeeds.conf)" > /etc/opkg/distfeeds.conf	
+}
+
+grep -q 'custom-firmware_core' </etc/opkg/customfeeds.conf || echo 'src/gz custom-firmware_core https://github.com/jkool702/openwrt-custom-builds/raw/main-NSS/WRX36/bin/targets/qualcommax/ipq807x/packages' >> /etc/opkg/customfeeds.conf
+
+for nn in base luci nss_packages packages routing sqm_scripts_nss telephony; do
+	grep -q "custom-firmware_${nn}" </etc/opkg/customfeeds.conf || echo "src/gz custom-firmware_${nn} https://github.com/jkool702/openwrt-custom-builds/raw/main-NSS/WRX36/bin/packages/aarch64_cortex-a53/${nn}" >> /etc/opkg/customfeeds.conf
+done
+
+exit 0

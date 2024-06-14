@@ -5,7 +5,9 @@ uci batch <<'EOF'
 delete umdns.@umdns[0]
 set umdns.@umdns[0]=umdns
 set umdns.@umdns[0].jail='1'
-set umdns.@umdns[0].network='lan' 'IoT'
+add_list umdns.@umdns[0].network="'lan'"
+add_list umdns.@umdns[0].network="'IoT'"
+
 EOF
 uci commit umdns
 }

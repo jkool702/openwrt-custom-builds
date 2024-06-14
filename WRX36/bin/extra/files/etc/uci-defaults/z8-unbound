@@ -35,10 +35,20 @@ set unbound.ub_main.dns64_prefix='64:ff9b::/96'
 set unbound.ub_main.domain_type='static'
 set unbound.ub_main.add_local_fqdn='4'
 set unbound.ub_main.add_wan_fqdn='0'
-set unbound.ub_main.trigger_interface='lan' 'IoT' 'wan'
-set unbound.ub_main.iface_lan='IoT' 'lan'
-set unbound.ub_main.iface_wan='wan' 'wan6'
-set unbound.ub_main.iface_trig='IoT' 'lan' 'wan'
+add_list unbound.ub_main.trigger_interface="'lan'"
+add_list unbound.ub_main.trigger_interface="'IoT'"
+add_list unbound.ub_main.trigger_interface="'wan'"
+
+add_list unbound.ub_main.iface_lan="'IoT'"
+add_list unbound.ub_main.iface_lan="'lan'"
+
+add_list unbound.ub_main.iface_wan="'wan'"
+add_list unbound.ub_main.iface_wan="'wan6'"
+
+add_list unbound.ub_main.iface_trig="'IoT'"
+add_list unbound.ub_main.iface_trig="'lan'"
+add_list unbound.ub_main.iface_trig="'wan'"
+
 set unbound.ub_main.dhcp4_slaac6='1'
 set unbound.ub_main.query_minimize='1'
 delete unbound.auth_icann
@@ -47,8 +57,27 @@ set unbound.auth_icann.enabled='1'
 set unbound.auth_icann.fallback='1'
 set unbound.auth_icann.url_dir='https://www.internic.net/domain/'
 set unbound.auth_icann.zone_type='auth_zone'
-set unbound.auth_icann.server='lax.xfr.dns.icann.org' 'iad.xfr.dns.icann.org'
-set unbound.auth_icann.zone_name='.' 'arpa.' 'in-addr.arpa.' 'in-addr-servers.arpa.' 'ip4only.arpa.' 'ip6.arpa.' 'ip6-servers.arpa.' 'root-servers.net.' 'iana-servers.net.' 'icann-servers.net.' 'mcast.net.' 'ns.arpa.' 'home.arpa.' 'resolver.arpa.' 'uri.arpa.' 'urn.arpa.' 'iris.arpa.'
+add_list unbound.auth_icann.server="'lax.xfr.dns.icann.org'"
+add_list unbound.auth_icann.server="'iad.xfr.dns.icann.org'"
+
+add_list unbound.auth_icann.zone_name="'.'"
+add_list unbound.auth_icann.zone_name="'arpa.'"
+add_list unbound.auth_icann.zone_name="'in-addr.arpa.'"
+add_list unbound.auth_icann.zone_name="'in-addr-servers.arpa.'"
+add_list unbound.auth_icann.zone_name="'ip4only.arpa.'"
+add_list unbound.auth_icann.zone_name="'ip6.arpa.'"
+add_list unbound.auth_icann.zone_name="'ip6-servers.arpa.'"
+add_list unbound.auth_icann.zone_name="'root-servers.net.'"
+add_list unbound.auth_icann.zone_name="'iana-servers.net.'"
+add_list unbound.auth_icann.zone_name="'icann-servers.net.'"
+add_list unbound.auth_icann.zone_name="'mcast.net.'"
+add_list unbound.auth_icann.zone_name="'ns.arpa.'"
+add_list unbound.auth_icann.zone_name="'home.arpa.'"
+add_list unbound.auth_icann.zone_name="'resolver.arpa.'"
+add_list unbound.auth_icann.zone_name="'uri.arpa.'"
+add_list unbound.auth_icann.zone_name="'urn.arpa.'"
+add_list unbound.auth_icann.zone_name="'iris.arpa.'"
+
 EOF
 uci commit unbound
 }
