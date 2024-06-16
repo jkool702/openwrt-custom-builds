@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/usteer ] && ! [ "$(cat /etc/config/usteer)" = "$(cat /rom/etc/config/usteer)" ]; } || {
+{ [ -f /etc/config/usteer ] && [ -f /rom/etc/config/usteer ] && ! [ "$(cat /etc/config/usteer)" = "$(cat /rom/etc/config/usteer)" ]; } || {
 uci batch <<'EOF'
 delete usteer.@usteer[0]
 set usteer.@usteer[0]=usteer

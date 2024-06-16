@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/network ] && ! [ "$(cat /etc/config/network)" = "$(cat /rom/etc/config/network)" ]; } || {
+{ [ -f /etc/config/network ] && [ -f /rom/etc/config/network ] && ! [ "$(cat /etc/config/network)" = "$(cat /rom/etc/config/network)" ]; } || {
 uci batch <<'EOF'
 delete network.loopback
 set network.loopback=interface

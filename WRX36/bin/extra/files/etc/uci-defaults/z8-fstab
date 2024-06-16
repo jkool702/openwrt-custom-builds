@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/fstab ] && ! [ "$(cat /etc/config/fstab)" = "$(cat /rom/etc/config/fstab)" ]; } || {
+{ [ -f /etc/config/fstab ] && [ -f /rom/etc/config/fstab ] && ! [ "$(cat /etc/config/fstab)" = "$(cat /rom/etc/config/fstab)" ]; } || {
 uci batch <<'EOF'
 delete fstab.@global[0]
 set fstab.@global[0]=global

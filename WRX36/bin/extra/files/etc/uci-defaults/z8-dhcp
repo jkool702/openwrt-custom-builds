@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/dhcp ] && ! [ "$(cat /etc/config/dhcp)" = "$(cat /rom/etc/config/dhcp)" ]; } || {
+{ [ -f /etc/config/dhcp ] && [ -f /rom/etc/config/dhcp ] && ! [ "$(cat /etc/config/dhcp)" = "$(cat /rom/etc/config/dhcp)" ]; } || {
 uci batch <<'EOF'
 delete dhcp.lan
 set dhcp.lan=dhcp
@@ -22,6 +22,7 @@ add_list dhcp.lan.ra_flags="'other-config'"
 
 add_list dhcp.lan.dhcp_option="'1,255.255.255.0'"
 add_list dhcp.lan.dhcp_option="'3,10.0.0.1'"
+add_list dhcp.lan.dhcp_option="'4,10.0.0.1'"
 add_list dhcp.lan.dhcp_option="'6,10.0.0.1'"
 add_list dhcp.lan.dhcp_option="'12,OpenWrt_WRX36'"
 add_list dhcp.lan.dhcp_option="'15,lan'"
@@ -56,6 +57,7 @@ add_list dhcp.IoT.ra_flags="'other-config'"
 
 add_list dhcp.IoT.dhcp_option="'1,255.255.255.0'"
 add_list dhcp.IoT.dhcp_option="'3,192.168.0.1'"
+add_list dhcp.IoT.dhcp_option="'4,192.168.0.1'"
 add_list dhcp.IoT.dhcp_option="'6,192.168.0.1'"
 add_list dhcp.IoT.dhcp_option="'12,OpenWrt_WRX36'"
 add_list dhcp.IoT.dhcp_option="'15,lan'"

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/system ] && ! [ "$(cat /etc/config/system)" = "$(cat /rom/etc/config/system)" ]; } || {
+{ [ -f /etc/config/system ] && [ -f /rom/etc/config/system ] && ! [ "$(cat /etc/config/system)" = "$(cat /rom/etc/config/system)" ]; } || {
 uci batch <<'EOF'
 delete system.@system[0]
 set system.@system[0]=system

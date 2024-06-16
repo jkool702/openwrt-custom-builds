@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/unbound ] && ! [ "$(cat /etc/config/unbound)" = "$(cat /rom/etc/config/unbound)" ]; } || {
+{ [ -f /etc/config/unbound ] && [ -f /rom/etc/config/unbound ] && ! [ "$(cat /etc/config/unbound)" = "$(cat /rom/etc/config/unbound)" ]; } || {
 uci batch <<'EOF'
 delete unbound.ub_main
 set unbound.ub_main=unbound

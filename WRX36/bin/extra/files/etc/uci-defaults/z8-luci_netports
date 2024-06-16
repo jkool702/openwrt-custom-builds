@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/luci_netports ] && ! [ "$(cat /etc/config/luci_netports)" = "$(cat /rom/etc/config/luci_netports)" ]; } || {
+{ [ -f /etc/config/luci_netports ] && [ -f /rom/etc/config/luci_netports ] && ! [ "$(cat /etc/config/luci_netports)" = "$(cat /rom/etc/config/luci_netports)" ]; } || {
 uci batch <<'EOF'
 delete luci_netports.global
 set luci_netports.global=global

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/ksmbd ] && ! [ "$(cat /etc/config/ksmbd)" = "$(cat /rom/etc/config/ksmbd)" ]; } || {
+{ [ -f /etc/config/ksmbd ] && [ -f /rom/etc/config/ksmbd ] && ! [ "$(cat /etc/config/ksmbd)" = "$(cat /rom/etc/config/ksmbd)" ]; } || {
 uci batch <<'EOF'
 delete ksmbd.@globals[0]
 set ksmbd.@globals[0]=globals

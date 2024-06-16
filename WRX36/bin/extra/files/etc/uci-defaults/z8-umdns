@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/umdns ] && ! [ "$(cat /etc/config/umdns)" = "$(cat /rom/etc/config/umdns)" ]; } || {
+{ [ -f /etc/config/umdns ] && [ -f /rom/etc/config/umdns ] && ! [ "$(cat /etc/config/umdns)" = "$(cat /rom/etc/config/umdns)" ]; } || {
 uci batch <<'EOF'
 delete umdns.@umdns[0]
 set umdns.@umdns[0]=umdns

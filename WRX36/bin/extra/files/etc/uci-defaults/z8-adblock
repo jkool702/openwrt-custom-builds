@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/adblock ] && ! [ "$(cat /etc/config/adblock)" = "$(cat /rom/etc/config/adblock)" ]; } || {
+{ [ -f /etc/config/adblock ] && [ -f /rom/etc/config/adblock ] && ! [ "$(cat /etc/config/adblock)" = "$(cat /rom/etc/config/adblock)" ]; } || {
 uci batch <<'EOF'
 delete adblock.global
 set adblock.global=adblock

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/wireless ] && ! [ "$(cat /etc/config/wireless)" = "$(cat /rom/etc/config/wireless)" ]; } || {
+{ [ -f /etc/config/wireless ] && [ -f /rom/etc/config/wireless ] && ! [ "$(cat /etc/config/wireless)" = "$(cat /rom/etc/config/wireless)" ]; } || {
 uci batch <<'EOF'
 delete wireless.radio0
 set wireless.radio0=wifi-device

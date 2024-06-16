@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/luci_statistics ] && ! [ "$(cat /etc/config/luci_statistics)" = "$(cat /rom/etc/config/luci_statistics)" ]; } || {
+{ [ -f /etc/config/luci_statistics ] && [ -f /rom/etc/config/luci_statistics ] && ! [ "$(cat /etc/config/luci_statistics)" = "$(cat /rom/etc/config/luci_statistics)" ]; } || {
 uci batch <<'EOF'
 delete luci_statistics.collectd
 set luci_statistics.collectd=statistics

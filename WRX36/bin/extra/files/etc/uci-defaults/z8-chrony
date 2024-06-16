@@ -1,17 +1,17 @@
 #!/bin/sh
 
-{ [ -f /etc/config/chrony ] && ! [ "$(cat /etc/config/chrony)" = "$(cat /rom/etc/config/chrony)" ]; } || {
+{ [ -f /etc/config/chrony ] && [ -f /rom/etc/config/chrony ] && ! [ "$(cat /etc/config/chrony)" = "$(cat /rom/etc/config/chrony)" ]; } || {
 uci batch <<'EOF'
 delete chrony.@pool[0]
 set chrony.@pool[0]=pool
 set chrony.@pool[0].hostname='stratum1.time.cifelli.xyz'
 set chrony.@pool[0].maxpoll='12'
-set chrony.@pool[0].iburst='yes'
-set chrony.@pool[0].nts='yes'
+set chrony.@pool[0].iburst='1'
+set chrony.@pool[0].nts='1'
 delete chrony.@dhcp_ntp_server[0]
 set chrony.@dhcp_ntp_server[0]=dhcp_ntp_server
-set chrony.@dhcp_ntp_server[0].iburst='yes'
-set chrony.@dhcp_ntp_server[0].disabled='no'
+set chrony.@dhcp_ntp_server[0].iburst='1'
+set chrony.@dhcp_ntp_server[0].disabled='0'
 delete chrony.@allow[0]
 set chrony.@allow[0]=allow
 set chrony.@allow[0].interface='lan'
@@ -21,8 +21,8 @@ set chrony.@makestep[0].threshold='1.0'
 set chrony.@makestep[0].limit='3'
 delete chrony.@nts[0]
 set chrony.@nts[0]=nts
-set chrony.@nts[0].rtccheck='yes'
-set chrony.@nts[0].systemcerts='yes'
+set chrony.@nts[0].rtccheck='1'
+set chrony.@nts[0].systemcerts='1'
 EOF
 uci commit chrony
 }

@@ -3,7 +3,7 @@
 grep -q act_mirred </etc/modules.d/70-sched-core && sed -i s/'act_mirred'/'act_nssmirred'/ /etc/modules.d/70-sched-core
 grep -q qca-nss-match </etc/modules.d/70-sched-core || echo 'qca-nss-match' >> /etc/modules.d/70-sched-core
 
-{ [ -f /etc/config/sqm ] && ! [ "$(cat /etc/config/sqm)" = "$(cat /rom/etc/config/sqm)" ]; } || {
+{ [ -f /etc/config/sqm ] && [ -f /rom/etc/config/sqm ] && ! [ "$(cat /etc/config/sqm)" = "$(cat /rom/etc/config/sqm)" ]; } || {
 uci batch <<'EOF'
 delete sqm.wan
 set sqm.wan=queue

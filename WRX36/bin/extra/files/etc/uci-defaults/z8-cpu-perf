@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/cpu-perf ] && ! [ "$(cat /etc/config/cpu-perf)" = "$(cat /rom/etc/config/cpu-perf)" ]; } || {
+{ [ -f /etc/config/cpu-perf ] && [ -f /rom/etc/config/cpu-perf ] && ! [ "$(cat /etc/config/cpu-perf)" = "$(cat /rom/etc/config/cpu-perf)" ]; } || {
 uci batch <<'EOF'
 delete cpu-perf.config
 set cpu-perf.config=main

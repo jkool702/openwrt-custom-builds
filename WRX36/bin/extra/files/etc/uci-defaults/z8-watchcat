@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/watchcat ] && ! [ "$(cat /etc/config/watchcat)" = "$(cat /rom/etc/config/watchcat)" ]; } || {
+{ [ -f /etc/config/watchcat ] && [ -f /rom/etc/config/watchcat ] && ! [ "$(cat /etc/config/watchcat)" = "$(cat /rom/etc/config/watchcat)" ]; } || {
 uci batch <<'EOF'
 delete watchcat.@watchcat[0]
 set watchcat.@watchcat[0]=watchcat

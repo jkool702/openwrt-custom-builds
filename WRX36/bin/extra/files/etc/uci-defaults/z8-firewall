@@ -1,6 +1,6 @@
 #!/bin/sh
 
-{ [ -f /etc/config/firewall ] && ! [ "$(cat /etc/config/firewall)" = "$(cat /rom/etc/config/firewall)" ]; } || {
+{ [ -f /etc/config/firewall ] && [ -f /rom/etc/config/firewall ] && ! [ "$(cat /etc/config/firewall)" = "$(cat /rom/etc/config/firewall)" ]; } || {
 uci batch <<'EOF'
 delete firewall.@defaults[0]
 set firewall.@defaults[0]=defaults
