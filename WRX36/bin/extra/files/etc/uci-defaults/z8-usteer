@@ -1,8 +1,12 @@
 #!/bin/sh
 
-{ [ -f /etc/config/usteer ] && [ -f /rom/etc/config/usteer ] && ! [ "$(cat /etc/config/usteer)" = "$(cat /rom/etc/config/usteer)" ]; } || {
+{ [ -f /etc/config/usteer ] && sed s/'[[:space:]]'//g /etc/config/usteer | grep -qE '.+' && [ -f /rom/etc/config/usteer ] && sed s/'[[:space:]]'//g /rom/etc/config/usteer | grep -qE '.+' && ! [ "$(cat /etc/config/usteer)" = "$(cat /rom/etc/config/usteer)" ]; } || {
+
+touch /etc/config/usteer
+
 uci batch <<'EOF'
 delete usteer.@usteer[0]
+add usteer usteer
 set usteer.@usteer[0]=usteer
 set usteer.@usteer[0].network='lan'
 set usteer.@usteer[0].syslog='1'

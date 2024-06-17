@@ -1,47 +1,66 @@
 #!/bin/sh
 
-{ [ -f /etc/config/luci_netports ] && [ -f /rom/etc/config/luci_netports ] && ! [ "$(cat /etc/config/luci_netports)" = "$(cat /rom/etc/config/luci_netports)" ]; } || {
+{ [ -f /etc/config/luci_netports ] && sed s/'[[:space:]]'//g /etc/config/luci_netports | grep -qE '.+' && [ -f /rom/etc/config/luci_netports ] && sed s/'[[:space:]]'//g /rom/etc/config/luci_netports | grep -qE '.+' && ! [ "$(cat /etc/config/luci_netports)" = "$(cat /rom/etc/config/luci_netports)" ]; } || {
+
+touch /etc/config/luci_netports
+
 uci batch <<'EOF'
 delete luci_netports.global
 set luci_netports.global=global
 set luci_netports.global.default_additional_info='0'
 set luci_netports.global.default_h_mode='1'
 set luci_netports.global.hv_mode_switch_button='1'
+
 delete luci_netports.@port[0]
+add luci_netports port
 set luci_netports.@port[0]=port
 set luci_netports.@port[0].ifname='lo'
 set luci_netports.@port[0].disable='1'
+
 delete luci_netports.@port[1]
+add luci_netports port
 set luci_netports.@port[1]=port
 set luci_netports.@port[1].ifname='wan'
 set luci_netports.@port[1].name='WAN'
 set luci_netports.@port[1].type='auto'
+
 delete luci_netports.@port[2]
+add luci_netports port
 set luci_netports.@port[2]=port
 set luci_netports.@port[2].ifname='lan1'
 set luci_netports.@port[2].name='LAN 1 (lan)'
 set luci_netports.@port[2].type='auto'
+
 delete luci_netports.@port[3]
+add luci_netports port
 set luci_netports.@port[3]=port
 set luci_netports.@port[3].ifname='lan2'
 set luci_netports.@port[3].name='LAN 2 (lan)'
 set luci_netports.@port[3].type='auto'
+
 delete luci_netports.@port[4]
+add luci_netports port
 set luci_netports.@port[4]=port
 set luci_netports.@port[4].ifname='lan3'
 set luci_netports.@port[4].name='LAN 3 (lan)'
 set luci_netports.@port[4].type='auto'
+
 delete luci_netports.@port[5]
+add luci_netports port
 set luci_netports.@port[5]=port
 set luci_netports.@port[5].ifname='lan4'
 set luci_netports.@port[5].name='LAN 4 (IoT)'
 set luci_netports.@port[5].type='auto'
+
 delete luci_netports.@port[6]
+add luci_netports port
 set luci_netports.@port[6]=port
 set luci_netports.@port[6].ifname='phy0-ap0'
 set luci_netports.@port[6].name='WiFi (5 GHz)'
 set luci_netports.@port[6].type='auto'
+
 delete luci_netports.@port[7]
+add luci_netports port
 set luci_netports.@port[7]=port
 set luci_netports.@port[7].ifname='phy1-ap0'
 set luci_netports.@port[7].name='WiFi (2.4 GHz)'

@@ -3,8 +3,12 @@
 grep -q act_mirred </etc/modules.d/70-sched-core && sed -i s/'act_mirred'/'act_nssmirred'/ /etc/modules.d/70-sched-core
 grep -q qca-nss-match </etc/modules.d/70-sched-core || echo 'qca-nss-match' >> /etc/modules.d/70-sched-core
 
-{ [ -f /etc/config/sqm ] && [ -f /rom/etc/config/sqm ] && ! [ "$(cat /etc/config/sqm)" = "$(cat /rom/etc/config/sqm)" ]; } || {
+{ [ -f /etc/config/sqm ] && sed s/'[[:space:]]'//g /etc/config/sqm | grep -qE '.+' && [ -f /rom/etc/config/sqm ] && sed s/'[[:space:]]'//g /rom/etc/config/sqm | grep -qE '.+' && ! [ "$(cat /etc/config/sqm)" = "$(cat /rom/etc/config/sqm)" ]; } || {
+
+touch /etc/config/sqm
+
 uci batch <<'EOF'
+delete sqm.eth1
 delete sqm.wan
 set sqm.wan=queue
 set sqm.wan.enabled='0'
@@ -21,6 +25,10 @@ set sqm.wan.squash_dscp='0'
 set sqm.wan.squash_ingress='0'
 set sqm.wan.tcMTU='2047'
 set sqm.wan.tcTSIZE='512'
+set sqm.wan.qdisc_advanced='1'
+set sqm.wan.qdisc_really_really_advanced='1'
+set sqm.wan.itarget='auto'
+set sqm.wan.etarget='auto'
 EOF
 uci commit sqm
 }

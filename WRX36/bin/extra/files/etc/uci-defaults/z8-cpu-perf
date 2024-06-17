@@ -1,16 +1,25 @@
 #!/bin/sh
 
-{ [ -f /etc/config/cpu-perf ] && [ -f /rom/etc/config/cpu-perf ] && ! [ "$(cat /etc/config/cpu-perf)" = "$(cat /rom/etc/config/cpu-perf)" ]; } || {
+{ [ -f /etc/config/cpu-perf ] && sed s/'[[:space:]]'//g /etc/config/cpu-perf | grep -qE '.+' && [ -f /rom/etc/config/cpu-perf ] && sed s/'[[:space:]]'//g /rom/etc/config/cpu-perf | grep -qE '.+' && ! [ "$(cat /etc/config/cpu-perf)" = "$(cat /rom/etc/config/cpu-perf)" ]; } || {
+
+touch /etc/config/cpu-perf
+
 uci batch <<'EOF'
 delete cpu-perf.config
-set cpu-perf.config=main
-set cpu-perf.config.enabled='1'
 set cpu-perf.ondemand=governor
 set cpu-perf.conservative=governor
+set cpu-perf.performance=governor
+set cpu-perf.schedutil=governor
+set cpu-perf.config=main
+set cpu-perf.config.enabled='1'
 set cpu-perf.cpu0=cpu
+set cpu-perf.cpu0.scaling_governor='performance'
 set cpu-perf.cpu1=cpu
+set cpu-perf.cpu1.scaling_governor='performance'
 set cpu-perf.cpu2=cpu
+set cpu-perf.cpu2.scaling_governor='performance'
 set cpu-perf.cpu3=cpu
+set cpu-perf.cpu3.scaling_governor='performance'
 EOF
 uci commit cpu-perf
 }

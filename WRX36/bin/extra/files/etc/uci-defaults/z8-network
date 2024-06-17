@@ -1,6 +1,9 @@
 #!/bin/sh
 
-{ [ -f /etc/config/network ] && [ -f /rom/etc/config/network ] && ! [ "$(cat /etc/config/network)" = "$(cat /rom/etc/config/network)" ]; } || {
+{ [ -f /etc/config/network ] && sed s/'[[:space:]]'//g /etc/config/network | grep -qE '.+' && [ -f /rom/etc/config/network ] && sed s/'[[:space:]]'//g /rom/etc/config/network | grep -qE '.+' && ! [ "$(cat /etc/config/network)" = "$(cat /rom/etc/config/network)" ]; } || {
+
+touch /etc/config/network
+
 uci batch <<'EOF'
 delete network.loopback
 set network.loopback=interface
@@ -9,17 +12,19 @@ set network.loopback.proto='static'
 set network.loopback.ipaddr='127.0.0.1'
 set network.loopback.netmask='255.0.0.0'
 set network.globals=globals
+
 delete network.@device[0]
+add network device
 set network.@device[0]=device
 set network.@device[0].name='br-lan'
 set network.@device[0].type='bridge'
-add_list network.@device[0].ports="'lan1'"
-add_list network.@device[0].ports="'lan2'"
-add_list network.@device[0].ports="'lan3'"
-
+add_list network.@device[0].ports='lan1'
+add_list network.@device[0].ports='lan2'
+add_list network.@device[0].ports='lan3'
 set network.@device[0].bridge_empty='1'
 set network.@device[0].stp='1'
 set network.@device[0].igmp_snooping='1'
+
 delete network.lan
 set network.lan=interface
 set network.lan.device='br-lan'
@@ -30,6 +35,7 @@ set network.lan.dns_search='lan'
 set network.lan.ipaddr='10.0.0.1/24'
 set network.lan.dns='10.0.0.1'
 set network.lan.delegate='0'
+
 delete network.IoT
 set network.IoT=interface
 set network.IoT.device='lan4'
@@ -40,6 +46,7 @@ set network.IoT.ipaddr='192.168.0.1/24'
 set network.IoT.dns_search='lan'
 set network.IoT.dns='192.168.0.1'
 set network.IoT.delegate='0'
+
 delete network.wan
 set network.wan=interface
 set network.wan.device='wan'
@@ -56,7 +63,9 @@ set network.wan6.auto='0'
 set network.wan6.reqaddress='try'
 set network.wan6.reqprefix='auto'
 set network.wan6.peerdns='0'
+
 delete network.@device[1]
+add network device
 set network.@device[1]=device
 set network.@device[1].name='lan4'
 EOF

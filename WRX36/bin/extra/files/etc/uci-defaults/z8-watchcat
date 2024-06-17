@@ -1,8 +1,12 @@
 #!/bin/sh
 
-{ [ -f /etc/config/watchcat ] && [ -f /rom/etc/config/watchcat ] && ! [ "$(cat /etc/config/watchcat)" = "$(cat /rom/etc/config/watchcat)" ]; } || {
+{ [ -f /etc/config/watchcat ] && sed s/'[[:space:]]'//g /etc/config/watchcat | grep -qE '.+' && [ -f /rom/etc/config/watchcat ] && sed s/'[[:space:]]'//g /rom/etc/config/watchcat | grep -qE '.+' && ! [ "$(cat /etc/config/watchcat)" = "$(cat /rom/etc/config/watchcat)" ]; } || {
+
+touch /etc/config/watchcat
+
 uci batch <<'EOF'
 delete watchcat.@watchcat[0]
+add watchcat watchcat
 set watchcat.@watchcat[0]=watchcat
 set watchcat.@watchcat[0].period='15m'
 set watchcat.@watchcat[0].mode='ping_reboot'
@@ -12,7 +16,9 @@ set watchcat.@watchcat[0].addressfamily='ipv4'
 set watchcat.@watchcat[0].pingperiod='1m'
 set watchcat.@watchcat[0].pingsize='standard'
 set watchcat.@watchcat[0].interface='@wan'
+
 delete watchcat.@watchcat[1]
+add watchcat watchcat
 set watchcat.@watchcat[1]=watchcat
 set watchcat.@watchcat[1].mode='ping_reboot'
 set watchcat.@watchcat[1].period='15m'

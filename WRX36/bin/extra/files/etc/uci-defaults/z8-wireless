@@ -1,6 +1,9 @@
 #!/bin/sh
 
-{ [ -f /etc/config/wireless ] && [ -f /rom/etc/config/wireless ] && ! [ "$(cat /etc/config/wireless)" = "$(cat /rom/etc/config/wireless)" ]; } || {
+{ [ -f /etc/config/wireless ] && sed s/'[[:space:]]'//g /etc/config/wireless | grep -qE '.+' && [ -f /rom/etc/config/wireless ] && sed s/'[[:space:]]'//g /rom/etc/config/wireless | grep -qE '.+' && ! [ "$(cat /etc/config/wireless)" = "$(cat /rom/etc/config/wireless)" ]; } || {
+
+touch /etc/config/wireless
+
 uci batch <<'EOF'
 delete wireless.radio0
 set wireless.radio0=wifi-device
@@ -15,6 +18,7 @@ set wireless.radio0.cell_density='0'
 set wireless.radio0.txpower='30'
 set wireless.radio0.diversity='1'
 set wireless.radio0.disabled='0'
+
 delete wireless.radio1
 set wireless.radio1=wifi-device
 set wireless.radio1.type='mac80211'
@@ -29,6 +33,7 @@ set wireless.radio1.txpower='30'
 set wireless.radio1.diversity='1'
 set wireless.radio1.disabled='0'
 set wireless.radio1.noscan='1'
+
 delete wireless.lan_radio0
 set wireless.lan_radio0=wifi-iface
 set wireless.lan_radio0.device='radio0'
@@ -52,6 +57,7 @@ set wireless.lan_radio0.reassociation_deadline='8192'
 set wireless.lan_radio0.proxy_arp='1'
 set wireless.lan_radio0.multicast_to_unicast_all='0'
 set wireless.lan_radio0.key='password'
+
 delete wireless.lan_radio1
 set wireless.lan_radio1=wifi-iface
 set wireless.lan_radio1.device='radio1'

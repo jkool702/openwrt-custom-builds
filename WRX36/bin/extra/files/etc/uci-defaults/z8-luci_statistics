@@ -1,6 +1,9 @@
 #!/bin/sh
 
-{ [ -f /etc/config/luci_statistics ] && [ -f /rom/etc/config/luci_statistics ] && ! [ "$(cat /etc/config/luci_statistics)" = "$(cat /rom/etc/config/luci_statistics)" ]; } || {
+{ [ -f /etc/config/luci_statistics ] && sed s/'[[:space:]]'//g /etc/config/luci_statistics | grep -qE '.+' && [ -f /rom/etc/config/luci_statistics ] && sed s/'[[:space:]]'//g /rom/etc/config/luci_statistics | grep -qE '.+' && ! [ "$(cat /etc/config/luci_statistics)" = "$(cat /rom/etc/config/luci_statistics)" ]; } || {
+
+touch /etc/config/luci_statistics
+
 uci batch <<'EOF'
 delete luci_statistics.collectd
 set luci_statistics.collectd=statistics
@@ -86,7 +89,7 @@ set luci_statistics.collectd_curl.enable='0'
 delete luci_statistics.collectd_df
 set luci_statistics.collectd_df=statistics
 set luci_statistics.collectd_df.enable='0'
-set luci_statistics.collectd_df.Devices='/dev/mtdblock/4'
+set luci_statistics.collectd_df.Devices='/dev/mtdblock/18'
 set luci_statistics.collectd_df.MountPoints='/overlay'
 set luci_statistics.collectd_df.FSTypes='tmpfs'
 set luci_statistics.collectd_df.IgnoreSelected='0'
@@ -123,14 +126,16 @@ delete luci_statistics.collectd_iptables
 set luci_statistics.collectd_iptables=statistics
 set luci_statistics.collectd_iptables.enable='0'
 delete luci_statistics.@collectd_iptables_match[0]
+add luci_statistics collectd_iptables_match
 set luci_statistics.@collectd_iptables_match[0]=collectd_iptables_match
 set luci_statistics.@collectd_iptables_match[0].table='nat'
 set luci_statistics.@collectd_iptables_match[0].chain='luci_fw_postrouting'
 set luci_statistics.@collectd_iptables_match[0].target='MASQUERADE'
-set luci_statistics.@collectd_iptables_match[0].source='192.168.1.0/24'
+set luci_statistics.@collectd_iptables_match[0].source='10.0.0.0/24'
 set luci_statistics.@collectd_iptables_match[0].outputif='br-ff'
 set luci_statistics.@collectd_iptables_match[0].name='LAN-Clients traffic'
 delete luci_statistics.@collectd_iptables_match[1]
+add luci_statistics collectd_iptables_match
 set luci_statistics.@collectd_iptables_match[1]=collectd_iptables_match
 set luci_statistics.@collectd_iptables_match[1].chain='luci_fw_postrouting'
 set luci_statistics.@collectd_iptables_match[1].table='nat'

@@ -1,6 +1,9 @@
 #!/bin/sh
 
-{ [ -f /etc/config/dhcp ] && [ -f /rom/etc/config/dhcp ] && ! [ "$(cat /etc/config/dhcp)" = "$(cat /rom/etc/config/dhcp)" ]; } || {
+{ [ -f /etc/config/dhcp ] && sed s/'[[:space:]]'//g /etc/config/dhcp | grep -qE '.+' && [ -f /rom/etc/config/dhcp ] && sed s/'[[:space:]]'//g /rom/etc/config/dhcp | grep -qE '.+' && ! [ "$(cat /etc/config/dhcp)" = "$(cat /rom/etc/config/dhcp)" ]; } || {
+
+touch /etc/config/dhcp
+
 uci batch <<'EOF'
 delete dhcp.lan
 set dhcp.lan=dhcp
@@ -17,26 +20,27 @@ set dhcp.lan.netmask='255.255.255.0'
 set dhcp.lan.force='1'
 set dhcp.lan.router='10.0.0.1'
 set dhcp.lan.domain='lan'
-add_list dhcp.lan.ra_flags="'managed-config'"
-add_list dhcp.lan.ra_flags="'other-config'"
-
-add_list dhcp.lan.dhcp_option="'1,255.255.255.0'"
-add_list dhcp.lan.dhcp_option="'3,10.0.0.1'"
-add_list dhcp.lan.dhcp_option="'4,10.0.0.1'"
-add_list dhcp.lan.dhcp_option="'6,10.0.0.1'"
-add_list dhcp.lan.dhcp_option="'12,OpenWrt_WRX36'"
-add_list dhcp.lan.dhcp_option="'15,lan'"
+add_list dhcp.lan.ra_flags='managed-config'
+add_list dhcp.lan.ra_flags='other-config'
+add_list dhcp.lan.dhcp_option='1,255.255.255.0'
+add_list dhcp.lan.dhcp_option='3,10.0.0.1'
+add_list dhcp.lan.dhcp_option='4,10.0.0.1'
+add_list dhcp.lan.dhcp_option='6,10.0.0.1'
+add_list dhcp.lan.dhcp_option='12,OpenWrt_WRX36'
+add_list dhcp.lan.dhcp_option='15,lan'
 
 delete dhcp.wan
 set dhcp.wan=dhcp
 set dhcp.wan.interface='wan'
 set dhcp.wan.ignore='1'
+
 delete dhcp.odhcpd
 set dhcp.odhcpd=odhcpd
 set dhcp.odhcpd.maindhcp='1'
 set dhcp.odhcpd.leasefile='/var/lib/unbound/odhcpd/dhcp.leases'
 set dhcp.odhcpd.leasetrigger='/usr/lib/unbound/odhcpd.sh'
 set dhcp.odhcpd.loglevel='4'
+
 delete dhcp.IoT
 set dhcp.IoT=dhcp
 set dhcp.IoT.interface='IoT'
@@ -52,17 +56,17 @@ set dhcp.IoT.netmask='255.255.255.0'
 set dhcp.IoT.force='1'
 set dhcp.IoT.router='192.168.0.1'
 set dhcp.IoT.domain='lan'
-add_list dhcp.IoT.ra_flags="'managed-config'"
-add_list dhcp.IoT.ra_flags="'other-config'"
-
-add_list dhcp.IoT.dhcp_option="'1,255.255.255.0'"
-add_list dhcp.IoT.dhcp_option="'3,192.168.0.1'"
-add_list dhcp.IoT.dhcp_option="'4,192.168.0.1'"
-add_list dhcp.IoT.dhcp_option="'6,192.168.0.1'"
-add_list dhcp.IoT.dhcp_option="'12,OpenWrt_WRX36'"
-add_list dhcp.IoT.dhcp_option="'15,lan'"
+add_list dhcp.IoT.ra_flags='managed-config'
+add_list dhcp.IoT.ra_flags='other-config'
+add_list dhcp.IoT.dhcp_option='1,255.255.255.0'
+add_list dhcp.IoT.dhcp_option='3,192.168.0.1'
+add_list dhcp.IoT.dhcp_option='4,192.168.0.1'
+add_list dhcp.IoT.dhcp_option='6,192.168.0.1'
+add_list dhcp.IoT.dhcp_option='12,OpenWrt_WRX36'
+add_list dhcp.IoT.dhcp_option='15,lan'
 
 delete dhcp.@host[0]
+add dhcp host
 set dhcp.@host[0]=host
 set dhcp.@host[0].name='AP_IoT'
 set dhcp.@host[0].ip='192.168.0.254'

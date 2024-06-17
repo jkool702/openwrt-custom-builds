@@ -1,13 +1,19 @@
 #!/bin/sh
 
-{ [ -f /etc/config/ksmbd ] && [ -f /rom/etc/config/ksmbd ] && ! [ "$(cat /etc/config/ksmbd)" = "$(cat /rom/etc/config/ksmbd)" ]; } || {
+{ [ -f /etc/config/ksmbd ] && sed s/'[[:space:]]'//g /etc/config/ksmbd | grep -qE '.+' && [ -f /rom/etc/config/ksmbd ] && sed s/'[[:space:]]'//g /rom/etc/config/ksmbd | grep -qE '.+' && ! [ "$(cat /etc/config/ksmbd)" = "$(cat /rom/etc/config/ksmbd)" ]; } || {
+
+touch /etc/config/ksmbd
+
 uci batch <<'EOF'
 delete ksmbd.@globals[0]
+add ksmbd globals
 set ksmbd.@globals[0]=globals
 set ksmbd.@globals[0].workgroup='WORKGROUP'
 set ksmbd.@globals[0].interface='lan'
 set ksmbd.@globals[0].description='OpenWrt_WRX36'
+
 delete ksmbd.@share[0]
+add ksmbd share
 set ksmbd.@share[0]=share
 set ksmbd.@share[0].read_only='no'
 set ksmbd.@share[0].users='SMBUSER'

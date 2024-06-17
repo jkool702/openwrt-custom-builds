@@ -1,6 +1,8 @@
 #!/bin/sh
 /etc/init.d/network restart
 
+sleep 2
+
 { sleep 10; reboot; } &
 
 exit 0

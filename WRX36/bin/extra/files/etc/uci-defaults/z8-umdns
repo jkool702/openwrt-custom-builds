@@ -1,13 +1,16 @@
 #!/bin/sh
 
-{ [ -f /etc/config/umdns ] && [ -f /rom/etc/config/umdns ] && ! [ "$(cat /etc/config/umdns)" = "$(cat /rom/etc/config/umdns)" ]; } || {
+{ [ -f /etc/config/umdns ] && sed s/'[[:space:]]'//g /etc/config/umdns | grep -qE '.+' && [ -f /rom/etc/config/umdns ] && sed s/'[[:space:]]'//g /rom/etc/config/umdns | grep -qE '.+' && ! [ "$(cat /etc/config/umdns)" = "$(cat /rom/etc/config/umdns)" ]; } || {
+
+touch /etc/config/umdns
+
 uci batch <<'EOF'
 delete umdns.@umdns[0]
+add umdns umdns
 set umdns.@umdns[0]=umdns
 set umdns.@umdns[0].jail='1'
-add_list umdns.@umdns[0].network="'lan'"
-add_list umdns.@umdns[0].network="'IoT'"
-
+add_list umdns.@umdns[0].network='lan'
+add_list umdns.@umdns[0].network='IoT'
 EOF
 uci commit umdns
 }

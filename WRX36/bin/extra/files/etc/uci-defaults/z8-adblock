@@ -1,6 +1,9 @@
 #!/bin/sh
 
-{ [ -f /etc/config/adblock ] && [ -f /rom/etc/config/adblock ] && ! [ "$(cat /etc/config/adblock)" = "$(cat /rom/etc/config/adblock)" ]; } || {
+{ [ -f /etc/config/adblock ] && sed s/'[[:space:]]'//g /etc/config/adblock | grep -qE '.+' && [ -f /rom/etc/config/adblock ] && sed s/'[[:space:]]'//g /rom/etc/config/adblock | grep -qE '.+' && ! [ "$(cat /etc/config/adblock)" = "$(cat /rom/etc/config/adblock)" ]; } || {
+
+touch /etc/config/adblock
+
 uci batch <<'EOF'
 delete adblock.global
 set adblock.global=adblock
@@ -16,33 +19,30 @@ set adblock.global.adb_dns='unbound'
 set adblock.global.adb_fetchutil='curl'
 set adblock.global.adb_dnsflush='1'
 set adblock.global.adb_trigger='lan'
-add_list adblock.global.adb_zonelist="'IoT'"
-add_list adblock.global.adb_zonelist="'lan'"
-
+add_list adblock.global.adb_zonelist='IoT'
+add_list adblock.global.adb_zonelist='lan'
 set adblock.global.adb_lookupdomain='gstatic.com'
-add_list adblock.global.adb_portlist="'53'"
-add_list adblock.global.adb_portlist="'53'"
-
-add_list adblock.global.adb_sources="'adaway'"
-add_list adblock.global.adb_sources="'adguard'"
-add_list adblock.global.adb_sources="'adguard_tracking'"
-add_list adblock.global.adb_sources="'android_tracking'"
-add_list adblock.global.adb_sources="'anti_ad'"
-add_list adblock.global.adb_sources="'anudeep'"
-add_list adblock.global.adb_sources="'bitcoin'"
-add_list adblock.global.adb_sources="'disconnect'"
-add_list adblock.global.adb_sources="'easylist'"
-add_list adblock.global.adb_sources="'easyprivacy'"
-add_list adblock.global.adb_sources="'firetv_tracking'"
-add_list adblock.global.adb_sources="'notracking'"
-add_list adblock.global.adb_sources="'openphish'"
-add_list adblock.global.adb_sources="'phishing_army'"
-add_list adblock.global.adb_sources="'smarttv_tracking'"
-add_list adblock.global.adb_sources="'spam404'"
-add_list adblock.global.adb_sources="'wally3k'"
-add_list adblock.global.adb_sources="'whocares'"
-add_list adblock.global.adb_sources="'winspy'"
-add_list adblock.global.adb_sources="'yoyo'"
+add_list adblock.global.adb_portlist='53'
+add_list adblock.global.adb_sources='adaway'
+add_list adblock.global.adb_sources='adguard'
+add_list adblock.global.adb_sources='adguard_tracking'
+add_list adblock.global.adb_sources='android_tracking'
+add_list adblock.global.adb_sources='anti_ad'
+add_list adblock.global.adb_sources='anudeep'
+add_list adblock.global.adb_sources='bitcoin'
+add_list adblock.global.adb_sources='disconnect'
+add_list adblock.global.adb_sources='easylist'
+add_list adblock.global.adb_sources='easyprivacy'
+add_list adblock.global.adb_sources='firetv_tracking'
+add_list adblock.global.adb_sources='notracking'
+add_list adblock.global.adb_sources='openphish'
+add_list adblock.global.adb_sources='phishing_army'
+add_list adblock.global.adb_sources='smarttv_tracking'
+add_list adblock.global.adb_sources='spam404'
+add_list adblock.global.adb_sources='wally3k'
+add_list adblock.global.adb_sources='whocares'
+add_list adblock.global.adb_sources='winspy'
+add_list adblock.global.adb_sources='yoyo'
 
 EOF
 uci commit adblock

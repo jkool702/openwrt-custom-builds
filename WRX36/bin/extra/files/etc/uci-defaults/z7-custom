@@ -3,8 +3,8 @@
 # partial fix for ssl
 grep -q 'net.netfilter.nf_conntrack_tcp_no_window_check' </etc/sysctl.conf || echo 'net.netfilter.nf_conntrack_tcp_no_window_check=1' >>/etc/sysctl.conf
 
-# change rootr shell to bash
-sed -i -E s/'^(root.*/bin/)ash'/'1bash'/ /etc/passwd
+# change root shell to bash
+sed -i -E s/'^(root:.*:\/bin\/)ash'/'\1bash'/ /etc/passwd
 
 if [ -f /etc/init.d/ksmbd ]; then
    # setup SMBUSER for ksmbd
@@ -15,6 +15,8 @@ if [ -f /etc/init.d/ksmbd ]; then
    ksmbd.adduser -a SMBUSER -p SMBPASSWORD
 fi
 
+mkdir -p /var/lock
+
 # disable bridger
 if [ -f /etc/init.d/bridger ]; then
    /etc/init.d/bridger disable
@@ -23,9 +25,10 @@ fi
 
 # generate stuff for unbound
 if [ -f /etc/init.d/unbound ]; then
-   ln /etc/ssl/certs/ca-certificates.crt /etc/unbound/ca-certificates.crt
+   mkdir -p /etc/unbound
+   [ -f /etc/ssl/certs/ca-certificates.crt ] && ln /etc/ssl/certs/ca-certificates.crt /etc/unbound/ca-certificates.crt
    unbound-anchor -a /etc/unbound/root.key
-   unbound mkdir -p /var/lib/unbound
+   mkdir -p /var/lib/unbound
    chown -R unbound:unbound /etc/unbound /var/lib/unbound
    cp -p /etc/unbound/root.key /var/lib/unbound
    unbound-control-setup -d /etc/unbound
@@ -42,6 +45,7 @@ if [ -f /etc/init.d/chronyd ]; then
    chrony-hotplug
    [ -f /etc/crontabs/root ] || printf '' >>/etc/crontabs/root
    grep -q 'chrony-hotplug' </etc/crontabs/root || echo '55 2,10,18 * * * chrony-hotplug' >> /etc/crontabs/root
+   chmod +x /etc/crontabs/root
 fi
 
 # disable irqbalance
@@ -56,7 +60,7 @@ fi
 # this will still benefit from  manual tuning, but this should at least get it up and running
 if [ -f /etc/init.d/sqm ]; then
  if ping -c 1 -w 2 1.1.1.1 && ping -c 1 -w 2 www.gstatic.com; then
-   echo $(speedtest 2>&1 | grep -E 'Upload|Download' | sed -E s/'^.* (.*).[0-9]* Mbit/s[ t]*$'/'1000'/) | { 
+   echo $(speedtest 2>&1 | grep -E 'Upload|Download' | sed -E s/'^.* (.*).[0-9]* Mbit\/s[ t]*$'/'1000'/) | { 
      u=0
      d=0 
      sqmFlag=0
@@ -92,6 +96,14 @@ fi
 if [ -f /etc/init.d/qca-nss-drv ]; then
 	sed -i s/"set_affinity 'ppdu-end-interrupts-mac1' 1 1/set_affinity 'ppdu-end-interrupts-mac1' 3 1/" /etc/init.d/qca-nss-drv
 	service qca-nss-drv restart
+fi
+
+# tweak ecm
+if [ -f /etc/init.d/qca-nss-ecm ]; then
+	uci set ecm.global.acceleration_engine='nss'
+	uci set ecm.general.disable_gro='1'
+	uci commit ecm
+	/etc/init.d/qca-nss-ecm restart
 fi
 
 exit 0
