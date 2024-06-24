@@ -45,7 +45,7 @@ prev_kernel_config_path="${buildroot_dir}"/openwrt-custom-builds/WRX36/bin/extra
 # get system memory 
 read -r memKB < /proc/meminfo
 memKB="${memKB% *}"
-memKB="${memKB#* }"
+memKB="${memKB##* }"
 
 # set tmpfs_build_flag to false if empty+unset --OR-- to true if nonempty+set (to anything other than 'false' or '0')
 if [[ "${tmpfs_build_flag}" == '0' ]] || [[ "${tmpfs_build_flag}" == 'false' ]]; then
